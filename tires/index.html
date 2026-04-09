@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tires — Roll & Charge</title>
+  <meta name="description" content="Browse top tire brands with transparent pricing. Mobile installation available same-day.">
+  <link rel="icon" href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/fe974943b_logo.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --accent: #f04e23; --accent-hover: #d94318; --surface: #f8fafc; --border: rgba(30,58,138,0.1); --text-secondary: rgba(30,58,138,0.5); }
+    * { scrollbar-width: thin; scrollbar-color: #ff6b35 transparent; }
+    ::selection { background: rgba(255,107,53,0.2); color: #1e3a8a; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; color: #1e3a8a; }
+    .services-dropdown .dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+      min-width: 220px; background: #fff; border: 1px solid rgba(30,58,138,0.1); border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(30,58,138,0.10); padding: 8px 0; z-index: 60; margin-top: 4px;
+    }
+    .services-dropdown:hover .dropdown-menu { display: block; }
+    .services-dropdown .dropdown-menu a { display: block; padding: 8px 16px; font-size: 14px; color: #1e3a8a; transition: background 0.15s, color 0.15s; }
+    .services-dropdown .dropdown-menu a:hover { background: rgba(240,78,35,0.06); color: #f04e23; }
+    .mobile-menu { display: none; }
+    .mobile-menu.open { display: block; }
+    nav.nav-scrolled { background: #fff; box-shadow: 0 1px 12px rgba(30,58,138,0.08); padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  </style>
+</head>
+<body class="bg-white text-[#1e3a8a]">
+<div class="min-h-screen bg-white text-[#1e3a8a]">
+
+  <!-- NAV -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <a class="flex items-center group" href="/"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/e1559ad67_crest_RNC_orange.png" alt="RNC Logo" class="h-10 w-auto"></a>
+      <div class="hidden lg:flex items-center gap-1">
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/">Home</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-[#1e3a8a]/10 text-[#1e3a8a]" href="/tires/">Tires</a>
+        <div class="relative services-dropdown">
+          <button class="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5">Services<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 ml-1"><path d="m6 9 6 6 6-6"></path></svg></button>
+          <div class="dropdown-menu">
+            <a href="/services/brakes/">Brakes</a>
+            <a href="/services/diagnostics/">Diagnostics</a>
+            <a href="/services/suspension/">Suspension</a>
+            <a href="/services/transmission/">Transmission</a>
+            <a href="/services/ac-cooling/">AC &amp; Cooling</a>
+            <a href="/services/engine-repairs/">Engine Repairs</a>
+            <a href="/services/fleet/">Fleet Services</a>
+          </div>
+        </div>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/electric-vehicles/">Electric Vehicles</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/roadside/">Roadside</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/about/">About</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/careers/">Careers</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:+15551234567" class="flex items-center gap-2 text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(555) 123-4567
+        </a>
+        <a class="bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20" href="/#booking">Book Now</a>
+      </div>
+      <button class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-[#1e3a8a]/5" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#1e3a8a]"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-[#1e3a8a]/10 mt-2 px-6 py-4 space-y-3">
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/">Home</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]" href="/tires/">Tires</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/brakes/">Brakes</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/diagnostics/">Diagnostics</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/electric-vehicles/">Electric Vehicles</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/roadside/">Roadside</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/about/">About</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/careers/">Careers</a>
+      <a class="block mt-2 bg-[#f04e23] text-white text-center font-semibold text-sm px-5 py-3 rounded-full" href="/#booking">Book Now</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative min-h-[70vh] flex items-end overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1920&q=80" alt="Find Your Perfect Tires" class="w-full h-full object-cover opacity-20">
+        <div class="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent"></div>
+      </div>
+      <div class="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#f04e23]/5 rounded-full blur-[150px]"></div>
+      <div class="relative max-w-7xl mx-auto px-6 pb-20 pt-40 w-full">
+        <div class="inline-flex items-center gap-2 bg-[#f04e23]/10 border border-[#f04e23]/20 text-[#f04e23] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#f04e23] animate-pulse"></span>Tire Sales &amp; Installation
+        </div>
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6 text-[#1e3a8a]">Find Your Perfect<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f04e23] to-[#d94318]">Tires.</span></h1>
+        <p class="text-lg sm:text-xl text-[#1e3a8a]/50 max-w-xl leading-relaxed mb-10">Browse top brands, get transparent pricing, and have them installed at your location — same day available.</p>
+        <a class="inline-flex items-center justify-center gap-2 bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-[#f04e23]/20 group" href="/#booking">Get a Tire Quote<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+      </div>
+    </section>
+
+    <!-- FEATURES BAR -->
+    <section class="py-12 border-y border-[#1e3a8a]/10 bg-[#f8fafc]">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="flex gap-4 items-start">
+          <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 shadow-md shadow-[#f04e23]/30">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-1 text-[#1e3a8a]">Mobile Install</h4>
+            <p class="text-sm text-[#1e3a8a]/40">We mount and balance at your location.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 shadow-md shadow-[#f04e23]/30">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-1 text-[#1e3a8a]">Warranty Included</h4>
+            <p class="text-sm text-[#1e3a8a]/40">Every tire backed by manufacturer warranty.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 shadow-md shadow-[#f04e23]/30">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-1 text-[#1e3a8a]">Same-Day Available</h4>
+            <p class="text-sm text-[#1e3a8a]/40">Order now, installed by end of day.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 shadow-md shadow-[#f04e23]/30">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-1 text-[#1e3a8a]">Top Brands Only</h4>
+            <p class="text-sm text-[#1e3a8a]/40">Michelin, Goodyear, Bridgestone &amp; more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIRE CATALOG -->
+    <section class="py-28 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#1e3a8a]">Our Tire Selection</h2>
+          <p class="text-[#1e3a8a]/40 mt-4 text-lg">Browse our catalog or call for custom sizes</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7 hover:border-[#1e3a8a]/20 transition-all duration-500 hover:shadow-lg">
+            <h3 class="text-[#1e3a8a] text-xl font-semibold">Michelin</h3>
+            <p class="text-sm text-[#1e3a8a]/40 mb-3">Defender LTX M/S</p>
+            <div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-[#f04e23] fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><span class="text-sm font-medium text-[#1e3a8a]">4.8</span></div>
+            <div class="mb-4"><span class="text-3xl font-bold text-[#1e3a8a]">$189</span><span class="text-sm text-[#1e3a8a]/40">/tire</span></div>
+            <p class="text-xs text-[#1e3a8a]/30 mb-6">+$25 install/ea</p>
+            <a class="block text-center bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300" href="/#booking">Get Quote</a>
+          </div>
+
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7 hover:border-[#1e3a8a]/20 transition-all duration-500 hover:shadow-lg">
+            <h3 class="text-[#1e3a8a] text-xl font-semibold">Michelin</h3>
+            <p class="text-sm text-[#1e3a8a]/40 mb-3">X-Ice Snow</p>
+            <div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-[#f04e23] fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><span class="text-sm font-medium text-[#1e3a8a]">4.7</span></div>
+            <div class="mb-4"><span class="text-3xl font-bold text-[#1e3a8a]">$175</span><span class="text-sm text-[#1e3a8a]/40">/tire</span></div>
+            <p class="text-xs text-[#1e3a8a]/30 mb-6">+$25 install/ea</p>
+            <a class="block text-center bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300" href="/#booking">Get Quote</a>
+          </div>
+
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7 hover:border-[#1e3a8a]/20 transition-all duration-500 hover:shadow-lg">
+            <h3 class="text-[#1e3a8a] text-xl font-semibold">Pirelli</h3>
+            <p class="text-sm text-[#1e3a8a]/40 mb-3">Scorpion Verde AS Plus II</p>
+            <div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-[#f04e23] fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><span class="text-sm font-medium text-[#1e3a8a]">4.5</span></div>
+            <div class="mb-4"><span class="text-3xl font-bold text-[#1e3a8a]">$198</span><span class="text-sm text-[#1e3a8a]/40">/tire</span></div>
+            <p class="text-xs text-[#1e3a8a]/30 mb-6">+$25 install/ea</p>
+            <a class="block text-center bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300" href="/#booking">Get Quote</a>
+          </div>
+
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7 hover:border-[#1e3a8a]/20 transition-all duration-500 hover:shadow-lg">
+            <h3 class="text-[#1e3a8a] text-xl font-semibold">Continental</h3>
+            <p class="text-sm text-[#1e3a8a]/40 mb-3">TrueContact Tour</p>
+            <div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-[#f04e23] fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><span class="text-sm font-medium text-[#1e3a8a]">4.7</span></div>
+            <div class="mb-4"><span class="text-3xl font-bold text-[#1e3a8a]">$165</span><span class="text-sm text-[#1e3a8a]/40">/tire</span></div>
+            <p class="text-xs text-[#1e3a8a]/30 mb-6">+$25 install/ea</p>
+            <a class="block text-center bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300" href="/#booking">Get Quote</a>
+          </div>
+
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7 hover:border-[#1e3a8a]/20 transition-all duration-500 hover:shadow-lg">
+            <h3 class="text-[#1e3a8a] text-xl font-semibold">Goodyear</h3>
+            <p class="text-sm text-[#1e3a8a]/40 mb-3">Wrangler AT/S</p>
+            <div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-[#f04e23] fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><span class="text-sm font-medium text-[#1e3a8a]">4.6</span></div>
+            <div class="mb-4"><span class="text-3xl font-bold text-[#1e3a8a]">$215</span><span class="text-sm text-[#1e3a8a]/40">/tire</span></div>
+            <p class="text-xs text-[#1e3a8a]/30 mb-6">+$30 install/ea</p>
+            <a class="block text-center bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300" href="/#booking">Get Quote</a>
+          </div>
+
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7 hover:border-[#1e3a8a]/20 transition-all duration-500 hover:shadow-lg">
+            <h3 class="text-[#1e3a8a] text-xl font-semibold">Firestone</h3>
+            <p class="text-sm text-[#1e3a8a]/40 mb-3">Destination LE3</p>
+            <div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-[#f04e23] fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><span class="text-sm font-medium text-[#1e3a8a]">4.4</span></div>
+            <div class="mb-4"><span class="text-3xl font-bold text-[#1e3a8a]">$142</span><span class="text-sm text-[#1e3a8a]/40">/tire</span></div>
+            <p class="text-xs text-[#1e3a8a]/30 mb-6">+$25 install/ea</p>
+            <a class="block text-center bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300" href="/#booking">Get Quote</a>
+          </div>
+
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7 hover:border-[#1e3a8a]/20 transition-all duration-500 hover:shadow-lg">
+            <h3 class="text-[#1e3a8a] text-xl font-semibold">Bridgestone</h3>
+            <p class="text-sm text-[#1e3a8a]/40 mb-3">Potenza Sport</p>
+            <div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-[#f04e23] fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><span class="text-sm font-medium text-[#1e3a8a]">4.9</span></div>
+            <div class="mb-4"><span class="text-3xl font-bold text-[#1e3a8a]">$245</span><span class="text-sm text-[#1e3a8a]/40">/tire</span></div>
+            <p class="text-xs text-[#1e3a8a]/30 mb-6">+$25 install/ea</p>
+            <a class="block text-center bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300" href="/#booking">Get Quote</a>
+          </div>
+
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7 hover:border-[#1e3a8a]/20 transition-all duration-500 hover:shadow-lg">
+            <h3 class="text-[#1e3a8a] text-xl font-semibold">BFGoodrich</h3>
+            <p class="text-sm text-[#1e3a8a]/40 mb-3">KO2 All-Terrain</p>
+            <div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-[#f04e23] fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><span class="text-sm font-medium text-[#1e3a8a]">4.9</span></div>
+            <div class="mb-4"><span class="text-3xl font-bold text-[#1e3a8a]">$229</span><span class="text-sm text-[#1e3a8a]/40">/tire</span></div>
+            <p class="text-xs text-[#1e3a8a]/30 mb-6">+$30 install/ea</p>
+            <a class="block text-center bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300" href="/#booking">Get Quote</a>
+          </div>
+
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7 hover:border-[#1e3a8a]/20 transition-all duration-500 hover:shadow-lg">
+            <h3 class="text-[#1e3a8a] text-xl font-semibold">Continental</h3>
+            <p class="text-sm text-[#1e3a8a]/40 mb-3">ExtremeContact Sport 02</p>
+            <div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-[#f04e23] fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><span class="text-sm font-medium text-[#1e3a8a]">4.8</span></div>
+            <div class="mb-4"><span class="text-3xl font-bold text-[#1e3a8a]">$265</span><span class="text-sm text-[#1e3a8a]/40">/tire</span></div>
+            <p class="text-xs text-[#1e3a8a]/30 mb-6">+$25 install/ea</p>
+            <a class="block text-center bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300" href="/#booking">Get Quote</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNS YOU NEED NEW TIRES -->
+    <section class="py-28 bg-[#f8fafc] border-y border-[#1e3a8a]/10">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#1e3a8a]">Signs You Need New Tires</h2>
+          <p class="text-[#1e3a8a]/40 mt-4 text-lg max-w-lg mx-auto">Watch for these warning signs to keep your vehicle safe on the road.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7">
+            <div class="w-10 h-10 rounded-xl bg-[#f04e23]/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+            <h3 class="text-[#1e3a8a] text-lg font-semibold mb-2">Reduced Tread Depth</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Tires should be replaced when tread reaches 2/32 inch. Use the penny test: insert a penny upside down—if you see Lincoln's head, it's time.</p>
+          </div>
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7">
+            <div class="w-10 h-10 rounded-xl bg-[#f04e23]/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+            <h3 class="text-[#1e3a8a] text-lg font-semibold mb-2">Uneven Wear</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Uneven wear patterns indicate alignment, inflation, or suspension issues. This reduces tire life and driving safety.</p>
+          </div>
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7">
+            <div class="w-10 h-10 rounded-xl bg-[#f04e23]/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+            <h3 class="text-[#1e3a8a] text-lg font-semibold mb-2">Vibration or Pulling</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Vibrations or your vehicle pulling to one side may indicate unbalanced, misaligned, or damaged tires.</p>
+          </div>
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7">
+            <div class="w-10 h-10 rounded-xl bg-[#f04e23]/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+            <h3 class="text-[#1e3a8a] text-lg font-semibold mb-2">Cracks or Bulges</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Visible cracks, bulges, or blisters in the sidewall mean the tire is damaged and needs immediate replacement.</p>
+          </div>
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7">
+            <div class="w-10 h-10 rounded-xl bg-[#f04e23]/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+            <h3 class="text-[#1e3a8a] text-lg font-semibold mb-2">Excessive Noise</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Loud thumping or unusual tire noise while driving suggests wear or damage—have them inspected immediately.</p>
+          </div>
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-7">
+            <div class="w-10 h-10 rounded-xl bg-[#f04e23]/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h3 class="text-[#1e3a8a] text-lg font-semibold mb-2">Age</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Even if tread looks good, replace tires every 6–10 years due to rubber degradation, regardless of mileage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO READ TIRE SIZE -->
+    <section class="py-28 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#1e3a8a]">How to Read Your Tire Size</h2>
+          <p class="text-[#1e3a8a]/40 mt-4 text-lg max-w-lg mx-auto">Tire sizes are displayed on the sidewall using a standardized format. Here's how to decode it:</p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6"><h4 class="font-semibold text-[#1e3a8a] mb-2">Width</h4><p class="text-sm text-[#1e3a8a]/40">Tire width in millimeters (225mm)</p></div>
+            <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6"><h4 class="font-semibold text-[#1e3a8a] mb-2">Aspect Ratio</h4><p class="text-sm text-[#1e3a8a]/40">Sidewall height as % of width (65% of 225mm)</p></div>
+            <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6"><h4 class="font-semibold text-[#1e3a8a] mb-2">Type</h4><p class="text-sm text-[#1e3a8a]/40">R = Radial construction</p></div>
+            <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6"><h4 class="font-semibold text-[#1e3a8a] mb-2">Wheel Diameter</h4><p class="text-sm text-[#1e3a8a]/40">Wheel diameter in inches (17 inches)</p></div>
+            <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6"><h4 class="font-semibold text-[#1e3a8a] mb-2">Load Index</h4><p class="text-sm text-[#1e3a8a]/40">Maximum weight capacity per tire</p></div>
+            <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6"><h4 class="font-semibold text-[#1e3a8a] mb-2">Speed Rating</h4><p class="text-sm text-[#1e3a8a]/40">Maximum safe speed (H = 130 mph)</p></div>
+          </div>
+          <div class="rounded-3xl overflow-hidden border border-[#1e3a8a]/10">
+            <img src="https://images.unsplash.com/photo-1504711331256-6816b3e3f778?w=600&q=80" alt="Tire size diagram" class="w-full h-[400px] object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREAD DEPTH -->
+    <section class="py-28 bg-[#f8fafc] border-y border-[#1e3a8a]/10">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="rounded-3xl overflow-hidden border border-[#1e3a8a]/10">
+            <img src="https://images.unsplash.com/photo-1585523942305-c8b9c3d85eca?w=600&q=80" alt="Tread depth measurement" class="w-full h-[400px] object-cover">
+          </div>
+          <div>
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#1e3a8a] mb-4">How to Measure Tread Depth</h2>
+            <p class="text-[#1e3a8a]/40 text-lg leading-relaxed mb-10">Keep your tires safe with regular tread depth checks. Here are the most common methods:</p>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md shadow-[#f04e23]/30"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+                <div><h4 class="font-semibold mb-1 text-[#1e3a8a]">The Penny Test</h4><p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Insert a penny upside down into the tread grooves. If you can see the top of Lincoln's head, your tread is at 2/32 inch—time for replacement.</p></div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md shadow-[#f04e23]/30"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+                <div><h4 class="font-semibold mb-1 text-[#1e3a8a]">Tread Depth Gauge</h4><p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Use a dedicated gauge for precise measurements. Most are inexpensive and provide exact readings in 32nds of an inch.</p></div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md shadow-[#f04e23]/30"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+                <div><h4 class="font-semibold mb-1 text-[#1e3a8a]">Visual Inspection</h4><p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Many modern tires have built-in wear indicators. When treads wear flush with these bars, replacement is needed.</p></div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md shadow-[#f04e23]/30"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+                <div><h4 class="font-semibold mb-1 text-[#1e3a8a]">Professional Inspection</h4><p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Have a technician measure your tread depth during regular service. We offer free inspections at every visit.</p></div>
+              </div>
+            </div>
+            <div class="mt-8 bg-[#f04e23]/10 border border-[#f04e23]/20 rounded-2xl p-5">
+              <p class="text-sm text-[#1e3a8a]/60"><span class="font-semibold text-[#f04e23]">Pro Tip:</span> Check tread depth monthly and always maintain proper tire pressure for safety and longevity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[#1e3a8a]/10 bg-[#f8fafc]">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/e1559ad67_crest_RNC_orange.png" alt="RNC Logo" class="h-10 w-auto"></div>
+          <p class="text-[#1e3a8a]/40 text-sm leading-relaxed">Premium tire &amp; auto services. We come to you — wherever you are.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Services</h4>
+          <div class="space-y-3">
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/tires/">Tires</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/brakes/">Brakes</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/diagnostics/">Diagnostics</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/roadside/">Roadside Assistance</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/fleet/">Fleet Services</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Company</h4>
+          <div class="space-y-3">
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/about/">About Us</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/careers/">Careers</a>
+            <span class="block text-sm text-[#1e3a8a]/50">Contact</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Contact</h4>
+          <div class="space-y-3 text-sm text-[#1e3a8a]/50">
+            <p>(555) 123-4567</p>
+            <p>hello@mobilerev.com</p>
+            <p>Mon-Sat: 7am – 7pm</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-[#1e3a8a]/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-[#1e3a8a]/20">&copy; 2026 Roll &amp; Charge. All rights reserved.</p>
+        <div class="flex gap-6 text-xs text-[#1e3a8a]/20"><span>Privacy Policy</span><span>Terms of Service</span></div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script>
+(function(){var n=document.getElementById('main-nav');window.addEventListener('scroll',function(){n.classList.toggle('nav-scrolled',window.scrollY>20)});})();
+</script>
+</body>
+</html>

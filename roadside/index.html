@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roadside Assistance — Roll & Charge</title>
+  <meta name="description" content="Mobile tire replacements, quick starts, and EV top-ups using our proprietary charging system — wherever you are, we'll come to you.">
+  <link rel="icon" href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/fe974943b_logo.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --accent: #f04e23;
+      --accent-hover: #d94318;
+      --surface: #f8fafc;
+      --surface-2: #f1f5f9;
+      --border: rgba(30,58,138,0.1);
+      --text-secondary: rgba(30,58,138,0.5);
+    }
+    * { scrollbar-width: thin; scrollbar-color: #ff6b35 transparent; }
+    ::selection { background: rgba(255,107,53,0.2); color: #1e3a8a; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; color: #1e3a8a; }
+
+    /* Services dropdown */
+    .services-dropdown .dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+      min-width: 220px; background: #fff; border: 1px solid rgba(30,58,138,0.1); border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(30,58,138,0.10); padding: 8px 0; z-index: 60; margin-top: 4px;
+    }
+    .services-dropdown:hover .dropdown-menu { display: block; }
+    .services-dropdown .dropdown-menu a {
+      display: block; padding: 8px 16px; font-size: 14px; color: #1e3a8a; transition: background 0.15s, color 0.15s;
+    }
+    .services-dropdown .dropdown-menu a:hover { background: rgba(240,78,35,0.06); color: #f04e23; }
+
+    /* Mobile menu */
+    .mobile-menu { display: none; }
+    .mobile-menu.open { display: block; }
+    nav.nav-scrolled { background: #fff; box-shadow: 0 1px 12px rgba(30,58,138,0.08); padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  </style>
+</head>
+<body class="bg-white text-[#1e3a8a]">
+<div class="min-h-screen bg-white text-[#1e3a8a]">
+
+  <!-- ========== NAV ========== -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <a class="flex items-center group" href="/">
+        <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/e1559ad67_crest_RNC_orange.png" alt="RNC Logo" class="h-10 w-auto">
+      </a>
+      <div class="hidden lg:flex items-center gap-1">
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/">Home</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/tires/">Tires</a>
+        <div class="relative services-dropdown">
+          <button class="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5">Services<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform duration-200 ml-1"><path d="m6 9 6 6 6-6"></path></svg></button>
+          <div class="dropdown-menu">
+            <a href="/services/brakes/">Brakes</a>
+            <a href="/services/diagnostics/">Diagnostics</a>
+            <a href="/services/suspension/">Suspension</a>
+            <a href="/services/transmission/">Transmission</a>
+            <a href="/services/ac-cooling/">AC &amp; Cooling</a>
+            <a href="/services/engine-repairs/">Engine Repairs</a>
+            <a href="/services/fleet/">Fleet Services</a>
+          </div>
+        </div>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/electric-vehicles/">Electric Vehicles</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-[#1e3a8a]/10 text-[#1e3a8a]" href="/roadside/">Roadside</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/about/">About</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/careers/">Careers</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:+15551234567" class="flex items-center gap-2 text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(555) 123-4567
+        </a>
+        <a class="bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20" href="#booking">Book Now</a>
+      </div>
+      <button class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-[#1e3a8a]/5" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#1e3a8a]"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-[#1e3a8a]/10 mt-2 px-6 py-4 space-y-3">
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/">Home</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/tires/">Tires</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/brakes/">Brakes</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/diagnostics/">Diagnostics</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/suspension/">Suspension</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/transmission/">Transmission</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/ac-cooling/">AC &amp; Cooling</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/engine-repairs/">Engine Repairs</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/electric-vehicles/">Electric Vehicles</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]" href="/roadside/">Roadside</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/about/">About</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/careers/">Careers</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/fleet/">Fleet Services</a>
+      <a class="block mt-2 bg-[#f04e23] text-white text-center font-semibold text-sm px-5 py-3 rounded-full" href="#booking">Book Now</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="relative min-h-[70vh] flex items-end overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1625047509252-ab38fb5c7343?w=1920&q=80" alt="Roadside assistance" class="w-full h-full object-cover opacity-20">
+        <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/40"></div>
+      </div>
+      <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#f04e23]/5 rounded-full blur-[120px]"></div>
+      <div class="relative max-w-7xl mx-auto px-6 pb-20 pt-40 w-full">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a]/60 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#f04e23]"></span>Roadside Assistance
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-5 text-[#1e3a8a]">
+            Stranded? We've<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f04e23] to-[#d94318]">Got You Covered.</span>
+          </h1>
+          <p class="text-lg text-[#1e3a8a]/45 max-w-lg leading-relaxed mb-8">Mobile tire replacements, quick starts, and EV top-ups using our proprietary charging system — wherever you are, we'll come to you.</p>
+          <a class="inline-flex items-center gap-2 bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20 group" href="#booking">
+            Request Assistance
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ROADSIDE SERVICES ========== -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">What We Offer</span>
+          <h2 class="text-4xl font-bold tracking-tight text-[#1e3a8a]">Roadside Services</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Tire Replacement -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6 hover:border-[#1e3a8a]/20 transition-all duration-400 hover:shadow-lg">
+            <div class="w-14 h-14 rounded-2xl bg-[#f04e23] flex items-center justify-center mb-5 shadow-md shadow-[#f04e23]/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white"><circle cx="12" cy="12" r="10"></circle></svg>
+            </div>
+            <h3 class="font-semibold mb-2 text-[#1e3a8a]">Tire Replacement</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Flat tire? We'll come to you and swap it out fast — whether it's a spare or a brand new tire from our mobile stock.</p>
+          </div>
+          <!-- Quick Starts -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6 hover:border-[#1e3a8a]/20 transition-all duration-400 hover:shadow-lg">
+            <div class="w-14 h-14 rounded-2xl bg-[#f04e23] flex items-center justify-center mb-5 shadow-md shadow-[#f04e23]/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+            </div>
+            <h3 class="font-semibold mb-2 text-[#1e3a8a]">Quick Starts</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Dead battery leaving you stranded? Our technicians carry professional-grade jump start equipment to get you moving in minutes.</p>
+          </div>
+          <!-- EV Top-Up -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6 hover:border-[#1e3a8a]/20 transition-all duration-400 hover:shadow-lg">
+            <div class="w-14 h-14 rounded-2xl bg-[#f04e23] flex items-center justify-center mb-5 shadow-md shadow-[#f04e23]/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"></rect><line x1="22" x2="22" y1="11" y2="13"></line></svg>
+            </div>
+            <h3 class="font-semibold mb-2 text-[#1e3a8a]">EV Top-Up</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Run out of charge on the road? Our proprietary mobile charging system delivers enough power to get you to the nearest charging station or your destination.</p>
+          </div>
+          <!-- Fast Response -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6 hover:border-[#1e3a8a]/20 transition-all duration-400 hover:shadow-lg">
+            <div class="w-14 h-14 rounded-2xl bg-[#f04e23] flex items-center justify-center mb-5 shadow-md shadow-[#f04e23]/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="font-semibold mb-2 text-[#1e3a8a]">Fast Response</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">We aim to reach you within 30-60 minutes of your call, anywhere in our service area.</p>
+          </div>
+          <!-- Certified Technicians -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6 hover:border-[#1e3a8a]/20 transition-all duration-400 hover:shadow-lg">
+            <div class="w-14 h-14 rounded-2xl bg-[#f04e23] flex items-center justify-center mb-5 shadow-md shadow-[#f04e23]/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <h3 class="font-semibold mb-2 text-[#1e3a8a]">Certified Technicians</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Every roadside call is handled by an ASE-certified mechanic — not just a tow truck operator.</p>
+          </div>
+          <!-- 24/7 Dispatch -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-6 hover:border-[#1e3a8a]/20 transition-all duration-400 hover:shadow-lg">
+            <div class="w-14 h-14 rounded-2xl bg-[#f04e23] flex items-center justify-center mb-5 shadow-md shadow-[#f04e23]/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <h3 class="font-semibold mb-2 text-[#1e3a8a]">24/7 Dispatch</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Emergencies don't follow a schedule. Our dispatch line is always open — day or night, weekends and holidays.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROPRIETARY MOBILE EV CHARGING ========== -->
+    <section class="py-20 bg-[#f8fafc] border-y border-[#1e3a8a]/10">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="flex-1">
+            <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Exclusive Technology</span>
+            <h2 class="text-3xl font-bold text-[#1e3a8a] mb-4">Proprietary Mobile EV Charging</h2>
+            <p class="text-[#1e3a8a]/50 leading-relaxed mb-6">We built our own mobile EV charging system from the ground up — compact enough to fit in our service vehicles, powerful enough to deliver a meaningful top-up in under 30 minutes. Compatible with all major EV makes and models.</p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-sm text-[#1e3a8a]/60">
+                <span class="w-5 h-5 rounded-full bg-[#f04e23]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-[#f04e23]"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                </span>Compatible with Tesla, Rivian, GM, Ford, BMW &amp; more
+              </li>
+              <li class="flex items-start gap-3 text-sm text-[#1e3a8a]/60">
+                <span class="w-5 h-5 rounded-full bg-[#f04e23]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-[#f04e23]"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                </span>Up to 40km of range delivered on-site
+              </li>
+              <li class="flex items-start gap-3 text-sm text-[#1e3a8a]/60">
+                <span class="w-5 h-5 rounded-full bg-[#f04e23]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-[#f04e23]"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                </span>No tow truck required
+              </li>
+              <li class="flex items-start gap-3 text-sm text-[#1e3a8a]/60">
+                <span class="w-5 h-5 rounded-full bg-[#f04e23]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-[#f04e23]"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                </span>Available across our entire service area
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1 w-full">
+            <div class="bg-gradient-to-br from-[#1e3a8a]/5 to-[#f04e23]/5 border border-[#1e3a8a]/10 rounded-3xl p-10 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-20 h-20 text-[#f04e23] mx-auto mb-6 opacity-80"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"></rect><line x1="22" x2="22" y1="11" y2="13"></line></svg>
+              <div class="text-5xl font-bold text-[#1e3a8a] mb-2">40km</div>
+              <div class="text-[#1e3a8a]/40 text-sm">Range delivered on a single top-up</div>
+              <div class="mt-6 pt-6 border-t border-[#1e3a8a]/10 grid grid-cols-2 gap-4 text-center">
+                <div>
+                  <div class="text-2xl font-bold text-[#f04e23]">&lt;30min</div>
+                  <div class="text-xs text-[#1e3a8a]/40 mt-1">Charge time</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-[#f04e23]">All EVs</div>
+                  <div class="text-xs text-[#1e3a8a]/40 mt-1">Compatible</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section class="py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl font-bold tracking-tight mb-3 text-[#1e3a8a]">How It Works</h2>
+          <p class="text-[#1e3a8a]/40">Three steps from stranded to moving.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="text-center">
+            <div class="text-5xl font-bold text-[#1e3a8a]/5 mb-4">01</div>
+            <h3 class="font-semibold text-lg mb-2 text-[#1e3a8a]">Call or Book Online</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Reach our dispatch line or submit a request. Tell us your location and what's happened.</p>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl font-bold text-[#1e3a8a]/5 mb-4">02</div>
+            <h3 class="font-semibold text-lg mb-2 text-[#1e3a8a]">Tech En Route</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">We dispatch the nearest available technician immediately with everything needed for your situation.</p>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl font-bold text-[#1e3a8a]/5 mb-4">03</div>
+            <h3 class="font-semibold text-lg mb-2 text-[#1e3a8a]">Back on the Road</h3>
+            <p class="text-sm text-[#1e3a8a]/40 leading-relaxed">Your tech arrives, resolves the issue on the spot, and you're on your way — no tow needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EMERGENCY BANNER ========== -->
+    <section class="py-6 bg-[#f04e23]">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-white text-center sm:text-left">
+          <span class="font-bold text-lg">Stranded right now?</span>
+          <span class="text-white/80 ml-2">Call our 24/7 emergency dispatch line.</span>
+        </div>
+        <a href="tel:+15551234567" class="flex items-center gap-2 bg-white text-[#f04e23] font-bold px-6 py-3 rounded-full hover:bg-white/90 transition-all whitespace-nowrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          (555) 123-4567
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== BOOKING FORM ========== -->
+    <section id="booking" class="py-24 bg-[#f8fafc]">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold tracking-tight mb-3 text-[#1e3a8a]">Request Assistance</h2>
+          <p class="text-[#1e3a8a]/40">For emergencies, call us directly. For scheduled roadside coverage, book below.</p>
+        </div>
+        <div class="bg-white border border-[#1e3a8a]/10 rounded-3xl p-8 md:p-10 shadow-lg">
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Full Name *</label>
+                <input class="w-full border bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 h-12 rounded-xl px-3 text-sm transition-colors" required placeholder="John Doe">
+              </div>
+              <div class="space-y-2">
+                <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Phone *</label>
+                <input class="w-full border bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 h-12 rounded-xl px-3 text-sm transition-colors" required placeholder="(555) 000-0000">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Email</label>
+                <input type="email" class="w-full border bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 h-12 rounded-xl px-3 text-sm transition-colors" placeholder="john@email.com">
+              </div>
+              <div class="space-y-2">
+                <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Service Type *</label>
+                <select required class="w-full border bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 h-12 rounded-xl px-3 text-sm transition-colors appearance-none" style="background-image:url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 fill=%22%231e3a8a%22 opacity=%220.4%22 viewBox=%220 0 16 16%22%3E%3Cpath d=%22M4.646 5.646a.5.5 0 01.708 0L8 8.293l2.646-2.647a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z%22/%3E%3C/svg%3E');background-repeat:no-repeat;background-position:right 1rem center;background-size:1rem;">
+                  <option value="">Select a service</option>
+                  <option value="tire_replacement">Tire Replacement</option>
+                  <option value="quick_start">Quick Start</option>
+                  <option value="ev_topup">EV Top-Up</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="space-y-2">
+                <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Year</label>
+                <input class="w-full border bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 h-12 rounded-xl px-3 text-sm transition-colors" placeholder="2024">
+              </div>
+              <div class="space-y-2">
+                <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Make</label>
+                <input class="w-full border bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 h-12 rounded-xl px-3 text-sm transition-colors" placeholder="Toyota">
+              </div>
+              <div class="space-y-2">
+                <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Model</label>
+                <input class="w-full border bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 h-12 rounded-xl px-3 text-sm transition-colors" placeholder="Camry">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Preferred Date</label>
+                <input type="date" class="w-full border bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 h-12 rounded-xl px-3 text-sm transition-colors">
+              </div>
+              <div class="space-y-2">
+                <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Preferred Time</label>
+                <select class="w-full border bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 h-12 rounded-xl px-3 text-sm transition-colors appearance-none" style="background-image:url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 fill=%22%231e3a8a%22 opacity=%220.4%22 viewBox=%220 0 16 16%22%3E%3Cpath d=%22M4.646 5.646a.5.5 0 01.708 0L8 8.293l2.646-2.647a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z%22/%3E%3C/svg%3E');background-repeat:no-repeat;background-position:right 1rem center;background-size:1rem;">
+                  <option value="">Select time</option>
+                  <option value="morning">Morning (7am-12pm)</option>
+                  <option value="afternoon">Afternoon (12pm-4pm)</option>
+                  <option value="evening">Evening (4pm-7pm)</option>
+                </select>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Service Location</label>
+              <input class="w-full border bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 h-12 rounded-xl px-3 text-sm transition-colors" placeholder="123 Main St, City, State">
+            </div>
+            <div class="space-y-2">
+              <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Additional Notes</label>
+              <textarea class="w-full border bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 rounded-xl px-3 py-2 text-sm transition-colors min-h-[80px]" placeholder="Any specific requests or details..."></textarea>
+            </div>
+            <button class="w-full bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold h-14 rounded-xl text-base transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20 inline-flex items-center justify-center gap-2" type="submit">
+              Submit Request
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 ml-2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-[#1e3a8a]/10 bg-[#f8fafc]">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/e1559ad67_crest_RNC_orange.png" alt="RNC Logo" class="h-10 w-auto">
+          </div>
+          <p class="text-[#1e3a8a]/40 text-sm leading-relaxed">Premium tire &amp; auto services. We come to you — wherever you are.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Services</h4>
+          <div class="space-y-3">
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/tires/">Tires</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/brakes/">Brakes</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/diagnostics/">Diagnostics</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/roadside/">Roadside Assistance</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/fleet/">Fleet Services</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Company</h4>
+          <div class="space-y-3">
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/about/">About Us</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/careers/">Careers</a>
+            <span class="block text-sm text-[#1e3a8a]/50">Contact</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Contact</h4>
+          <div class="space-y-3 text-sm text-[#1e3a8a]/50">
+            <p>(555) 123-4567</p>
+            <p>hello@mobilerev.com</p>
+            <p>Mon-Sat: 7am – 7pm</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-[#1e3a8a]/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-[#1e3a8a]/20">&copy; 2026 Roll &amp; Charge. All rights reserved.</p>
+        <div class="flex gap-6 text-xs text-[#1e3a8a]/20">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script>
+(function(){var n=document.getElementById('main-nav');window.addEventListener('scroll',function(){n.classList.toggle('nav-scrolled',window.scrollY>20)});})();
+</script>
+</body>
+</html>

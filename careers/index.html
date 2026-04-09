@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers — Roll & Charge</title>
+  <meta name="description" content="Join the Roll & Charge team. We're looking for skilled, passionate technicians. Apply today.">
+  <link rel="icon" href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/fe974943b_logo.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --accent: #f04e23;
+      --accent-hover: #d94318;
+      --surface: #f8fafc;
+      --surface-2: #f1f5f9;
+      --border: rgba(30,58,138,0.1);
+      --text-secondary: rgba(30,58,138,0.5);
+    }
+    * { scrollbar-width: thin; scrollbar-color: #ff6b35 transparent; }
+    ::selection { background: rgba(255,107,53,0.2); color: #1e3a8a; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; color: #1e3a8a; }
+
+    /* Services dropdown */
+    .services-dropdown .dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+      min-width: 220px; background: #fff; border: 1px solid rgba(30,58,138,0.1); border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(30,58,138,0.10); padding: 8px 0; z-index: 60; margin-top: 4px;
+    }
+    .services-dropdown:hover .dropdown-menu { display: block; }
+    .services-dropdown .dropdown-menu a {
+      display: block; padding: 8px 16px; font-size: 14px; color: #1e3a8a; transition: background 0.15s, color 0.15s;
+    }
+    .services-dropdown .dropdown-menu a:hover { background: rgba(240,78,35,0.06); color: #f04e23; }
+
+    /* Mobile menu */
+    .mobile-menu { display: none; }
+    .mobile-menu.open { display: block; }
+    nav.nav-scrolled { background: #fff; box-shadow: 0 1px 12px rgba(30,58,138,0.08); padding-top: 0.75rem; padding-bottom: 0.75rem; }
+
+    /* Toggle chip active state */
+    .toggle-chip.active {
+      background: rgba(240,78,35,0.10) !important;
+      border-color: #f04e23 !important;
+      color: #f04e23 !important;
+    }
+    .toggle-chip.active .chip-check {
+      background: #f04e23 !important;
+      border-color: #f04e23 !important;
+    }
+  </style>
+</head>
+<body class="bg-white text-[#1e3a8a]">
+<div class="min-h-screen bg-white text-[#1e3a8a]">
+
+  <!-- ========== NAV ========== -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <a class="flex items-center group" href="/">
+        <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/e1559ad67_crest_RNC_orange.png" alt="RNC Logo" class="h-10 w-auto">
+      </a>
+      <div class="hidden lg:flex items-center gap-1">
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/">Home</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/tires/">Tires</a>
+        <div class="relative services-dropdown">
+          <button class="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5">Services<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform duration-200 ml-1"><path d="m6 9 6 6 6-6"></path></svg></button>
+          <div class="dropdown-menu">
+            <a href="/services/brakes/">Brakes</a>
+            <a href="/services/diagnostics/">Diagnostics</a>
+            <a href="/services/suspension/">Suspension</a>
+            <a href="/services/transmission/">Transmission</a>
+            <a href="/services/ac-cooling/">AC &amp; Cooling</a>
+            <a href="/services/engine-repairs/">Engine Repairs</a>
+            <a href="/services/fleet/">Fleet Services</a>
+          </div>
+        </div>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/electric-vehicles/">Electric Vehicles</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/roadside/">Roadside</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/about/">About</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-[#1e3a8a]/10 text-[#1e3a8a]" href="/careers/">Careers</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:+15551234567" class="flex items-center gap-2 text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(555) 123-4567
+        </a>
+        <a class="bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20" href="/#booking">Book Now</a>
+      </div>
+      <button class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-[#1e3a8a]/5" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#1e3a8a]"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-[#1e3a8a]/10 mt-2 px-6 py-4 space-y-3">
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/">Home</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/tires/">Tires</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/brakes/">Brakes</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/diagnostics/">Diagnostics</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/suspension/">Suspension</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/transmission/">Transmission</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/ac-cooling/">AC &amp; Cooling</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/engine-repairs/">Engine Repairs</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/electric-vehicles/">Electric Vehicles</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/roadside/">Roadside</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/about/">About</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]" href="/careers/">Careers</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/fleet/">Fleet Services</a>
+      <a class="block mt-2 bg-[#f04e23] text-white text-center font-semibold text-sm px-5 py-3 rounded-full" href="/#booking">Book Now</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="min-h-screen bg-white">
+
+      <!-- ========== HERO ========== -->
+      <section class="relative pt-40 pb-24 overflow-hidden">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#f04e23]/5 rounded-full blur-[140px]"></div>
+        <div class="max-w-7xl mx-auto px-6 relative">
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a]/60 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#f04e23]"></span>Join Our Team
+            </div>
+            <h1 class="text-5xl lg:text-6xl font-bold tracking-tight text-[#1e3a8a] leading-tight mb-5">Work With the<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f04e23] to-[#d94318]">Best in the Business.</span></h1>
+            <p class="text-lg text-[#1e3a8a]/45 leading-relaxed max-w-lg">We're always looking for skilled, passionate technicians to join the Roll &amp; Charge service team. Apply below and we'll be in touch.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== PERKS ========== -->
+      <section class="py-16 border-y border-[#1e3a8a]/10 bg-[#f8fafc]">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Top Tools -->
+            <div class="flex gap-4">
+              <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 shadow-md shadow-[#f04e23]/30">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm text-[#1e3a8a] mb-1">Top Tools Provided</h4>
+                <p class="text-xs text-[#1e3a8a]/40 leading-relaxed">We supply professional-grade equipment for every job.</p>
+              </div>
+            </div>
+            <!-- Full Insurance -->
+            <div class="flex gap-4">
+              <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 shadow-md shadow-[#f04e23]/30">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm text-[#1e3a8a] mb-1">Full Insurance Coverage</h4>
+                <p class="text-xs text-[#1e3a8a]/40 leading-relaxed">Comprehensive coverage so you can work with confidence.</p>
+              </div>
+            </div>
+            <!-- Flexible Scheduling -->
+            <div class="flex gap-4">
+              <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 shadow-md shadow-[#f04e23]/30">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm text-[#1e3a8a] mb-1">Flexible Scheduling</h4>
+                <p class="text-xs text-[#1e3a8a]/40 leading-relaxed">Set your own hours and work around your lifestyle.</p>
+              </div>
+            </div>
+            <!-- Competitive Earnings -->
+            <div class="flex gap-4">
+              <div class="w-10 h-10 rounded-xl bg-[#f04e23] flex items-center justify-center flex-shrink-0 shadow-md shadow-[#f04e23]/30">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm text-[#1e3a8a] mb-1">Competitive Earnings</h4>
+                <p class="text-xs text-[#1e3a8a]/40 leading-relaxed">Performance-based pay with weekly direct deposits.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== APPLICATION FORM ========== -->
+      <section class="py-24">
+        <div class="max-w-3xl mx-auto px-6">
+          <div class="text-center mb-14">
+            <h2 class="text-3xl font-bold text-[#1e3a8a] mb-3">Mechanic Application</h2>
+            <p class="text-[#1e3a8a]/40">Fill out the form below and our team will review your application within 2&ndash;3 business days.</p>
+          </div>
+
+          <form class="bg-white border border-[#1e3a8a]/10 rounded-3xl p-8 md:p-12 space-y-8" id="career-form">
+
+            <!-- Personal Information -->
+            <div>
+              <h3 class="text-sm font-semibold uppercase tracking-widest text-[#1e3a8a]/30 mb-5">Personal Information</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-2">
+                  <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Full Name *</label>
+                  <input class="flex w-full border px-3 py-1 text-base shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#f04e23]/50 md:text-sm bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 h-12 rounded-xl" required placeholder="Jane Smith" name="fullName">
+                </div>
+                <div class="space-y-2">
+                  <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Phone *</label>
+                  <input class="flex w-full border px-3 py-1 text-base shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#f04e23]/50 md:text-sm bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 h-12 rounded-xl" required placeholder="(555) 000-0000" name="phone">
+                </div>
+                <div class="space-y-2 md:col-span-2">
+                  <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Email *</label>
+                  <input type="email" class="flex w-full border px-3 py-1 text-base shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#f04e23]/50 md:text-sm bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 h-12 rounded-xl" required placeholder="jane@email.com" name="email">
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience -->
+            <div>
+              <h3 class="text-sm font-semibold uppercase tracking-widest text-[#1e3a8a]/30 mb-5">Experience</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-2 md:col-span-2">
+                  <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Years of Experience *</label>
+                  <select required name="experience" class="flex w-full items-center justify-between border px-3 py-2 text-sm shadow-sm bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] h-12 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#f04e23]/50 appearance-none cursor-pointer" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a8a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 12px center;">
+                    <option value="" disabled selected>Select range</option>
+                    <option value="Less than 1 year">Less than 1 year</option>
+                    <option value="1-2 years">1&ndash;2 years</option>
+                    <option value="3-5 years">3&ndash;5 years</option>
+                    <option value="6-10 years">6&ndash;10 years</option>
+                    <option value="10+ years">10+ years</option>
+                  </select>
+                </div>
+                <div class="space-y-2 md:col-span-2">
+                  <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Specialties <span class="normal-case font-normal text-[#1e3a8a]/30">(select all that apply)</span></label>
+                  <div class="grid grid-cols-2 gap-2">
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>General Repair</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Tires &amp; Wheels</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Brakes</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Engine Diagnostics</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Electrical / Electronics</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Suspension &amp; Steering</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Transmission</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>AC &amp; Cooling</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Electric Vehicles (EV)</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Fleet / Commercial</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div>
+              <h3 class="text-sm font-semibold uppercase tracking-widest text-[#1e3a8a]/30 mb-5">Certifications</h3>
+              <div class="space-y-4">
+                <div class="space-y-2">
+                  <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Select all certifications you hold</label>
+                  <div class="grid grid-cols-2 gap-2">
+                    <!-- ASE Certified - expandable -->
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="toggleCert(this,'ase-sub')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>ASE Certified</button>
+                    <!-- Red Seal -->
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Red Seal (Canada)</button>
+                    <!-- Journeyman -->
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Journeyman Technician</button>
+                    <!-- Manufacturer Certified - expandable -->
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="toggleCert(this,'mfr-sub')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Manufacturer Certified</button>
+                    <!-- No Formal -->
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>No Formal Certification</button>
+                  </div>
+                </div>
+                <!-- ASE sub-options -->
+                <div id="ase-sub" class="hidden space-y-2 pl-1 border-l-2 border-[#f04e23]/30 ml-2">
+                  <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">ASE Certifications Held <span class="normal-case font-normal text-[#1e3a8a]/30">(select all that apply)</span></label>
+                  <div class="grid grid-cols-2 gap-2">
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>A1 – Engine Repair</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>A2 – Automatic Trans</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>A3 – Manual Drivetrain</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>A4 – Suspension &amp; Steering</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>A5 – Brakes</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>A6 – Electrical Systems</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>A7 – Heating &amp; AC</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>A8 – Engine Performance</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>A9 – Light Vehicle Diesel</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>ASE Master Technician</button>
+                  </div>
+                </div>
+                <!-- Manufacturer sub-options -->
+                <div id="mfr-sub" class="hidden space-y-2 pl-1 border-l-2 border-[#f04e23]/30 ml-2">
+                  <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Manufacturer Programs <span class="normal-case font-normal text-[#1e3a8a]/30">(select all that apply)</span></label>
+                  <div class="grid grid-cols-2 gap-2">
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Toyota / Lexus (TPS / T-TEN)</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Honda / Acura (PACT)</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Ford (FACT / ASSET)</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>GM (GM ASEP)</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>BMW / MINI</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Mercedes-Benz</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Hyundai / Kia</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Tesla (Certified Body/Service)</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Volkswagen / Audi</button>
+                    <button type="button" class="toggle-chip flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs text-left transition-all duration-200 border-[#1e3a8a]/10 bg-[#1e3a8a]/5 text-[#1e3a8a]/60 hover:border-[#1e3a8a]/20" onclick="this.classList.toggle('active')"><span class="chip-check w-4 h-4 rounded flex-shrink-0 border flex items-center justify-center transition-all border-[#1e3a8a]/20 bg-white"></span>Other Manufacturer</button>
+                  </div>
+                  <div class="mt-2">
+                    <input class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-1 h-10 rounded-xl px-3 text-xs" placeholder="Other manufacturer certification (optional)" name="mfrOther">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Logistics -->
+            <div>
+              <h3 class="text-sm font-semibold uppercase tracking-widest text-[#1e3a8a]/30 mb-5">Logistics</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="space-y-2">
+                  <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Own Tools? *</label>
+                  <select required name="ownTools" class="flex w-full items-center justify-between border px-3 py-2 text-sm shadow-sm bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] h-12 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#f04e23]/50 appearance-none cursor-pointer" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a8a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 12px center;">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Yes - full kit">Yes &ndash; full kit</option>
+                    <option value="Partial">Partial</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="space-y-2">
+                  <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Reliable Vehicle? *</label>
+                  <select required name="reliableVehicle" class="flex w-full items-center justify-between border px-3 py-2 text-sm shadow-sm bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] h-12 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#f04e23]/50 appearance-none cursor-pointer" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a8a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 12px center;">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="space-y-2">
+                  <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Availability *</label>
+                  <select required name="availability" class="flex w-full items-center justify-between border px-3 py-2 text-sm shadow-sm bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] h-12 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#f04e23]/50 appearance-none cursor-pointer" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231e3a8a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 12px center;">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
+                    <option value="Weekends only">Weekends only</option>
+                    <option value="Flexible">Flexible</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tell Us About Yourself -->
+            <div class="space-y-2">
+              <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Tell Us About Yourself</label>
+              <textarea class="flex w-full border px-3 py-2 text-base shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#f04e23]/50 md:text-sm bg-[#1e3a8a]/5 border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 rounded-xl min-h-[120px]" name="about" placeholder="Briefly describe your experience, what types of vehicles you've worked on, and why you'd like to join Roll &amp; Charge..."></textarea>
+            </div>
+
+            <!-- Resume Upload -->
+            <div class="space-y-2">
+              <label class="font-medium text-[#1e3a8a]/60 text-xs uppercase tracking-wider">Resume <span class="normal-case font-normal text-[#1e3a8a]/30">(PDF, DOC, DOCX)</span></label>
+              <label class="flex flex-col items-center gap-3 px-6 py-8 border-2 border-dashed border-[#1e3a8a]/10 rounded-xl cursor-pointer hover:border-[#f04e23]/30 hover:bg-[#f04e23]/5 transition-all duration-200 group" id="resume-drop">
+                <div class="w-10 h-10 rounded-xl bg-[#1e3a8a]/5 group-hover:bg-[#f04e23]/10 flex items-center justify-center transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#1e3a8a]/30 group-hover:text-[#f04e23] transition-colors"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg>
+                </div>
+                <div class="text-center">
+                  <p class="text-sm font-medium text-[#1e3a8a]/60 group-hover:text-[#1e3a8a] transition-colors" id="resume-label">Click to upload your resume</p>
+                  <p class="text-xs text-[#1e3a8a]/30 mt-1">PDF, DOC or DOCX up to 10MB</p>
+                </div>
+                <input type="file" accept=".pdf,.doc,.docx" class="hidden" name="resume" id="resume-input" onchange="document.getElementById('resume-label').textContent = this.files[0] ? this.files[0].name : 'Click to upload your resume'">
+              </label>
+            </div>
+
+            <!-- Submit -->
+            <button class="inline-flex items-center justify-center gap-2 w-full bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold h-14 rounded-xl text-base transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20 shadow" type="submit">Submit Application<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 ml-2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-[#1e3a8a]/10 bg-[#f8fafc]">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/e1559ad67_crest_RNC_orange.png" alt="RNC Logo" class="h-10 w-auto">
+          </div>
+          <p class="text-[#1e3a8a]/40 text-sm leading-relaxed">Premium tire &amp; auto services. We come to you — wherever you are.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Services</h4>
+          <div class="space-y-3">
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/tires/">Tires</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/brakes/">Brakes</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/diagnostics/">Diagnostics</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/roadside/">Roadside Assistance</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/fleet/">Fleet Services</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Company</h4>
+          <div class="space-y-3">
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/about/">About Us</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/careers/">Careers</a>
+            <span class="block text-sm text-[#1e3a8a]/50">Contact</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Contact</h4>
+          <div class="space-y-3 text-sm text-[#1e3a8a]/50">
+            <p>(555) 123-4567</p>
+            <p>hello@mobilerev.com</p>
+            <p>Mon-Sat: 7am – 7pm</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-[#1e3a8a]/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-[#1e3a8a]/20">&copy; 2026 Roll &amp; Charge. All rights reserved.</p>
+        <div class="flex gap-6 text-xs text-[#1e3a8a]/20">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script>
+(function(){var n=document.getElementById('main-nav');window.addEventListener('scroll',function(){n.classList.toggle('nav-scrolled',window.scrollY>20)});})();
+function toggleCert(btn,subId){btn.classList.toggle('active');var sub=document.getElementById(subId);if(btn.classList.contains('active')){sub.classList.remove('hidden');}else{sub.classList.add('hidden');sub.querySelectorAll('.toggle-chip.active').forEach(function(c){c.classList.remove('active');});}}
+</script>
+</body>
+</html>

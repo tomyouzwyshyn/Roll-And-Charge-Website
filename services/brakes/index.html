@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brakes | Roll &amp; Charge</title>
+  <meta name="description" content="Expert brake service at your location. From pads to full overhauls — we ensure your safety on every stop.">
+  <link rel="icon" href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/fe974943b_logo.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --accent: #f04e23;
+      --accent-hover: #d94318;
+      --surface: #f8fafc;
+      --surface-2: #f1f5f9;
+      --border: rgba(30,58,138,0.1);
+      --text-secondary: rgba(30,58,138,0.5);
+    }
+    * { scrollbar-width: thin; scrollbar-color: #ff6b35 transparent; }
+    ::selection { background: rgba(255,107,53,0.2); color: #1e3a8a; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; color: #1e3a8a; }
+
+    /* Services dropdown */
+    .services-dropdown .dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+      min-width: 220px; background: #fff; border: 1px solid rgba(30,58,138,0.1); border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(30,58,138,0.10); padding: 8px 0; z-index: 60; margin-top: 4px;
+    }
+    .services-dropdown:hover .dropdown-menu { display: block; }
+    .services-dropdown .dropdown-menu a {
+      display: block; padding: 8px 16px; font-size: 14px; color: #1e3a8a; transition: background 0.15s, color 0.15s;
+    }
+    .services-dropdown .dropdown-menu a:hover { background: rgba(240,78,35,0.06); color: #f04e23; }
+
+    /* Mobile menu */
+    .mobile-menu { display: none; }
+    .mobile-menu.open { display: block; }
+    nav.nav-scrolled { background: #fff; box-shadow: 0 1px 12px rgba(30,58,138,0.08); padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  </style>
+</head>
+<body class="bg-white text-[#1e3a8a]">
+<div class="min-h-screen bg-white text-[#1e3a8a]">
+
+  <!-- ========== NAV ========== -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <a class="flex items-center group" href="/">
+        <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/e1559ad67_crest_RNC_orange.png" alt="RNC Logo" class="h-10 w-auto">
+      </a>
+      <div class="hidden lg:flex items-center gap-1">
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/">Home</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/tires/">Tires</a>
+        <div class="relative services-dropdown">
+          <button class="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5">Services<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform duration-200 ml-1"><path d="m6 9 6 6 6-6"></path></svg></button>
+          <div class="dropdown-menu">
+            <a href="/services/brakes/">Brakes</a>
+            <a href="/services/diagnostics/">Diagnostics</a>
+            <a href="/services/suspension/">Suspension</a>
+            <a href="/services/transmission/">Transmission</a>
+            <a href="/services/ac-cooling/">AC &amp; Cooling</a>
+            <a href="/services/engine-repairs/">Engine Repairs</a>
+            <a href="/services/fleet/">Fleet Services</a>
+          </div>
+        </div>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/electric-vehicles/">Electric Vehicles</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/roadside/">Roadside</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/about/">About</a>
+        <a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-[#1e3a8a]/50 hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5" href="/careers/">Careers</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:+15551234567" class="flex items-center gap-2 text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(555) 123-4567
+        </a>
+        <a class="bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20" href="#booking">Book Now</a>
+      </div>
+      <button class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-[#1e3a8a]/5" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#1e3a8a]"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-[#1e3a8a]/10 mt-2 px-6 py-4 space-y-3">
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/">Home</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/tires/">Tires</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/brakes/">Brakes</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/diagnostics/">Diagnostics</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/suspension/">Suspension</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/transmission/">Transmission</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/ac-cooling/">AC &amp; Cooling</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/engine-repairs/">Engine Repairs</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/electric-vehicles/">Electric Vehicles</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/roadside/">Roadside</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/about/">About</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/careers/">Careers</a>
+      <a class="block py-2 text-sm font-medium text-[#1e3a8a]/60" href="/services/fleet/">Fleet Services</a>
+      <a class="block mt-2 bg-[#f04e23] text-white text-center font-semibold text-sm px-5 py-3 rounded-full" href="#booking">Book Now</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="relative min-h-[80vh] flex items-center overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1920&q=80" alt="Brake service" class="w-full h-full object-cover opacity-20">
+        <div class="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent"></div>
+      </div>
+      <div class="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#f04e23]/5 rounded-full blur-[150px]"></div>
+      <div class="relative max-w-7xl mx-auto px-6 pt-32 pb-20 w-full">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 bg-[#f04e23]/10 border border-[#f04e23]/20 text-[#f04e23] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#f04e23] animate-pulse"></span>Brake Service
+          </div>
+          <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
+            Stop With<br>
+            <span class="text-[#f04e23]">Confidence.</span>
+          </h1>
+          <p class="text-[#1e3a8a]/50 text-lg sm:text-xl max-w-lg leading-relaxed mb-10">
+            Expert brake service at your location. From pads to full overhauls &mdash; we ensure your safety on every stop.
+          </p>
+          <a href="#booking" class="inline-flex items-center gap-2 bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20">
+            Schedule Brake Service
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES GRID ========== -->
+    <section class="py-28 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">What We Offer</span>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4">Comprehensive Brake Services</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-8 hover:shadow-lg hover:shadow-[#1e3a8a]/5 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-6 group-hover:bg-[#f04e23] transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#f04e23] group-hover:text-white transition-colors duration-300"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Brake Pad Replacement</h3>
+            <p class="text-[#1e3a8a]/50 text-sm leading-relaxed">Premium ceramic and semi-metallic pads for cars, trucks &amp; SUVs.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-8 hover:shadow-lg hover:shadow-[#1e3a8a]/5 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-6 group-hover:bg-[#f04e23] transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#f04e23] group-hover:text-white transition-colors duration-300"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v4m0 12v4m10-10h-4M6 12H2"></path></svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Rotor Resurfacing &amp; Replacement</h3>
+            <p class="text-[#1e3a8a]/50 text-sm leading-relaxed">Precision machined or new rotors for smooth, quiet stopping.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-8 hover:shadow-lg hover:shadow-[#1e3a8a]/5 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-6 group-hover:bg-[#f04e23] transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#f04e23] group-hover:text-white transition-colors duration-300"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Caliper Service</h3>
+            <p class="text-[#1e3a8a]/50 text-sm leading-relaxed">Inspection, lubrication, and replacement of brake calipers.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-8 hover:shadow-lg hover:shadow-[#1e3a8a]/5 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-6 group-hover:bg-[#f04e23] transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#f04e23] group-hover:text-white transition-colors duration-300"><path d="M12 2v6m0 8v6m-6-6h6m2 0h6"></path><circle cx="12" cy="12" r="2"></circle></svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Brake Fluid Flush</h3>
+            <p class="text-[#1e3a8a]/50 text-sm leading-relaxed">Complete fluid exchange to maintain hydraulic brake performance.</p>
+          </div>
+          <!-- Card 5 -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-8 hover:shadow-lg hover:shadow-[#1e3a8a]/5 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-6 group-hover:bg-[#f04e23] transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#f04e23] group-hover:text-white transition-colors duration-300"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Brake Inspection</h3>
+            <p class="text-[#1e3a8a]/50 text-sm leading-relaxed">Full visual and measurement inspection of all brake components.</p>
+          </div>
+          <!-- Card 6 -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-8 hover:shadow-lg hover:shadow-[#1e3a8a]/5 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-6 group-hover:bg-[#f04e23] transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#f04e23] group-hover:text-white transition-colors duration-300"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">ABS Diagnostics</h3>
+            <p class="text-[#1e3a8a]/50 text-sm leading-relaxed">Computer-aided diagnosis of ABS sensors, modules &amp; wiring.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WARNING SIGNS ========== -->
+    <section class="py-28 bg-[#f8fafc] relative">
+      <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-[#f04e23]/[0.03] rounded-full blur-[150px]"></div>
+      <div class="max-w-4xl mx-auto px-6 relative">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4">Warning Signs</h2>
+          <p class="text-[#1e3a8a]/40 text-lg max-w-lg mx-auto">If you notice any of these, schedule a brake inspection immediately.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex items-center gap-4 bg-white border border-[#1e3a8a]/10 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+            <div class="w-10 h-10 rounded-full bg-[#f04e23]/10 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <span class="text-sm font-medium">Squealing or grinding noise when braking</span>
+          </div>
+          <div class="flex items-center gap-4 bg-white border border-[#1e3a8a]/10 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+            <div class="w-10 h-10 rounded-full bg-[#f04e23]/10 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <span class="text-sm font-medium">Vehicle pulls to one side when stopping</span>
+          </div>
+          <div class="flex items-center gap-4 bg-white border border-[#1e3a8a]/10 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+            <div class="w-10 h-10 rounded-full bg-[#f04e23]/10 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <span class="text-sm font-medium">Brake pedal feels spongy or soft</span>
+          </div>
+          <div class="flex items-center gap-4 bg-white border border-[#1e3a8a]/10 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+            <div class="w-10 h-10 rounded-full bg-[#f04e23]/10 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <span class="text-sm font-medium">Vibration or pulsation in brake pedal</span>
+          </div>
+          <div class="flex items-center gap-4 bg-white border border-[#1e3a8a]/10 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+            <div class="w-10 h-10 rounded-full bg-[#f04e23]/10 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <span class="text-sm font-medium">Brake warning light on dashboard</span>
+          </div>
+          <div class="flex items-center gap-4 bg-white border border-[#1e3a8a]/10 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+            <div class="w-10 h-10 rounded-full bg-[#f04e23]/10 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <span class="text-sm font-medium">Longer stopping distances than normal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRICING ========== -->
+    <section class="py-28 relative">
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#f04e23]/[0.03] rounded-full blur-[150px]"></div>
+      <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="text-center mb-16">
+          <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Pricing</span>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4">Transparent Brake Packages</h2>
+          <p class="text-[#1e3a8a]/40 text-lg max-w-md mx-auto">No surprises. Pick your package and book.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Basic -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 flex flex-col">
+            <h3 class="text-xl font-bold mb-2">Basic Brake Service</h3>
+            <p class="text-[#1e3a8a]/50 text-sm mb-6">Standard pad replacement</p>
+            <div class="flex items-baseline gap-1 mb-8">
+              <span class="text-4xl font-bold text-[#1e3a8a]">$149</span>
+              <span class="text-[#1e3a8a]/40 text-sm">/axle</span>
+            </div>
+            <ul class="space-y-3 mb-8 flex-1">
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Brake pad replacement
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Rotor inspection
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Hardware lubrication
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Test drive verification
+              </li>
+            </ul>
+            <a href="#booking" class="block text-center bg-[#1e3a8a]/5 hover:bg-[#1e3a8a]/10 text-[#1e3a8a] font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-300">Book Now</a>
+          </div>
+          <!-- Complete (Popular) -->
+          <div class="bg-white border-2 border-[#f04e23] rounded-2xl p-8 shadow-lg shadow-[#f04e23]/10 relative flex flex-col">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+              <span class="bg-[#f04e23] text-white text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full">Most Popular</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Complete Brake Service</h3>
+            <p class="text-[#1e3a8a]/50 text-sm mb-6">Pads + rotors for maximum performance</p>
+            <div class="flex items-baseline gap-1 mb-8">
+              <span class="text-4xl font-bold text-[#1e3a8a]">$299</span>
+              <span class="text-[#1e3a8a]/40 text-sm">/axle</span>
+            </div>
+            <ul class="space-y-3 mb-8 flex-1">
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Premium brake pads
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                New or resurfaced rotors
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Caliper inspection &amp; lube
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Brake fluid top-off
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Full system test
+              </li>
+            </ul>
+            <a href="#booking" class="block text-center bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20">Book Now</a>
+          </div>
+          <!-- Premium -->
+          <div class="bg-white border border-[#1e3a8a]/10 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 flex flex-col">
+            <h3 class="text-xl font-bold mb-2">Premium Brake Overhaul</h3>
+            <p class="text-[#1e3a8a]/50 text-sm mb-6">Full system restoration</p>
+            <div class="flex items-baseline gap-1 mb-8">
+              <span class="text-4xl font-bold text-[#1e3a8a]">$499</span>
+              <span class="text-[#1e3a8a]/40 text-sm">/axle</span>
+            </div>
+            <ul class="space-y-3 mb-8 flex-1">
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Premium ceramic pads
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                New OEM-spec rotors
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Caliper rebuild/replace
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Full brake fluid flush
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                ABS system check
+              </li>
+              <li class="flex items-center gap-3 text-sm text-[#1e3a8a]/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23] shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                12-month warranty
+              </li>
+            </ul>
+            <a href="#booking" class="block text-center bg-[#1e3a8a]/5 hover:bg-[#1e3a8a]/10 text-[#1e3a8a] font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-300">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BOOKING FORM ========== -->
+    <section id="booking" class="py-28 relative">
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#f04e23]/[0.03] rounded-full blur-[150px]"></div>
+      <div class="max-w-3xl mx-auto px-6 relative">
+        <div class="text-center mb-12">
+          <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Book Service</span>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-[#1e3a8a]">Book Your Brake Service</h2>
+          <p class="text-[#1e3a8a]/40 text-lg max-w-md mx-auto">Fill out the form and we'll get you scheduled.</p>
+        </div>
+        <div class="bg-white border border-[#1e3a8a]/10 rounded-3xl p-8 md:p-10 shadow-lg">
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="text-[#1e3a8a]/60 text-xs font-medium uppercase tracking-wider">Full Name *</label>
+                <input class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" required placeholder="John Doe">
+              </div>
+              <div class="space-y-2">
+                <label class="text-[#1e3a8a]/60 text-xs font-medium uppercase tracking-wider">Phone *</label>
+                <input class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" required placeholder="(555) 000-0000">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="text-[#1e3a8a]/60 text-xs font-medium uppercase tracking-wider">Email</label>
+                <input type="email" class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" placeholder="john@email.com">
+              </div>
+              <div class="space-y-2">
+                <label class="text-[#1e3a8a]/60 text-xs font-medium uppercase tracking-wider">Service Type *</label>
+                <select class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] h-12 rounded-xl px-3 text-sm focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 appearance-none" required>
+                  <option value="Brake Service" selected>Brake Service</option>
+                  <option value="Brake Pad Replacement">Brake Pad Replacement</option>
+                  <option value="Rotor Resurfacing">Rotor Resurfacing &amp; Replacement</option>
+                  <option value="Caliper Service">Caliper Service</option>
+                  <option value="Full Brake Overhaul">Full Brake Overhaul</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="space-y-2">
+                <label class="text-[#1e3a8a]/60 text-xs font-medium uppercase tracking-wider">Year</label>
+                <input class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" placeholder="2024">
+              </div>
+              <div class="space-y-2">
+                <label class="text-[#1e3a8a]/60 text-xs font-medium uppercase tracking-wider">Make</label>
+                <input class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" placeholder="Toyota">
+              </div>
+              <div class="space-y-2">
+                <label class="text-[#1e3a8a]/60 text-xs font-medium uppercase tracking-wider">Model</label>
+                <input class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" placeholder="Camry">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="text-[#1e3a8a]/60 text-xs font-medium uppercase tracking-wider">Preferred Date</label>
+                <input type="date" class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] h-12 rounded-xl px-3 text-sm focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2">
+              </div>
+              <div class="space-y-2">
+                <label class="text-[#1e3a8a]/60 text-xs font-medium uppercase tracking-wider">Preferred Time</label>
+                <select class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] h-12 rounded-xl px-3 text-sm focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 appearance-none">
+                  <option value="" disabled selected>Select time</option>
+                  <option value="morning">Morning (7am-12pm)</option>
+                  <option value="afternoon">Afternoon (12pm-4pm)</option>
+                  <option value="evening">Evening (4pm-7pm)</option>
+                </select>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="text-[#1e3a8a]/60 text-xs font-medium uppercase tracking-wider">Service Location</label>
+              <input class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" placeholder="123 Main St, City, State">
+            </div>
+            <div class="space-y-2">
+              <label class="text-[#1e3a8a]/60 text-xs font-medium uppercase tracking-wider">Additional Notes</label>
+              <textarea class="w-full bg-[#1e3a8a]/5 border border-[#1e3a8a]/10 text-[#1e3a8a] placeholder:text-[#1e3a8a]/20 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 rounded-xl px-3 py-3 text-sm min-h-[80px]" placeholder="Describe any symptoms — squealing, grinding, soft pedal, etc."></textarea>
+            </div>
+            <button class="w-full bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold h-14 rounded-xl text-base transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20 inline-flex items-center justify-center gap-2" type="submit">Submit Request<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 ml-2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-[#1e3a8a]/10 bg-[#f8fafc]">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698d0039256c3e76121217a6/e1559ad67_crest_RNC_orange.png" alt="RNC Logo" class="h-10 w-auto">
+          </div>
+          <p class="text-[#1e3a8a]/40 text-sm leading-relaxed">Premium tire &amp; auto services. We come to you — wherever you are.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Services</h4>
+          <div class="space-y-3">
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/tires/">Tires</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/brakes/">Brakes</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/diagnostics/">Diagnostics</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/roadside/">Roadside Assistance</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/services/fleet/">Fleet Services</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Company</h4>
+          <div class="space-y-3">
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/about/">About Us</a>
+            <a class="block text-sm text-[#1e3a8a]/50 hover:text-[#1e3a8a] transition-colors" href="/careers/">Careers</a>
+            <span class="block text-sm text-[#1e3a8a]/50">Contact</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-[#1e3a8a]/30 mb-4">Contact</h4>
+          <div class="space-y-3 text-sm text-[#1e3a8a]/50">
+            <p>(555) 123-4567</p>
+            <p>hello@mobilerev.com</p>
+            <p>Mon-Sat: 7am – 7pm</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-[#1e3a8a]/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-[#1e3a8a]/20">&copy; 2026 Roll &amp; Charge. All rights reserved.</p>
+        <div class="flex gap-6 text-xs text-[#1e3a8a]/20">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script>
+(function(){var n=document.getElementById('main-nav');window.addEventListener('scroll',function(){n.classList.toggle('nav-scrolled',window.scrollY>20)});})();
+</script>
+</body>
+</html>
