@@ -1,0 +1,21 @@
+# robots.txt — Roll & Charge
+# https://rollandcharge.com
+
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /.tmp/
+Disallow: /temporary screenshots/
+Disallow: /*.mjs$
+
+# AI crawlers — allow (modify if you want to block training)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://rollandcharge.com/sitemap.xml
