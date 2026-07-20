@@ -1,0 +1,10 @@
+node_modules
+.tmp
+temporary screenshots
+docs
+*.mjs
+package.json
+package-lock.json
+CLAUDEwebdev.md
+.claude
+.gitignore
