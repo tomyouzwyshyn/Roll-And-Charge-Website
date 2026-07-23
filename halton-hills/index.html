@@ -55,49 +55,49 @@
   }
   </script>
   <style>
-    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; color: #0d2a4a; }
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; color: #2e4459; }
     html { scroll-behavior: smooth; }
-    ::selection { background: rgba(255,107,53,0.2); color: #0d2a4a; }
+    ::selection { background: rgba(255,107,53,0.2); color: #2e4459; }
     .mobile-menu { display: none; } .mobile-menu.open { display: block; }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
-<body class="bg-white text-[#0d2a4a]">
+<body class="bg-white text-[#2e4459]">
 
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-[#0d2a4a]/10">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-[#2e4459]/10">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex items-center justify-between py-3">
         <a href="/" class="flex items-center gap-3 shrink-0" aria-label="Roll &amp; Charge home">
           <img src="/assets/rnc-crest.png" alt="Roll &amp; Charge logo" class="h-10 w-auto">
           <span class="hidden sm:block leading-tight">
             <span class="block font-bold text-[15px] tracking-tight">Roll &amp; Charge</span>
-            <span class="block text-[11px] text-[#0d2a4a]/50">Mobile Tire Service · Halton</span>
+            <span class="block text-[11px] text-[#2e4459]/60">Mobile Tire Service · Halton</span>
           </span>
         </a>
         <nav class="hidden lg:flex items-center gap-1" aria-label="Main">
-          <a class="px-4 py-2 rounded-full text-sm font-medium text-[#0d2a4a]/60 hover:text-[#0d2a4a] hover:bg-[#0d2a4a]/5 transition-colors" href="/#services">Services</a>
-          <a class="px-4 py-2 rounded-full text-sm font-medium text-[#0d2a4a]/60 hover:text-[#0d2a4a] hover:bg-[#0d2a4a]/5 transition-colors" href="/#pricing">Pricing</a>
-          <a class="px-4 py-2 rounded-full text-sm font-medium text-[#0d2a4a]/60 hover:text-[#0d2a4a] hover:bg-[#0d2a4a]/5 transition-colors" href="/oakville/">Oakville</a>
-          <a class="px-4 py-2 rounded-full text-sm font-medium text-[#0d2a4a]/60 hover:text-[#0d2a4a] hover:bg-[#0d2a4a]/5 transition-colors" href="/burlington/">Burlington</a>
-          <a class="px-4 py-2 rounded-full text-sm font-medium text-[#0d2a4a]/60 hover:text-[#0d2a4a] hover:bg-[#0d2a4a]/5 transition-colors" href="/milton/">Milton</a>
-          <a class="px-4 py-2 rounded-full text-sm font-medium bg-[#0d2a4a]/10 text-[#0d2a4a]" href="/halton-hills/">Halton Hills</a>
+          <a class="px-4 py-2 rounded-full text-sm font-medium text-[#2e4459]/70 hover:text-[#2e4459] hover:bg-[#2e4459]/5 transition-colors" href="/#services">Services</a>
+          <a class="px-4 py-2 rounded-full text-sm font-medium text-[#2e4459]/70 hover:text-[#2e4459] hover:bg-[#2e4459]/5 transition-colors" href="/#pricing">Pricing</a>
+          <a class="px-4 py-2 rounded-full text-sm font-medium text-[#2e4459]/70 hover:text-[#2e4459] hover:bg-[#2e4459]/5 transition-colors" href="/oakville/">Oakville</a>
+          <a class="px-4 py-2 rounded-full text-sm font-medium text-[#2e4459]/70 hover:text-[#2e4459] hover:bg-[#2e4459]/5 transition-colors" href="/burlington/">Burlington</a>
+          <a class="px-4 py-2 rounded-full text-sm font-medium text-[#2e4459]/70 hover:text-[#2e4459] hover:bg-[#2e4459]/5 transition-colors" href="/milton/">Milton</a>
+          <a class="px-4 py-2 rounded-full text-sm font-medium bg-[#2e4459]/10 text-[#2e4459]" href="/halton-hills/">Halton Hills</a>
         </nav>
         <div class="hidden lg:flex items-center gap-4 shrink-0">
-          <a href="tel:+15551234567" class="text-sm font-medium text-[#0d2a4a]/60 hover:text-[#0d2a4a] transition-colors">(555) 123-4567</a>
+          <a href="tel:+15551234567" class="text-sm font-medium text-[#2e4459]/70 hover:text-[#2e4459] transition-colors">(555) 123-4567</a>
           <a class="bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20" href="/#booking">Book Now</a>
         </div>
-        <button class="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl bg-[#0d2a4a]/5" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <button class="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl bg-[#2e4459]/5" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
         </button>
       </div>
-      <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-[#0d2a4a]/10 px-2 py-4 space-y-1">
-        <a class="block py-2.5 px-4 rounded-xl text-sm font-medium hover:bg-[#0d2a4a]/5" href="/#services">Services</a>
-        <a class="block py-2.5 px-4 rounded-xl text-sm font-medium hover:bg-[#0d2a4a]/5" href="/#pricing">Pricing</a>
-        <a class="block py-2.5 px-4 rounded-xl text-sm font-medium hover:bg-[#0d2a4a]/5" href="/oakville/">Oakville</a>
-        <a class="block py-2.5 px-4 rounded-xl text-sm font-medium hover:bg-[#0d2a4a]/5" href="/burlington/">Burlington</a>
-        <a class="block py-2.5 px-4 rounded-xl text-sm font-medium hover:bg-[#0d2a4a]/5" href="/milton/">Milton</a>
+      <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-[#2e4459]/10 px-2 py-4 space-y-1">
+        <a class="block py-2.5 px-4 rounded-xl text-sm font-medium hover:bg-[#2e4459]/5" href="/#services">Services</a>
+        <a class="block py-2.5 px-4 rounded-xl text-sm font-medium hover:bg-[#2e4459]/5" href="/#pricing">Pricing</a>
+        <a class="block py-2.5 px-4 rounded-xl text-sm font-medium hover:bg-[#2e4459]/5" href="/oakville/">Oakville</a>
+        <a class="block py-2.5 px-4 rounded-xl text-sm font-medium hover:bg-[#2e4459]/5" href="/burlington/">Burlington</a>
+        <a class="block py-2.5 px-4 rounded-xl text-sm font-medium hover:bg-[#2e4459]/5" href="/milton/">Milton</a>
         <div class="pt-3 px-2 flex gap-3">
-          <a href="tel:+15551234567" class="flex-1 inline-flex items-center justify-center border border-[#0d2a4a]/15 font-semibold text-sm h-12 rounded-full">Call Us</a>
+          <a href="tel:+15551234567" class="flex-1 inline-flex items-center justify-center border border-[#2e4459]/15 font-semibold text-sm h-12 rounded-full">Call Us</a>
           <a href="/#booking" class="flex-1 inline-flex items-center justify-center bg-[#f04e23] text-white font-semibold text-sm h-12 rounded-full">Book Now</a>
         </div>
       </div>
@@ -109,32 +109,32 @@
     <section class="relative overflow-hidden">
       <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#f04e23]/5 rounded-full blur-[150px]"></div>
       <div class="max-w-4xl mx-auto px-6 pt-12 pb-16 relative">
-        <nav class="text-xs text-[#0d2a4a]/40 mb-6" aria-label="Breadcrumb"><a href="/" class="hover:text-[#f04e23]">Home</a> <span aria-hidden="true">→</span> Halton Hills</nav>
+        <nav class="text-xs text-[#2e4459]/55 mb-6" aria-label="Breadcrumb"><a href="/" class="hover:text-[#f04e23]">Home</a> <span aria-hidden="true">→</span> Halton Hills</nav>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-5">Mobile Tire Change in <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f04e23] to-[#d94318]">Halton Hills.</span></h1>
-        <p class="text-lg sm:text-xl text-[#0d2a4a]/55 leading-relaxed mb-8 max-w-2xl">Georgetown, Acton, and every rural road between — seasonal swaps, flat repairs, and new tires &amp; rims installed at your house, hobby farm, or the Georgetown GO lot. The tire shop comes up the hill to you.</p>
+        <p class="text-lg sm:text-xl text-[#2e4459]/65 leading-relaxed mb-8 max-w-2xl">Georgetown, Acton, and every rural road between — seasonal swaps, flat repairs, and new tires &amp; rims installed at your house, hobby farm, or the Georgetown GO lot. The tire shop comes up the hill to you.</p>
         <div class="flex flex-col sm:flex-row gap-4 mb-8">
           <a class="inline-flex items-center justify-center gap-2 bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-[#f04e23]/20" href="/#booking">Book My Tire Change</a>
-          <a class="inline-flex items-center justify-center gap-2 bg-[#0d2a4a]/5 hover:bg-[#0d2a4a]/10 border border-[#0d2a4a]/10 text-[#0d2a4a] font-semibold text-base px-8 py-4 rounded-full transition-colors duration-300" href="/#pricing">See Pricing</a>
+          <a class="inline-flex items-center justify-center gap-2 bg-[#2e4459]/5 hover:bg-[#2e4459]/10 border border-[#2e4459]/10 text-[#2e4459] font-semibold text-base px-8 py-4 rounded-full transition-colors duration-300" href="/#pricing">See Pricing</a>
         </div>
-        <p class="text-sm text-[#0d2a4a]/50">Seasonal swap <strong class="text-[#0d2a4a]">$139 +HST</strong> · Second vehicle same driveway (on-rim) <strong class="text-[#f04e23]">$79</strong> · 45-Day Ride Promise</p>
+        <p class="text-sm text-[#2e4459]/60">Seasonal swap <strong class="text-[#2e4459]">$139 +HST</strong> · Second vehicle same driveway (on-rim) <strong class="text-[#f04e23]">$79</strong> · 45-Day Ride Promise</p>
       </div>
     </section>
 
     <!-- COMMUNITIES -->
-    <section class="py-16 bg-[#f8fafc] border-y border-[#0d2a4a]/10">
+    <section class="py-16 bg-[#edf3f8] border-y border-[#2e4459]/10">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Georgetown to Acton. And Every Sideroad.</h2>
-        <p class="text-[#0d2a4a]/55 leading-relaxed mb-8">Halton Hills isn't a subdivision grid — it's <strong>Georgetown</strong>'s family streets, <strong>Acton</strong>'s small-town blocks, the village lanes of <strong>Glen Williams</strong> and <strong>Norval</strong>, and long gravel laneways out toward <strong>Ballinafad</strong>, <strong>Limehouse</strong> and <strong>Silver Creek</strong>. Our service kit is fully self-contained, so a barn-side parking spot works exactly like a driveway on Mountainview Road.</p>
-        <p class="text-[#0d2a4a]/55 leading-relaxed mb-8"><strong>Getting to you is our job:</strong> we come up Trafalgar Road and Highway 25 from the 401, work Guelph Street and Mountainview through Georgetown, and run Highway 7 out to Acton. The Georgetown GO and Acton GO lots are regular morning stops for commuters on the Kitchener line.</p>
+        <p class="text-[#2e4459]/65 leading-relaxed mb-8">Halton Hills isn't a subdivision grid — it's <strong>Georgetown</strong>'s family streets, <strong>Acton</strong>'s small-town blocks, the village lanes of <strong>Glen Williams</strong> and <strong>Norval</strong>, and long gravel laneways out toward <strong>Ballinafad</strong>, <strong>Limehouse</strong> and <strong>Silver Creek</strong>. Our service kit is fully self-contained, so a barn-side parking spot works exactly like a driveway on Mountainview Road.</p>
+        <p class="text-[#2e4459]/65 leading-relaxed mb-8"><strong>Getting to you is our job:</strong> we come up Trafalgar Road and Highway 25 from the 401, work Guelph Street and Mountainview through Georgetown, and run Highway 7 out to Acton. The Georgetown GO and Acton GO lots are regular morning stops for commuters on the Kitchener line.</p>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
-          <div class="bg-white border border-[#0d2a4a]/10 rounded-xl px-4 py-3">Georgetown</div>
-          <div class="bg-white border border-[#0d2a4a]/10 rounded-xl px-4 py-3">Acton</div>
-          <div class="bg-white border border-[#0d2a4a]/10 rounded-xl px-4 py-3">Glen Williams</div>
-          <div class="bg-white border border-[#0d2a4a]/10 rounded-xl px-4 py-3">Stewarttown</div>
-          <div class="bg-white border border-[#0d2a4a]/10 rounded-xl px-4 py-3">Limehouse</div>
-          <div class="bg-white border border-[#0d2a4a]/10 rounded-xl px-4 py-3">Norval</div>
-          <div class="bg-white border border-[#0d2a4a]/10 rounded-xl px-4 py-3">Ballinafad</div>
-          <div class="bg-white border border-[#0d2a4a]/10 rounded-xl px-4 py-3">Silver Creek</div>
+          <div class="bg-white border border-[#2e4459]/10 rounded-xl px-4 py-3">Georgetown</div>
+          <div class="bg-white border border-[#2e4459]/10 rounded-xl px-4 py-3">Acton</div>
+          <div class="bg-white border border-[#2e4459]/10 rounded-xl px-4 py-3">Glen Williams</div>
+          <div class="bg-white border border-[#2e4459]/10 rounded-xl px-4 py-3">Stewarttown</div>
+          <div class="bg-white border border-[#2e4459]/10 rounded-xl px-4 py-3">Limehouse</div>
+          <div class="bg-white border border-[#2e4459]/10 rounded-xl px-4 py-3">Norval</div>
+          <div class="bg-white border border-[#2e4459]/10 rounded-xl px-4 py-3">Ballinafad</div>
+          <div class="bg-white border border-[#2e4459]/10 rounded-xl px-4 py-3">Silver Creek</div>
         </div>
       </div>
     </section>
@@ -144,35 +144,35 @@
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-8">Built for How Halton Hills Actually Drives.</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white border border-[#0d2a4a]/10 rounded-3xl p-7">
+          <div class="bg-white border border-[#2e4459]/10 rounded-3xl p-7">
             <h3 class="font-bold mb-2">Kitchener-Line Commuters</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed">Georgetown GO and Acton GO riders: leave the car, catch the train, come home to winters on and pressures set — photos texted before you hit Bramalea.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Georgetown GO and Acton GO riders: leave the car, catch the train, come home to winters on and pressures set — photos texted before you hit Bramalea.</p>
           </div>
-          <div class="bg-white border border-[#0d2a4a]/10 rounded-3xl p-7">
+          <div class="bg-white border border-[#2e4459]/10 rounded-3xl p-7">
             <h3 class="font-bold mb-2">Rural &amp; Escarpment Roads</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed">Gravel sideroads, winter hills on the escarpment, and no tire shop for twenty minutes in any direction — this is exactly the driving that mobile service was built for.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Gravel sideroads, winter hills on the escarpment, and no tire shop for twenty minutes in any direction — this is exactly the driving that mobile service was built for.</p>
           </div>
-          <div class="bg-white border border-[#0d2a4a]/10 rounded-3xl p-7">
+          <div class="bg-white border border-[#2e4459]/10 rounded-3xl p-7">
             <h3 class="font-bold mb-2">Trucks, Trailers &amp; Acreage</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed">Pickups, trade vans, and the trailer behind the barn — we service light-truck tires at the same published prices, and quote trailers individually.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Pickups, trade vans, and the trailer behind the barn — we service light-truck tires at the same published prices, and quote trailers individually.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- PRICING SNAPSHOT -->
-    <section class="py-16 bg-[#f8fafc] border-y border-[#0d2a4a]/10">
+    <section class="py-16 bg-[#edf3f8] border-y border-[#2e4459]/10">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-2">Halton Hills Pricing. No Asterisks.</h2>
-        <p class="text-[#0d2a4a]/50 mb-8">Same published prices as everywhere in Halton — no rural surcharge inside our service area. <a href="/#pricing" class="text-[#f04e23] underline underline-offset-4">Full table here</a>.</p>
-        <div class="bg-white border border-[#0d2a4a]/10 rounded-3xl overflow-hidden">
+        <p class="text-[#2e4459]/60 mb-8">Same published prices as everywhere in Halton — no rural surcharge inside our service area. <a href="/#pricing" class="text-[#f04e23] underline underline-offset-4">Full table here</a>.</p>
+        <div class="bg-white border border-[#2e4459]/10 rounded-3xl overflow-hidden">
           <table class="w-full text-left text-sm">
-            <tbody class="divide-y divide-[#0d2a4a]/8">
-              <tr><td class="px-6 py-4 font-semibold">Seasonal Tire Swap (on rims)</td><td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$139 <span class="text-[#0d2a4a]/40 font-normal">+HST</span></td></tr>
-              <tr class="bg-[#f8fafc]"><td class="px-6 py-4 font-semibold pl-10">+ Second vehicle, same visit (on-rim)</td><td class="px-6 py-4 text-right font-bold text-[#f04e23] sm:whitespace-nowrap">$79</td></tr>
-              <tr><td class="px-6 py-4 font-semibold">Tire Changeover (off rims)</td><td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$229 <span class="text-[#0d2a4a]/40 font-normal">+HST</span></td></tr>
-              <tr><td class="px-6 py-4 font-semibold">Flat Tire Repair</td><td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$119 <span class="text-[#0d2a4a]/40 font-normal">+HST</span></td></tr>
-              <tr><td class="px-6 py-4 font-semibold">Swap &amp; Store Bundle</td><td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$239 <span class="text-[#0d2a4a]/40 font-normal">+HST</span></td></tr>
+            <tbody class="divide-y divide-[#2e4459]/8">
+              <tr><td class="px-6 py-4 font-semibold">Seasonal Tire Swap (on rims)</td><td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$139 <span class="text-[#2e4459]/55 font-normal">+HST</span></td></tr>
+              <tr class="bg-[#edf3f8]"><td class="px-6 py-4 font-semibold pl-10">+ Second vehicle, same visit (on-rim)</td><td class="px-6 py-4 text-right font-bold text-[#f04e23] sm:whitespace-nowrap">$79</td></tr>
+              <tr><td class="px-6 py-4 font-semibold">Tire Changeover (off rims)</td><td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$229 <span class="text-[#2e4459]/55 font-normal">+HST</span></td></tr>
+              <tr><td class="px-6 py-4 font-semibold">Flat Tire Repair</td><td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$119 <span class="text-[#2e4459]/55 font-normal">+HST</span></td></tr>
+              <tr><td class="px-6 py-4 font-semibold">Swap &amp; Store Bundle</td><td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$239 <span class="text-[#2e4459]/55 font-normal">+HST</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -186,37 +186,37 @@
         <div class="space-y-6">
           <div>
             <h3 class="font-bold mb-2">Do you cover all of Halton Hills?</h3>
-            <p class="text-[#0d2a4a]/55 text-sm leading-relaxed">Yes — Georgetown and Acton plus Glen Williams, Stewarttown, Limehouse, Norval, Ballinafad and Silver Creek, and the rural roads between them. Long or gravel laneway? Just note it when you book.</p>
+            <p class="text-[#2e4459]/65 text-sm leading-relaxed">Yes — Georgetown and Acton plus Glen Williams, Stewarttown, Limehouse, Norval, Ballinafad and Silver Creek, and the rural roads between them. Long or gravel laneway? Just note it when you book.</p>
           </div>
           <div>
             <h3 class="font-bold mb-2">How much does a mobile tire change cost in Halton Hills?</h3>
-            <p class="text-[#0d2a4a]/55 text-sm leading-relaxed">$139+HST for a seasonal swap on rims, $229+HST for a changeover off rims (mount, balance, TPMS reset). Second vehicle at the same address: $79 on-rim, $159 off-rim. Every price is on our <a href="/#pricing" class="text-[#f04e23] underline underline-offset-4">pricing table</a>.</p>
+            <p class="text-[#2e4459]/65 text-sm leading-relaxed">$139+HST for a seasonal swap on rims, $229+HST for a changeover off rims (mount, balance, TPMS reset). Second vehicle at the same address: $79 on-rim, $159 off-rim. Every price is on our <a href="/#pricing" class="text-[#f04e23] underline underline-offset-4">pricing table</a>.</p>
           </div>
           <div>
             <h3 class="font-bold mb-2">Can you do my swap while I'm at work or on the GO train?</h3>
-            <p class="text-[#0d2a4a]/55 text-sm leading-relaxed">That's the point — Georgetown GO and Acton GO commuters leave the car, keep the tires accessible, and come home to the job done. Photos by text.</p>
+            <p class="text-[#2e4459]/65 text-sm leading-relaxed">That's the point — Georgetown GO and Acton GO commuters leave the car, keep the tires accessible, and come home to the job done. Photos by text.</p>
           </div>
           <div>
             <h3 class="font-bold mb-2">Do you service rural properties and hobby farms?</h3>
-            <p class="text-[#0d2a4a]/55 text-sm leading-relaxed">Yes — our kit is fully self-contained, so a barn-side spot outside Ballinafad works like a Georgetown driveway. Trailer and light-truck tires quoted individually.</p>
+            <p class="text-[#2e4459]/65 text-sm leading-relaxed">Yes — our kit is fully self-contained, so a barn-side spot outside Ballinafad works like a Georgetown driveway. Trailer and light-truck tires quoted individually.</p>
           </div>
           <div>
             <h3 class="font-bold mb-2">When should Halton Hills drivers switch to winters?</h3>
-            <p class="text-[#0d2a4a]/55 text-sm leading-relaxed">Below 7°C daytime highs — and up here on the escarpment side that comes earlier than by the lake. Late October is the smart window. <a href="/winter-tires-ontario/" class="text-[#f04e23] underline underline-offset-4">Our Ontario winter tire guide →</a></p>
+            <p class="text-[#2e4459]/65 text-sm leading-relaxed">Below 7°C daytime highs — and up here on the escarpment side that comes earlier than by the lake. Late October is the smart window. <a href="/winter-tires-ontario/" class="text-[#f04e23] underline underline-offset-4">Our Ontario winter tire guide →</a></p>
           </div>
           <div>
             <h3 class="font-bold mb-2">How fast can you get to me?</h3>
-            <p class="text-[#0d2a4a]/55 text-sm leading-relaxed">Georgetown and Acton routes run several days a week in season, with same-day slots when available. Flats are prioritized — we'll text a real ETA.</p>
+            <p class="text-[#2e4459]/65 text-sm leading-relaxed">Georgetown and Acton routes run several days a week in season, with same-day slots when available. Flats are prioritized — we'll text a real ETA.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA BAND -->
-    <section class="py-16 bg-[#0d2a4a]">
+    <section class="py-16 bg-[#2e4459]">
       <div class="max-w-4xl mx-auto px-6 text-center">
         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">Your Laneway. Our Problem Now.</h2>
-        <p class="text-white/60 mb-8 max-w-xl mx-auto">Book your Halton Hills mobile tire service in two minutes — same-day slots when available.</p>
+        <p class="text-white/75 mb-8 max-w-xl mx-auto">Book your Halton Hills mobile tire service in two minutes — same-day slots when available.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a class="inline-flex items-center justify-center gap-2 bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300" href="/#booking">Book My Tire Change</a>
           <a class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold text-base px-8 py-4 rounded-full transition-colors duration-300" href="tel:+15551234567">Call (555) 123-4567</a>
@@ -225,10 +225,10 @@
     </section>
   </main>
 
-  <footer class="border-t border-[#0d2a4a]/10 bg-white">
+  <footer class="border-t border-[#2e4459]/10 bg-white">
     <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-xs text-[#0d2a4a]/40">© 2026 Roll &amp; Charge · Mobile Tire Service, Halton Region ON</p>
-      <p class="text-xs text-[#0d2a4a]/40"><a href="/oakville/" class="hover:text-[#f04e23]">Oakville</a> · <a href="/burlington/" class="hover:text-[#f04e23]">Burlington</a> · <a href="/milton/" class="hover:text-[#f04e23]">Milton</a> · <a href="/halton-hills/" class="hover:text-[#f04e23]">Halton Hills</a> · <a href="/#pricing" class="hover:text-[#f04e23]">Pricing</a> · <a href="/#booking" class="hover:text-[#f04e23]">Book</a></p>
+      <p class="text-xs text-[#2e4459]/55">© 2026 Roll &amp; Charge · Mobile Tire Service, Halton Region ON</p>
+      <p class="text-xs text-[#2e4459]/55"><a href="/oakville/" class="hover:text-[#f04e23]">Oakville</a> · <a href="/burlington/" class="hover:text-[#f04e23]">Burlington</a> · <a href="/milton/" class="hover:text-[#f04e23]">Milton</a> · <a href="/halton-hills/" class="hover:text-[#f04e23]">Halton Hills</a> · <a href="/#pricing" class="hover:text-[#f04e23]">Pricing</a> · <a href="/#booking" class="hover:text-[#f04e23]">Book</a></p>
     </div>
   </footer>
 </body>

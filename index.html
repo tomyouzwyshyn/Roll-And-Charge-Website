@@ -105,8 +105,8 @@
   <style>
     :root { --accent: #f04e23; }
     html { scroll-behavior: smooth; }
-    ::selection { background: rgba(255,107,53,0.2); color: #0d2a4a; }
-    body { margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; color: #0d2a4a; }
+    ::selection { background: rgba(255,107,53,0.2); color: #2e4459; }
+    body { margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; color: #2e4459; }
     .marquee-track { animation: marquee 38s linear infinite; }
     @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     @media (prefers-reduced-motion: reduce) {
@@ -121,29 +121,29 @@
   </style>
 </head>
 
-<body class="bg-white text-[#0d2a4a]">
-<div class="min-h-screen bg-white text-[#0d2a4a]">
+<body class="bg-white text-[#2e4459]">
+<div class="min-h-screen bg-white text-[#2e4459]">
 
   <!-- ========== HEADER: UTILITY ROW (LWH-style: logo · phone · dual-intent CTAs) ========== -->
-  <div class="bg-white border-b border-[#0d2a4a]/10">
+  <div class="bg-white border-b border-[#2e4459]/10">
     <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-6">
       <a href="/" class="flex items-center gap-3 shrink-0" aria-label="Roll &amp; Charge home">
         <img src="/assets/rnc-crest.png" alt="Roll &amp; Charge logo" class="h-11 w-auto" width="44" height="44">
         <span class="hidden sm:block leading-tight">
           <span class="block font-bold text-base tracking-tight">Roll &amp; Charge</span>
-          <span class="block text-[11px] text-[#0d2a4a]/50">Mobile Tire Service · Halton</span>
+          <span class="block text-[11px] text-[#2e4459]/60">Mobile Tire Service · Halton</span>
         </span>
       </a>
       <div class="hidden md:flex items-center gap-2 text-center">
         <div class="text-left">
-          <p class="text-[11px] uppercase tracking-widest text-[#0d2a4a]/40 font-semibold">Call or text today</p>
-          <a href="tel:+15551234567" class="flex items-center gap-2 text-xl font-bold text-[#0d2a4a] hover:text-[#f04e23] transition-colors">
+          <p class="text-[11px] uppercase tracking-widest text-[#2e4459]/55 font-semibold">Call or text today</p>
+          <a href="tel:+15551234567" class="flex items-center gap-2 text-xl font-bold text-[#2e4459] hover:text-[#f04e23] transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#f04e23]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             (555) 123-4567</a>
         </div>
       </div>
       <div class="hidden lg:flex items-stretch gap-3 shrink-0">
-        <a href="#booking" class="flex flex-col justify-center bg-[#0d2a4a] hover:bg-[#0a2140] text-white rounded-2xl px-5 py-2.5 text-left transition-colors duration-300">
+        <a href="#booking" class="flex flex-col justify-center bg-[#2e4459] hover:bg-[#263a4c] text-white rounded-2xl px-5 py-2.5 text-left transition-colors duration-300">
           <span class="text-[10px] uppercase tracking-widest opacity-70 font-semibold">Need tire service?</span>
           <span class="text-sm font-bold">Book Your Appointment →</span>
         </a>
@@ -152,42 +152,42 @@
           <span class="text-sm font-bold">Get a Tire Quote →</span>
         </a>
       </div>
-      <button class="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl bg-[#0d2a4a]/5 shrink-0" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#0d2a4a]"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      <button class="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl bg-[#2e4459]/5 shrink-0" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#2e4459]"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
       </button>
     </div>
-    <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-[#0d2a4a]/10 px-4 py-4 space-y-1">
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#0d2a4a] hover:bg-[#0d2a4a]/5" href="/">Home</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#0d2a4a] hover:bg-[#0d2a4a]/5" href="#services">Services</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#0d2a4a] hover:bg-[#0d2a4a]/5" href="#pricing">Pricing</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#0d2a4a] hover:bg-[#0d2a4a]/5" href="/tires/">Tires &amp; Rims</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#0d2a4a]/60 hover:bg-[#0d2a4a]/5" href="/oakville/">— Oakville</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#0d2a4a]/60 hover:bg-[#0d2a4a]/5" href="/burlington/">— Burlington</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#0d2a4a]/60 hover:bg-[#0d2a4a]/5" href="/milton/">— Milton</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#0d2a4a]/60 hover:bg-[#0d2a4a]/5" href="/halton-hills/">— Halton Hills</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#0d2a4a] hover:bg-[#0d2a4a]/5" href="/electric-vehicles/">EV Tires</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#0d2a4a] hover:bg-[#0d2a4a]/5" href="/about/">About</a>
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-[#2e4459]/10 px-4 py-4 space-y-1">
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/">Home</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="#services">Services</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="#pricing">Pricing</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/tires/">Tires &amp; Rims</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459]/70 hover:bg-[#2e4459]/5" href="/oakville/">— Oakville</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459]/70 hover:bg-[#2e4459]/5" href="/burlington/">— Burlington</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459]/70 hover:bg-[#2e4459]/5" href="/milton/">— Milton</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459]/70 hover:bg-[#2e4459]/5" href="/halton-hills/">— Halton Hills</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/electric-vehicles/">EV Tires</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/about/">About</a>
       <div class="pt-3 px-2 flex gap-3">
-        <a href="tel:+15551234567" class="flex-1 inline-flex items-center justify-center gap-2 border border-[#0d2a4a]/15 text-[#0d2a4a] font-semibold text-sm h-12 rounded-full">Call Us</a>
+        <a href="tel:+15551234567" class="flex-1 inline-flex items-center justify-center gap-2 border border-[#2e4459]/15 text-[#2e4459] font-semibold text-sm h-12 rounded-full">Call Us</a>
         <a href="#booking" class="flex-1 inline-flex items-center justify-center bg-[#f04e23] text-white font-semibold text-sm h-12 rounded-full" onclick="document.getElementById('mobile-menu').classList.remove('open')">Book Now</a>
       </div>
     </div>
   </div>
 
   <!-- ========== HEADER: NAVY NAV BAR (LWH-style) ========== -->
-  <nav class="hidden lg:block bg-[#0d2a4a] sticky top-0 z-50" aria-label="Main">
+  <nav class="hidden lg:block bg-[#2e4459] sticky top-0 z-50" aria-label="Main">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
       <div class="flex items-center">
         <a class="px-4 py-3.5 text-sm font-semibold text-[#f04e23]" href="/">Home</a>
-        <a class="px-4 py-3.5 text-sm font-medium text-white/70 hover:text-white transition-colors" href="#services">Services</a>
-        <a class="px-4 py-3.5 text-sm font-medium text-white/70 hover:text-white transition-colors" href="#pricing">Pricing</a>
-        <a class="px-4 py-3.5 text-sm font-medium text-white/70 hover:text-white transition-colors" href="/tires/">Tires &amp; Rims</a>
-        <a class="px-4 py-3.5 text-sm font-medium text-white/70 hover:text-white transition-colors" href="/oakville/">Oakville</a>
-        <a class="px-4 py-3.5 text-sm font-medium text-white/70 hover:text-white transition-colors" href="/burlington/">Burlington</a>
-        <a class="px-4 py-3.5 text-sm font-medium text-white/70 hover:text-white transition-colors" href="/milton/">Milton</a>
-        <a class="px-4 py-3.5 text-sm font-medium text-white/70 hover:text-white transition-colors" href="/halton-hills/">Halton Hills</a>
-        <a class="px-4 py-3.5 text-sm font-medium text-white/70 hover:text-white transition-colors" href="/electric-vehicles/">EV Tires</a>
-        <a class="px-4 py-3.5 text-sm font-medium text-white/70 hover:text-white transition-colors" href="/about/">About</a>
+        <a class="px-4 py-3.5 text-sm font-medium text-white/80 hover:text-white transition-colors" href="#services">Services</a>
+        <a class="px-4 py-3.5 text-sm font-medium text-white/80 hover:text-white transition-colors" href="#pricing">Pricing</a>
+        <a class="px-4 py-3.5 text-sm font-medium text-white/80 hover:text-white transition-colors" href="/tires/">Tires &amp; Rims</a>
+        <a class="px-4 py-3.5 text-sm font-medium text-white/80 hover:text-white transition-colors" href="/oakville/">Oakville</a>
+        <a class="px-4 py-3.5 text-sm font-medium text-white/80 hover:text-white transition-colors" href="/burlington/">Burlington</a>
+        <a class="px-4 py-3.5 text-sm font-medium text-white/80 hover:text-white transition-colors" href="/milton/">Milton</a>
+        <a class="px-4 py-3.5 text-sm font-medium text-white/80 hover:text-white transition-colors" href="/halton-hills/">Halton Hills</a>
+        <a class="px-4 py-3.5 text-sm font-medium text-white/80 hover:text-white transition-colors" href="/electric-vehicles/">EV Tires</a>
+        <a class="px-4 py-3.5 text-sm font-medium text-white/80 hover:text-white transition-colors" href="/about/">About</a>
       </div>
       <a href="#booking" class="bg-[#f04e23] hover:bg-[#d94318] text-white text-sm font-bold px-5 py-2 rounded-full transition-colors duration-300">Book Now</a>
     </div>
@@ -198,19 +198,19 @@
     <section class="relative overflow-hidden">
       <div class="absolute inset-0">
         <img src="/assets/tires-hero.jpg" alt="Winter tires stacked and ready for mobile installation" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#0d2a4a]/80 via-[#0d2a4a]/70 to-[#0d2a4a]/85"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#2e4459]/80 via-[#2e4459]/70 to-[#2e4459]/85"></div>
       </div>
       <div class="relative max-w-4xl mx-auto px-6 py-24 lg:py-36 text-center">
         <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-7 backdrop-blur">
           <span class="w-1.5 h-1.5 rounded-full bg-[#f04e23] animate-pulse"></span>Now Serving Oakville · Burlington · Milton
         </div>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-5 text-white">Halton's Mobile Tire Shop.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f04e23] to-[#ff7a4d]">We Come to You.</span></h1>
-        <p class="text-lg sm:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed mb-9">Seasonal tire changes, flat repairs, and new tires &amp; rims — installed at your home, office, or job site. Book a 2-hour window online and keep your Saturday. Every price published below.</p>
+        <p class="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto leading-relaxed mb-9">Seasonal tire changes, flat repairs, and new tires &amp; rims — installed at your home, office, or job site. Book a 2-hour window online and keep your Saturday. Every price published below.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
           <a class="inline-flex items-center justify-center gap-2 bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-[#f04e23]/30 group" href="#booking">Book My Tire Change<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
           <a class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/25 text-white font-semibold text-base px-8 py-4 rounded-full transition-colors duration-300 backdrop-blur" href="#pricing">See Transparent Pricing</a>
         </div>
-        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-white/70">
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-white/80">
           <div class="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23]"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
             <span>45-Day Ride Promise</span>
@@ -232,35 +232,35 @@
     </section>
 
     <!-- ========== SERVICES INTRO STRIP (LWH "We provide…" slot) ========== -->
-    <section class="py-14 bg-white border-b border-[#0d2a4a]/10">
+    <section class="py-14 bg-white border-b border-[#2e4459]/10">
       <div class="max-w-4xl mx-auto px-6 text-center">
         <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-3">Mobile Tire Repair, Sales &amp; Service — Across Halton.</h2>
-        <p class="text-[#0d2a4a]/50 text-lg leading-relaxed">One specialty, done right: your tires. Seasonal swaps, changeovers, flat repairs, balancing, storage, and new tires &amp; rims from every major brand — all at your door, all at <a href="#pricing" class="text-[#f04e23] font-semibold underline underline-offset-4">published prices</a>.</p>
+        <p class="text-[#2e4459]/60 text-lg leading-relaxed">One specialty, done right: your tires. Seasonal swaps, changeovers, flat repairs, balancing, storage, and new tires &amp; rims from every major brand — all at your door, all at <a href="#pricing" class="text-[#f04e23] font-semibold underline underline-offset-4">published prices</a>.</p>
       </div>
     </section>
 
     <!-- ========== HOW IT WORKS: 3 STEPS (LWH Select→Schedule→Installation slot) ========== -->
-    <section id="how-it-works" class="py-20 bg-[#f8fafc] border-b border-[#0d2a4a]/10 scroll-mt-14">
+    <section id="how-it-works" class="py-20 bg-[#edf3f8] border-b border-[#2e4459]/10 scroll-mt-14">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-14">
           <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">How It Works</span>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#0d2a4a] mb-4">Three Steps. Zero Waiting Rooms.</h2>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#2e4459] mb-4">Three Steps. Zero Waiting Rooms.</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="relative bg-white border border-[#0d2a4a]/10 rounded-3xl p-8">
+          <div class="relative bg-white border border-[#2e4459]/10 rounded-3xl p-8">
             <span class="absolute -top-5 left-8 w-10 h-10 rounded-full bg-[#f04e23] text-white font-bold flex items-center justify-center shadow-lg shadow-[#f04e23]/30">1</span>
             <h3 class="text-lg font-bold mt-3 mb-2">Book in 2 Minutes</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed">Pick your service, tell us your vehicle and address, choose a window. We confirm by text — same-day slots when available.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Pick your service, tell us your vehicle and address, choose a window. We confirm by text — same-day slots when available.</p>
           </div>
-          <div class="relative bg-white border border-[#0d2a4a]/10 rounded-3xl p-8">
+          <div class="relative bg-white border border-[#2e4459]/10 rounded-3xl p-8">
             <span class="absolute -top-5 left-8 w-10 h-10 rounded-full bg-[#f04e23] text-white font-bold flex items-center justify-center shadow-lg shadow-[#f04e23]/30">2</span>
             <h3 class="text-lg font-bold mt-3 mb-2">We Come to You</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed">Our fully-equipped van arrives at your driveway, office lot, or curbside. Every wheel torqued to manufacturer spec, pressures set, TPMS reset.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Our fully-equipped van arrives at your driveway, office lot, or curbside. Every wheel torqued to manufacturer spec, pressures set, TPMS reset.</p>
           </div>
-          <div class="relative bg-white border border-[#0d2a4a]/10 rounded-3xl p-8">
+          <div class="relative bg-white border border-[#2e4459]/10 rounded-3xl p-8">
             <span class="absolute -top-5 left-8 w-10 h-10 rounded-full bg-[#f04e23] text-white font-bold flex items-center justify-center shadow-lg shadow-[#f04e23]/30">3</span>
             <h3 class="text-lg font-bold mt-3 mb-2">Roll On, Covered</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed">Pay on completion, get photos of the work — and our 45-Day Ride Promise: anything feels off, we come back free.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Pay on completion, get photos of the work — and our 45-Day Ride Promise: anything feels off, we come back free.</p>
           </div>
         </div>
       </div>
@@ -273,17 +273,17 @@
           <div>
             <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Welcome to Roll &amp; Charge</span>
             <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6">New to Halton.<br>Not to Tires.</h2>
-            <p class="text-[#0d2a4a]/55 text-lg leading-relaxed mb-6">We're a mobile-first tire shop built around one idea: your Saturday is worth more than a waiting room. Our fully-equipped van brings the whole tire bay to your driveway — calibrated torque wrenches, balancing gear, TPMS tools, and a tech who treats your car like their own.</p>
-            <p class="text-[#0d2a4a]/55 text-lg leading-relaxed mb-8">Because we're new here, we put every promise in writing: published pricing, a 45-day guarantee on every job, and photos of the finished work sent to your phone.</p>
-            <a href="/about/" class="inline-flex items-center gap-2 bg-[#0d2a4a]/5 hover:bg-[#0d2a4a]/10 border border-[#0d2a4a]/10 text-[#0d2a4a] font-semibold text-base px-8 py-4 rounded-full transition-colors duration-300">More About Us<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+            <p class="text-[#2e4459]/65 text-lg leading-relaxed mb-6">We're a mobile-first tire shop built around one idea: your Saturday is worth more than a waiting room. Our fully-equipped van brings the whole tire bay to your driveway — calibrated torque wrenches, balancing gear, TPMS tools, and a tech who treats your car like their own.</p>
+            <p class="text-[#2e4459]/65 text-lg leading-relaxed mb-8">Because we're new here, we put every promise in writing: published pricing, a 45-day guarantee on every job, and photos of the finished work sent to your phone.</p>
+            <a href="/about/" class="inline-flex items-center gap-2 bg-[#2e4459]/5 hover:bg-[#2e4459]/10 border border-[#2e4459]/10 text-[#2e4459] font-semibold text-base px-8 py-4 rounded-full transition-colors duration-300">More About Us<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
           </div>
           <div class="relative">
-            <div class="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl shadow-[#0d2a4a]/10 border border-[#0d2a4a]/10 bg-[#eef4fb]">
+            <div class="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl shadow-[#2e4459]/10 border border-[#2e4459]/10 bg-[#e4edf4]">
               <!-- Brand illustration: R&C van at a Halton driveway (placeholder until real photography) -->
               <svg viewBox="0 0 800 600" class="w-full h-full" role="img" aria-label="Illustration of the Roll &amp; Charge mobile tire van at a customer's driveway" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stop-color="#dcebfa"/><stop offset="1" stop-color="#f4f8fd"/>
+                    <stop offset="0" stop-color="#d7e2ec"/><stop offset="1" stop-color="#f0f5f9"/>
                   </linearGradient>
                 </defs>
                 <rect width="800" height="600" fill="url(#sky)"/>
@@ -291,10 +291,10 @@
                 <ellipse cx="180" cy="120" rx="70" ry="22" fill="#ffffff" opacity="0.9"/>
                 <ellipse cx="250" cy="140" rx="55" ry="18" fill="#ffffff" opacity="0.7"/>
                 <!-- house -->
-                <rect x="70" y="220" width="300" height="190" rx="6" fill="#12365e"/>
-                <polygon points="55,225 220,120 385,225" fill="#0d2a4a"/>
-                <rect x="110" y="265" width="60" height="55" rx="4" fill="#dcebfa"/>
-                <rect x="200" y="265" width="60" height="55" rx="4" fill="#dcebfa"/>
+                <rect x="70" y="220" width="300" height="190" rx="6" fill="#3a566f"/>
+                <polygon points="55,225 220,120 385,225" fill="#2e4459"/>
+                <rect x="110" y="265" width="60" height="55" rx="4" fill="#d7e2ec"/>
+                <rect x="200" y="265" width="60" height="55" rx="4" fill="#d7e2ec"/>
                 <rect x="285" y="300" width="55" height="110" rx="4" fill="#f04e23"/>
                 <circle cx="330" cy="358" r="4" fill="#ffd9cc"/>
                 <!-- lawn + driveway -->
@@ -303,28 +303,28 @@
                 <polygon points="400,410 545,410 610,600 355,600" fill="#c8d4e0"/>
                 <!-- tire stack -->
                 <g>
-                  <ellipse cx="320" cy="520" rx="52" ry="16" fill="#0d2a4a"/>
-                  <rect x="268" y="472" width="104" height="48" rx="14" fill="#12365e"/>
-                  <ellipse cx="320" cy="472" rx="52" ry="16" fill="#1d4470"/>
+                  <ellipse cx="320" cy="520" rx="52" ry="16" fill="#2e4459"/>
+                  <rect x="268" y="472" width="104" height="48" rx="14" fill="#3a566f"/>
+                  <ellipse cx="320" cy="472" rx="52" ry="16" fill="#4a6885"/>
                   <ellipse cx="320" cy="472" rx="24" ry="8" fill="#f04e23"/>
                 </g>
                 <!-- van -->
                 <g>
-                  <rect x="420" y="330" width="310" height="130" rx="18" fill="#ffffff" stroke="#0d2a4a" stroke-width="5"/>
-                  <path d="M730 460 L730 380 Q730 350 700 344 L640 334 L640 460 Z" fill="#ffffff" stroke="#0d2a4a" stroke-width="5"/>
-                  <rect x="655" y="352" width="52" height="42" rx="6" fill="#bcd6ef"/>
+                  <rect x="420" y="330" width="310" height="130" rx="18" fill="#ffffff" stroke="#2e4459" stroke-width="5"/>
+                  <path d="M730 460 L730 380 Q730 350 700 344 L640 334 L640 460 Z" fill="#ffffff" stroke="#2e4459" stroke-width="5"/>
+                  <rect x="655" y="352" width="52" height="42" rx="6" fill="#c3d6e5"/>
                   <rect x="420" y="418" width="310" height="24" fill="#f04e23"/>
-                  <text x="440" y="390" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#0d2a4a" letter-spacing="0.5">ROLL &amp; CHARGE</text>
+                  <text x="440" y="390" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#2e4459" letter-spacing="0.5">ROLL &amp; CHARGE</text>
                   <text x="441" y="410" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#f04e23" letter-spacing="1.5">MOBILE TIRE SERVICE</text>
-                  <circle cx="490" cy="468" r="34" fill="#0d2a4a"/><circle cx="490" cy="468" r="15" fill="#e9eef5"/>
-                  <circle cx="672" cy="468" r="34" fill="#0d2a4a"/><circle cx="672" cy="468" r="15" fill="#e9eef5"/>
+                  <circle cx="490" cy="468" r="34" fill="#2e4459"/><circle cx="490" cy="468" r="15" fill="#e4edf4"/>
+                  <circle cx="672" cy="468" r="34" fill="#2e4459"/><circle cx="672" cy="468" r="15" fill="#e4edf4"/>
                 </g>
               </svg>
             </div>
-            <div class="absolute -bottom-5 -left-5 bg-white border border-[#0d2a4a]/10 rounded-2xl px-5 py-4 shadow-xl shadow-[#0d2a4a]/10">
-              <p class="text-xs text-[#0d2a4a]/40 mb-1">Seasonal swap from</p>
-              <p class="text-2xl font-bold text-[#0d2a4a]">$139<span class="text-sm font-medium text-[#0d2a4a]/40"> +HST</span></p>
-              <p class="text-xs text-[#0d2a4a]/40">2nd vehicle swap just $79</p>
+            <div class="absolute -bottom-5 -left-5 bg-white border border-[#2e4459]/10 rounded-2xl px-5 py-4 shadow-xl shadow-[#2e4459]/10">
+              <p class="text-xs text-[#2e4459]/55 mb-1">Seasonal swap from</p>
+              <p class="text-2xl font-bold text-[#2e4459]">$139<span class="text-sm font-medium text-[#2e4459]/55"> +HST</span></p>
+              <p class="text-xs text-[#2e4459]/55">2nd vehicle swap just $79</p>
             </div>
             <div class="absolute -top-5 -right-5 bg-[#f04e23] text-white rounded-2xl px-5 py-4 shadow-xl shadow-[#f04e23]/30">
               <p class="text-xs font-medium opacity-80 mb-1">Our guarantee</p>
@@ -336,17 +336,17 @@
     </section>
 
     <!-- ========== ON-SITE INSTALLATION (LWH on-site install slot) ========== -->
-    <section class="py-20 bg-[#f8fafc] border-y border-[#0d2a4a]/10">
+    <section class="py-20 bg-[#edf3f8] border-y border-[#2e4459]/10">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div class="order-2 lg:order-1 relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl shadow-[#0d2a4a]/10 border border-[#0d2a4a]/10">
+          <div class="order-2 lg:order-1 relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl shadow-[#2e4459]/10 border border-[#2e4459]/10">
             <img src="/assets/tires-hero.jpg" alt="Tires ready for on-site installation" class="w-full h-full object-cover" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0d2a4a]/25 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#2e4459]/25 to-transparent"></div>
           </div>
           <div class="order-1 lg:order-2">
             <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">On-Site Installation</span>
             <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6">What Happens in<br>Your Driveway.</h2>
-            <ul class="space-y-4 text-[#0d2a4a]/70 text-[15px] mb-8">
+            <ul class="space-y-4 text-[#2e4459]/70 text-[15px] mb-8">
               <li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg><span><strong>Every lug torqued to your manufacturer's spec</strong> with a calibrated torque wrench — never an impact-gun guess. Free re-torque check after 50 km.</span></li>
               <li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg><span><strong>Pressures set to your door placard</strong>, TPMS reset where supported, valve stems checked.</span></li>
               <li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg><span><strong>Tread &amp; sidewall inspection on every wheel</strong> — with an honest read on remaining life, not an upsell script.</span></li>
@@ -360,13 +360,13 @@
     </section>
 
     <!-- ========== SHOP FOR TIRES & RIMS (LWH shop-tires slot) ========== -->
-    <section class="py-20 bg-[#0d2a4a] relative overflow-hidden">
+    <section class="py-20 bg-[#2e4459] relative overflow-hidden">
       <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#f04e23]/10 rounded-full blur-[180px]"></div>
       <div class="max-w-4xl mx-auto px-6 text-center relative">
         <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Shop Tires &amp; Rims</span>
         <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">New Tires &amp; Rims,<br>Delivered and Installed.</h2>
-        <p class="text-white/65 text-lg leading-relaxed max-w-2xl mx-auto mb-4">All major brands — Michelin, Bridgestone, Continental, Yokohama, BFGoodrich and more — plus winter wheel &amp; rim packages sized for your exact vehicle. Quoted fast, installed in your driveway.</p>
-        <p class="text-white/65 text-base mb-9">Found a lower written quote from an insured mobile installer? <strong class="text-white">We'll match it.</strong></p>
+        <p class="text-white/78 text-lg leading-relaxed max-w-2xl mx-auto mb-4">All major brands — Michelin, Bridgestone, Continental, Yokohama, BFGoodrich and more — plus winter wheel &amp; rim packages sized for your exact vehicle. Quoted fast, installed in your driveway.</p>
+        <p class="text-white/78 text-base mb-9">Found a lower written quote from an insured mobile installer? <strong class="text-white">We'll match it.</strong></p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/tires/" class="inline-flex items-center justify-center gap-2 bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300">Get a Tire Quote<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
           <a href="#pricing" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold text-base px-8 py-4 rounded-full transition-colors duration-300">Installation Pricing</a>
@@ -379,77 +379,77 @@
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-14">
           <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Mobile Tire Services</span>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#0d2a4a] mb-4">Everything Tires. At Your Door.</h2>
-          <p class="text-[#0d2a4a]/50 text-lg">Upfront prices on every job — see the <a href="#pricing" class="text-[#f04e23] underline underline-offset-4">full pricing table</a>.</p>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#2e4459] mb-4">Everything Tires. At Your Door.</h2>
+          <p class="text-[#2e4459]/60 text-lg">Upfront prices on every job — see the <a href="#pricing" class="text-[#f04e23] underline underline-offset-4">full pricing table</a>.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          <div class="group bg-white border border-[#0d2a4a]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
+          <div class="group bg-white border border-[#2e4459]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
             <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-5">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path><path d="M3 21v-5h5"></path></svg>
             </div>
             <h3 class="text-xl font-bold mb-2">Seasonal Tire Swap</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed mb-5">Winters on, summers off — on your rims, in your driveway. Torqued to spec, pressures set, free re-torque.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed mb-5">Winters on, summers off — on your rims, in your driveway. Torqued to spec, pressures set, free re-torque.</p>
             <div class="flex items-center justify-between">
-              <span class="font-bold text-lg">From $139<span class="text-xs font-medium text-[#0d2a4a]/40"> +HST</span></span>
+              <span class="font-bold text-lg">From $139<span class="text-xs font-medium text-[#2e4459]/55"> +HST</span></span>
               <a href="#booking" class="text-sm font-semibold text-[#f04e23] group-hover:underline underline-offset-4">Book →</a>
             </div>
           </div>
 
-          <div class="group bg-white border border-[#0d2a4a]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
+          <div class="group bg-white border border-[#2e4459]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
             <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-5">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v4"></path><path d="M12 18v4"></path><path d="m4.9 4.9 2.9 2.9"></path><path d="m16.2 16.2 2.9 2.9"></path><path d="M2 12h4"></path><path d="M18 12h4"></path><path d="m4.9 19.1 2.9-2.9"></path><path d="m16.2 7.8 2.9-2.9"></path></svg>
             </div>
             <h3 class="text-xl font-bold mb-2">Tire Changeover</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed mb-5">Tires mounted &amp; balanced off the rim, TPMS reset included. New tires or seasonal sets — no shop visit.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed mb-5">Tires mounted &amp; balanced off the rim, TPMS reset included. New tires or seasonal sets — no shop visit.</p>
             <div class="flex items-center justify-between">
-              <span class="font-bold text-lg">From $229<span class="text-xs font-medium text-[#0d2a4a]/40"> +HST</span></span>
+              <span class="font-bold text-lg">From $229<span class="text-xs font-medium text-[#2e4459]/55"> +HST</span></span>
               <a href="#booking" class="text-sm font-semibold text-[#f04e23] group-hover:underline underline-offset-4">Book →</a>
             </div>
           </div>
 
-          <div class="group bg-white border border-[#0d2a4a]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
+          <div class="group bg-white border border-[#2e4459]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
             <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-5">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M14 6.5a4 4 0 0 0-8 0c0 4.5 8 4.5 8 9a4 4 0 0 1-8 0"></path><path d="m18 2 4 4-4 4"></path><path d="M22 6H10"></path></svg>
             </div>
             <h3 class="text-xl font-bold mb-2">Flat Tire Repair</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed mb-5">Proper plug-and-patch repairs from the inside — permanent, not a roadside bodge. Home, office, or roadside.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed mb-5">Proper plug-and-patch repairs from the inside — permanent, not a roadside bodge. Home, office, or roadside.</p>
             <div class="flex items-center justify-between">
-              <span class="font-bold text-lg">From $119<span class="text-xs font-medium text-[#0d2a4a]/40"> +HST</span></span>
+              <span class="font-bold text-lg">From $119<span class="text-xs font-medium text-[#2e4459]/55"> +HST</span></span>
               <a href="#booking" class="text-sm font-semibold text-[#f04e23] group-hover:underline underline-offset-4">Book →</a>
             </div>
           </div>
 
-          <div class="group bg-white border border-[#0d2a4a]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
+          <div class="group bg-white border border-[#2e4459]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
             <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-5">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>
             </div>
             <h3 class="text-xl font-bold mb-2">New Tires &amp; Rims</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed mb-5">All major brands plus winter wheel packages — quoted fast, delivered and installed at your door. Written-quote price match.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed mb-5">All major brands plus winter wheel packages — quoted fast, delivered and installed at your door. Written-quote price match.</p>
             <div class="flex items-center justify-between">
               <span class="font-bold text-lg">By Quote</span>
               <a href="/tires/" class="text-sm font-semibold text-[#f04e23] group-hover:underline underline-offset-4">Get a Quote →</a>
             </div>
           </div>
 
-          <div class="group bg-white border border-[#0d2a4a]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
+          <div class="group bg-white border border-[#2e4459]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
             <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-5">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"></path><path d="M6 18h12"></path><path d="M6 14h12"></path><rect width="12" height="12" x="6" y="10"></rect></svg>
             </div>
             <h3 class="text-xl font-bold mb-2">Tire Storage</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed mb-5">We take your off-season set with us — cleaned, inspected, insured, and brought back at your next swap.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed mb-5">We take your off-season set with us — cleaned, inspected, insured, and brought back at your next swap.</p>
             <div class="flex items-center justify-between">
-              <span class="font-bold text-lg">$119<span class="text-xs font-medium text-[#0d2a4a]/40">/season</span></span>
+              <span class="font-bold text-lg">$119<span class="text-xs font-medium text-[#2e4459]/55">/season</span></span>
               <a href="#booking" class="text-sm font-semibold text-[#f04e23] group-hover:underline underline-offset-4">Book →</a>
             </div>
           </div>
 
-          <div class="group bg-white border border-[#0d2a4a]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
+          <div class="group bg-white border border-[#2e4459]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300">
             <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-5">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M10 17h4V5H2v12h3"></path><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5"></path><path d="M14 17h1"></path><circle cx="7.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>
             </div>
             <h3 class="text-xl font-bold mb-2">Fleet Tire Service</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed mb-5">Vans, trades, and delivery fleets across Halton — scheduled swaps and rapid flat response that keep wheels earning.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed mb-5">Vans, trades, and delivery fleets across Halton — scheduled swaps and rapid flat response that keep wheels earning.</p>
             <div class="flex items-center justify-between">
               <span class="font-bold text-lg">Custom</span>
               <a href="#booking" class="text-sm font-semibold text-[#f04e23] group-hover:underline underline-offset-4">Talk to Us →</a>
@@ -461,80 +461,80 @@
     </section>
 
     <!-- ========== PRICING (kept: our winning differentiator) ========== -->
-    <section id="pricing" class="py-20 bg-[#f8fafc] border-y border-[#0d2a4a]/10 relative overflow-hidden scroll-mt-14">
+    <section id="pricing" class="py-20 bg-[#edf3f8] border-y border-[#2e4459]/10 relative overflow-hidden scroll-mt-14">
       <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-[#f04e23]/[0.03] rounded-full blur-[150px]"></div>
       <div class="max-w-5xl mx-auto px-6 relative">
         <div class="text-center max-w-2xl mx-auto mb-12">
           <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Transparent Pricing</span>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#0d2a4a] mb-4">The Price Is the Price.</h2>
-          <p class="text-[#0d2a4a]/50 text-lg">No hidden trip fees inside Oakville, Burlington &amp; Milton. No surprises at the door. If an insured mobile competitor quotes you less in writing, we'll match it.</p>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#2e4459] mb-4">The Price Is the Price.</h2>
+          <p class="text-[#2e4459]/60 text-lg">No hidden trip fees inside Oakville, Burlington &amp; Milton. No surprises at the door. If an insured mobile competitor quotes you less in writing, we'll match it.</p>
         </div>
-        <div class="bg-white border border-[#0d2a4a]/10 rounded-3xl shadow-lg overflow-hidden">
+        <div class="bg-white border border-[#2e4459]/10 rounded-3xl shadow-lg overflow-hidden">
           <div class="overflow-x-auto">
             <table class="w-full text-left text-sm">
               <thead>
-                <tr class="bg-[#0d2a4a] text-white">
+                <tr class="bg-[#2e4459] text-white">
                   <th scope="col" class="px-6 py-4 font-semibold">Service</th>
                   <th scope="col" class="px-6 py-4 font-semibold">What's Included</th>
                   <th scope="col" class="px-6 py-4 font-semibold text-right sm:whitespace-nowrap">Price (+HST)</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-[#0d2a4a]/8">
+              <tbody class="divide-y divide-[#2e4459]/8">
                 <tr>
-                  <td class="px-6 py-4 font-semibold sm:whitespace-nowrap">Seasonal Tire Swap <span class="text-[#0d2a4a]/40 font-normal">(on rims)</span></td>
-                  <td class="px-6 py-4 text-[#0d2a4a]/60">4 wheels off/on · torque to spec · pressures set · inspection · free re-torque</td>
+                  <td class="px-6 py-4 font-semibold sm:whitespace-nowrap">Seasonal Tire Swap <span class="text-[#2e4459]/55 font-normal">(on rims)</span></td>
+                  <td class="px-6 py-4 text-[#2e4459]/70">4 wheels off/on · torque to spec · pressures set · inspection · free re-torque</td>
                   <td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$139</td>
                 </tr>
-                <tr class="bg-[#f8fafc]">
+                <tr class="bg-[#edf3f8]">
                   <td class="px-6 py-4 font-semibold sm:whitespace-nowrap pl-10">+ Second vehicle, same visit</td>
-                  <td class="px-6 py-4 text-[#0d2a4a]/60">Book with your household or neighbour and split the trip</td>
+                  <td class="px-6 py-4 text-[#2e4459]/70">Book with your household or neighbour and split the trip</td>
                   <td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap text-[#f04e23]">$79</td>
                 </tr>
                 <tr>
-                  <td class="px-6 py-4 font-semibold sm:whitespace-nowrap">Tire Changeover <span class="text-[#0d2a4a]/40 font-normal">(off rims)</span></td>
-                  <td class="px-6 py-4 text-[#0d2a4a]/60">Mount &amp; balance 4 tires · TPMS reset · valve check · disposal of worn tires</td>
+                  <td class="px-6 py-4 font-semibold sm:whitespace-nowrap">Tire Changeover <span class="text-[#2e4459]/55 font-normal">(off rims)</span></td>
+                  <td class="px-6 py-4 text-[#2e4459]/70">Mount &amp; balance 4 tires · TPMS reset · valve check · disposal of worn tires</td>
                   <td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$229</td>
                 </tr>
-                <tr class="bg-[#f8fafc]">
+                <tr class="bg-[#edf3f8]">
                   <td class="px-6 py-4 font-semibold sm:whitespace-nowrap pl-10">+ Second vehicle, off rims</td>
-                  <td class="px-6 py-4 text-[#0d2a4a]/60">Full mount &amp; balance for a second set, same visit</td>
+                  <td class="px-6 py-4 text-[#2e4459]/70">Full mount &amp; balance for a second set, same visit</td>
                   <td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap text-[#f04e23]">$159</td>
                 </tr>
                 <tr>
                   <td class="px-6 py-4 font-semibold sm:whitespace-nowrap">Flat Tire Repair</td>
-                  <td class="px-6 py-4 text-[#0d2a4a]/60">Dismount · internal inspection · plug-and-patch repair · rebalance</td>
+                  <td class="px-6 py-4 text-[#2e4459]/70">Dismount · internal inspection · plug-and-patch repair · rebalance</td>
                   <td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$119</td>
                 </tr>
                 <tr>
-                  <td class="px-6 py-4 font-semibold sm:whitespace-nowrap">Wheel Balancing <span class="text-[#0d2a4a]/40 font-normal">(4 wheels)</span></td>
-                  <td class="px-6 py-4 text-[#0d2a4a]/60">Road-force-quality balance at your door · fixes highway vibration</td>
+                  <td class="px-6 py-4 font-semibold sm:whitespace-nowrap">Wheel Balancing <span class="text-[#2e4459]/55 font-normal">(4 wheels)</span></td>
+                  <td class="px-6 py-4 text-[#2e4459]/70">Road-force-quality balance at your door · fixes highway vibration</td>
                   <td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$99</td>
                 </tr>
                 <tr>
                   <td class="px-6 py-4 font-semibold sm:whitespace-nowrap">Seasonal Tire Storage</td>
-                  <td class="px-6 py-4 text-[#0d2a4a]/60">Pickup · wash &amp; photo-condition report · insured storage · redelivery</td>
-                  <td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$119<span class="text-[#0d2a4a]/40 font-normal">/season</span></td>
+                  <td class="px-6 py-4 text-[#2e4459]/70">Pickup · wash &amp; photo-condition report · insured storage · redelivery</td>
+                  <td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$119<span class="text-[#2e4459]/55 font-normal">/season</span></td>
                 </tr>
-                <tr class="bg-[#f8fafc]">
+                <tr class="bg-[#edf3f8]">
                   <td class="px-6 py-4 font-semibold sm:whitespace-nowrap pl-10">+ Swap &amp; Store Bundle</td>
-                  <td class="px-6 py-4 text-[#0d2a4a]/60">Seasonal swap + storage together — our best value</td>
+                  <td class="px-6 py-4 text-[#2e4459]/70">Seasonal swap + storage together — our best value</td>
                   <td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap text-[#f04e23]">$239</td>
                 </tr>
                 <tr>
                   <td class="px-6 py-4 font-semibold sm:whitespace-nowrap">Spare Tire Install</td>
-                  <td class="px-6 py-4 text-[#0d2a4a]/60">Safe swap to your spare + pressure check on remaining tires</td>
+                  <td class="px-6 py-4 text-[#2e4459]/70">Safe swap to your spare + pressure check on remaining tires</td>
                   <td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap">$99</td>
                 </tr>
                 <tr>
                   <td class="px-6 py-4 font-semibold sm:whitespace-nowrap">New Tires &amp; Rims</td>
-                  <td class="px-6 py-4 text-[#0d2a4a]/60">All major brands + winter wheel packages · installed at your door · written-quote price match</td>
+                  <td class="px-6 py-4 text-[#2e4459]/70">All major brands + winter wheel packages · installed at your door · written-quote price match</td>
                   <td class="px-6 py-4 text-right font-bold sm:whitespace-nowrap"><a href="/tires/" class="text-[#f04e23] underline underline-offset-4">Get a Quote</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="px-6 py-4 bg-[#f8fafc] border-t border-[#0d2a4a]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-xs text-[#0d2a4a]/40">Run-flats &amp; wheels over 20″: +$10/tire. Most vehicles; duallies &amp; commercial quoted individually.</p>
+          <div class="px-6 py-4 bg-[#edf3f8] border-t border-[#2e4459]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-[#2e4459]/55">Run-flats &amp; wheels over 20″: +$10/tire. Most vehicles; duallies &amp; commercial quoted individually.</p>
             <a href="#booking" class="shrink-0 inline-flex items-center gap-2 bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20">Book at This Price<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
           </div>
         </div>
@@ -546,62 +546,62 @@
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-14">
           <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">The Roll &amp; Charge Promise</span>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#0d2a4a] mb-4">Promises in Writing.<br>Not Just Reviews.</h2>
-          <p class="text-[#0d2a4a]/50 text-lg">We're earning our first Halton reviews right now — so until they speak for us, these guarantees do.</p>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#2e4459] mb-4">Promises in Writing.<br>Not Just Reviews.</h2>
+          <p class="text-[#2e4459]/60 text-lg">We're earning our first Halton reviews right now — so until they speak for us, these guarantees do.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-[#f8fafc] border border-[#0d2a4a]/10 rounded-3xl p-8 text-center">
+          <div class="bg-[#edf3f8] border border-[#2e4459]/10 rounded-3xl p-8 text-center">
             <div class="w-12 h-12 mx-auto rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
             </div>
             <h3 class="font-bold mb-2">45-Day Ride Promise</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed">Vibration, slow leak on a repair, TPMS light — anything tied to our work within 45 days, we return free.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Vibration, slow leak on a repair, TPMS light — anything tied to our work within 45 days, we return free.</p>
           </div>
-          <div class="bg-[#f8fafc] border border-[#0d2a4a]/10 rounded-3xl p-8 text-center">
+          <div class="bg-[#edf3f8] border border-[#2e4459]/10 rounded-3xl p-8 text-center">
             <div class="w-12 h-12 mx-auto rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M10 2h4"></path><path d="M12 14v-4"></path><path d="M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6"></path><path d="M9 17H4v5"></path></svg>
             </div>
             <h3 class="font-bold mb-2">Torque You Can Verify</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed">Calibrated torque wrench on every lug, to your manufacturer's spec — with a free re-torque check after 50 km.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Calibrated torque wrench on every lug, to your manufacturer's spec — with a free re-torque check after 50 km.</p>
           </div>
-          <div class="bg-[#f8fafc] border border-[#0d2a4a]/10 rounded-3xl p-8 text-center">
+          <div class="bg-[#edf3f8] border border-[#2e4459]/10 rounded-3xl p-8 text-center">
             <div class="w-12 h-12 mx-auto rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
             </div>
             <h3 class="font-bold mb-2">Insured &amp; Accountable</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed">Fully insured mobile operation. You get photos of completed work and a digital record of every visit.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Fully insured mobile operation. You get photos of completed work and a digital record of every visit.</p>
           </div>
-          <div class="bg-[#f8fafc] border border-[#0d2a4a]/10 rounded-3xl p-8 text-center">
+          <div class="bg-[#edf3f8] border border-[#2e4459]/10 rounded-3xl p-8 text-center">
             <div class="w-12 h-12 mx-auto rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path></svg>
             </div>
             <h3 class="font-bold mb-2">Upfront Pricing</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed">Every price published on this page before you book. Written-quote price match on tires &amp; rims.</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Every price published on this page before you book. Written-quote price match on tires &amp; rims.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ========== BRAND MARQUEE (LWH brands slot) ========== -->
-    <section class="py-14 border-y border-[#0d2a4a]/10 bg-[#f8fafc] overflow-hidden" aria-label="Tire brands we carry">
-      <p class="text-center text-xs uppercase tracking-[0.3em] text-[#0d2a4a]/30 mb-8">Tire &amp; Rim Brands We Sell &amp; Install</p>
+    <section class="py-14 border-y border-[#2e4459]/10 bg-[#edf3f8] overflow-hidden" aria-label="Tire brands we carry">
+      <p class="text-center text-xs uppercase tracking-[0.3em] text-[#2e4459]/30 mb-8">Tire &amp; Rim Brands We Sell &amp; Install</p>
       <div class="flex items-center gap-14 whitespace-nowrap marquee-track" style="width: max-content;">
-        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Michelin</span>
-        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Bridgestone</span>
-        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Continental</span>
-        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Yokohama</span>
-        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">BFGoodrich</span>
-        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Pirelli</span>
-        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Goodyear</span>
-        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Toyo</span>
-        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Michelin</span>
-        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Bridgestone</span>
-        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Continental</span>
-        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Yokohama</span>
-        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">BFGoodrich</span>
-        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Pirelli</span>
-        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Goodyear</span>
-        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#0d2a4a]/30 hover:text-[#0d2a4a]/60 transition-colors duration-500 uppercase">Toyo</span>
+        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Michelin</span>
+        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Bridgestone</span>
+        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Continental</span>
+        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Yokohama</span>
+        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">BFGoodrich</span>
+        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Pirelli</span>
+        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Goodyear</span>
+        <span class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Toyo</span>
+        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Michelin</span>
+        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Bridgestone</span>
+        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Continental</span>
+        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Yokohama</span>
+        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">BFGoodrich</span>
+        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Pirelli</span>
+        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Goodyear</span>
+        <span aria-hidden="true" class="text-2xl md:text-3xl font-bold tracking-tight text-[#2e4459]/30 hover:text-[#2e4459]/70 transition-colors duration-500 uppercase">Toyo</span>
       </div>
     </section>
 
@@ -610,28 +610,28 @@
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-14">
           <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Service Areas</span>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#0d2a4a] mb-4">Proudly Mobile Across Halton.</h2>
-          <p class="text-[#0d2a4a]/50 text-lg">Home, office, gym parking lot — if your car's in Halton, we'll find it.</p>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#2e4459] mb-4">Proudly Mobile Across Halton.</h2>
+          <p class="text-[#2e4459]/60 text-lg">Home, office, gym parking lot — if your car's in Halton, we'll find it.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <a href="/oakville/" class="group bg-[#f8fafc] border border-[#0d2a4a]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300 block">
+          <a href="/oakville/" class="group bg-[#edf3f8] border border-[#2e4459]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300 block">
             <h3 class="text-2xl font-bold mb-3 group-hover:text-[#f04e23] transition-colors">Oakville</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed mb-4">Glen Abbey · Bronte · River Oaks · Joshua Creek · Old Oakville · West Oak Trails · Palermo</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed mb-4">Glen Abbey · Bronte · River Oaks · Joshua Creek · Old Oakville · West Oak Trails · Palermo</p>
             <span class="text-sm font-semibold text-[#f04e23]">Mobile tire change in Oakville →</span>
           </a>
-          <a href="/burlington/" class="group bg-[#f8fafc] border border-[#0d2a4a]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300 block">
+          <a href="/burlington/" class="group bg-[#edf3f8] border border-[#2e4459]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300 block">
             <h3 class="text-2xl font-bold mb-3 group-hover:text-[#f04e23] transition-colors">Burlington</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed mb-4">Aldershot · Millcroft · Alton Village · The Orchard · Brant Hills · Roseland · Tyandaga</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed mb-4">Aldershot · Millcroft · Alton Village · The Orchard · Brant Hills · Roseland · Tyandaga</p>
             <span class="text-sm font-semibold text-[#f04e23]">Mobile tire change in Burlington →</span>
           </a>
-          <a href="/milton/" class="group bg-[#f8fafc] border border-[#0d2a4a]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300 block">
+          <a href="/milton/" class="group bg-[#edf3f8] border border-[#2e4459]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300 block">
             <h3 class="text-2xl font-bold mb-3 group-hover:text-[#f04e23] transition-colors">Milton</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed mb-4">Beaty · Clarke · Ford · Willmott · Hawthorne Village · Scott · Boyne · Campbellville</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed mb-4">Beaty · Clarke · Ford · Willmott · Hawthorne Village · Scott · Boyne · Campbellville</p>
             <span class="text-sm font-semibold text-[#f04e23]">Mobile tire change in Milton →</span>
           </a>
-          <a href="/halton-hills/" class="group bg-[#f8fafc] border border-[#0d2a4a]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300 block">
+          <a href="/halton-hills/" class="group bg-[#edf3f8] border border-[#2e4459]/10 rounded-3xl p-8 hover:border-[#f04e23]/30 hover:shadow-xl hover:shadow-[#f04e23]/5 transition-all duration-300 block">
             <h3 class="text-2xl font-bold mb-3 group-hover:text-[#f04e23] transition-colors">Halton Hills</h3>
-            <p class="text-[#0d2a4a]/50 text-sm leading-relaxed mb-4">Georgetown · Acton · Glen Williams · Norval · Limehouse · Ballinafad · Rural routes</p>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed mb-4">Georgetown · Acton · Glen Williams · Norval · Limehouse · Ballinafad · Rural routes</p>
             <span class="text-sm font-semibold text-[#f04e23]">Mobile tire change in Halton Hills →</span>
           </a>
         </div>
@@ -639,52 +639,52 @@
     </section>
 
     <!-- ========== FAQ ========== -->
-    <section id="faq" class="py-20 bg-[#f8fafc] border-y border-[#0d2a4a]/10 relative scroll-mt-14">
+    <section id="faq" class="py-20 bg-[#edf3f8] border-y border-[#2e4459]/10 relative scroll-mt-14">
       <div class="max-w-3xl mx-auto px-6">
         <div class="text-center mb-12">
           <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">FAQ</span>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-[#0d2a4a]">Questions, Answered.</h2>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-[#2e4459]">Questions, Answered.</h2>
         </div>
         <div class="space-y-3">
-          <details class="faq bg-white border border-[#0d2a4a]/10 rounded-2xl group">
-            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#0d2a4a] list-none">How much does a mobile tire change cost in Oakville, Burlington or Milton?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
-            <p class="px-6 pb-5 text-[#0d2a4a]/60 text-sm leading-relaxed">A seasonal swap on rims is $139+HST for most vehicles; a full changeover off rims (mount, balance, TPMS reset) is $229+HST. Add a second vehicle at the same address for just $79 (on-rim swap; off-rim second vehicles are quoted separately). Everything is published in the <a href="#pricing" class="text-[#f04e23] underline underline-offset-4">pricing table</a> — no hidden trip fees inside our core Halton area.</p>
+          <details class="faq bg-white border border-[#2e4459]/10 rounded-2xl group">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#2e4459] list-none">How much does a mobile tire change cost in Oakville, Burlington or Milton?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
+            <p class="px-6 pb-5 text-[#2e4459]/70 text-sm leading-relaxed">A seasonal swap on rims is $139+HST for most vehicles; a full changeover off rims (mount, balance, TPMS reset) is $229+HST. Add a second vehicle at the same address for just $79 (on-rim swap; off-rim second vehicles are quoted separately). Everything is published in the <a href="#pricing" class="text-[#f04e23] underline underline-offset-4">pricing table</a> — no hidden trip fees inside our core Halton area.</p>
           </details>
-          <details class="faq bg-white border border-[#0d2a4a]/10 rounded-2xl group">
-            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#0d2a4a] list-none">Do I need to be there while you work?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
-            <p class="px-6 pb-5 text-[#0d2a4a]/60 text-sm leading-relaxed">No. As long as we can reach your vehicle and tires (driveway, garage code, concierge), you can be anywhere. We text before arrival and send photos when we're done.</p>
+          <details class="faq bg-white border border-[#2e4459]/10 rounded-2xl group">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#2e4459] list-none">Do I need to be there while you work?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
+            <p class="px-6 pb-5 text-[#2e4459]/70 text-sm leading-relaxed">No. As long as we can reach your vehicle and tires (driveway, garage code, concierge), you can be anywhere. We text before arrival and send photos when we're done.</p>
           </details>
-          <details class="faq bg-white border border-[#0d2a4a]/10 rounded-2xl group">
-            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#0d2a4a] list-none">What's included in a seasonal tire swap?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
-            <p class="px-6 pb-5 text-[#0d2a4a]/60 text-sm leading-relaxed">All four wheels off and on, torque to manufacturer spec with a calibrated wrench, pressures set to your door placard, tread and sidewall inspection, and a free re-torque check. TPMS reset included where supported.</p>
+          <details class="faq bg-white border border-[#2e4459]/10 rounded-2xl group">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#2e4459] list-none">What's included in a seasonal tire swap?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
+            <p class="px-6 pb-5 text-[#2e4459]/70 text-sm leading-relaxed">All four wheels off and on, torque to manufacturer spec with a calibrated wrench, pressures set to your door placard, tread and sidewall inspection, and a free re-torque check. TPMS reset included where supported.</p>
           </details>
-          <details class="faq bg-white border border-[#0d2a4a]/10 rounded-2xl group">
-            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#0d2a4a] list-none">Can you work in condo or underground parking?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
-            <p class="px-6 pb-5 text-[#0d2a4a]/60 text-sm leading-relaxed">Usually yes — our kit is fully portable and height-restricted garages are fine. Just add the clearance and parking level in your booking notes.</p>
+          <details class="faq bg-white border border-[#2e4459]/10 rounded-2xl group">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#2e4459] list-none">Can you work in condo or underground parking?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
+            <p class="px-6 pb-5 text-[#2e4459]/70 text-sm leading-relaxed">Usually yes — our kit is fully portable and height-restricted garages are fine. Just add the clearance and parking level in your booking notes.</p>
           </details>
-          <details class="faq bg-white border border-[#0d2a4a]/10 rounded-2xl group">
-            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#0d2a4a] list-none">What if it rains or snows?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
-            <p class="px-6 pb-5 text-[#0d2a4a]/60 text-sm leading-relaxed">We work in most weather. In severe conditions (ice storms, lightning) we'll text to rebook you into the next available slot free of charge.</p>
+          <details class="faq bg-white border border-[#2e4459]/10 rounded-2xl group">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#2e4459] list-none">What if it rains or snows?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
+            <p class="px-6 pb-5 text-[#2e4459]/70 text-sm leading-relaxed">We work in most weather. In severe conditions (ice storms, lightning) we'll text to rebook you into the next available slot free of charge.</p>
           </details>
-          <details class="faq bg-white border border-[#0d2a4a]/10 rounded-2xl group">
-            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#0d2a4a] list-none">How long does it take?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
-            <p class="px-6 pb-5 text-[#0d2a4a]/60 text-sm leading-relaxed">A swap on rims typically takes 45–60 minutes; a changeover off rims runs 60–90 minutes depending on the vehicle.</p>
+          <details class="faq bg-white border border-[#2e4459]/10 rounded-2xl group">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#2e4459] list-none">How long does it take?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
+            <p class="px-6 pb-5 text-[#2e4459]/70 text-sm leading-relaxed">A swap on rims typically takes 45–60 minutes; a changeover off rims runs 60–90 minutes depending on the vehicle.</p>
           </details>
-          <details class="faq bg-white border border-[#0d2a4a]/10 rounded-2xl group">
-            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#0d2a4a] list-none">Run-flats, low-profile, or 20″+ wheels?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
-            <p class="px-6 pb-5 text-[#0d2a4a]/60 text-sm leading-relaxed">Yes — they carry a small +$10/tire surcharge (it's in the pricing table) because they take longer to mount safely.</p>
+          <details class="faq bg-white border border-[#2e4459]/10 rounded-2xl group">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#2e4459] list-none">Run-flats, low-profile, or 20″+ wheels?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
+            <p class="px-6 pb-5 text-[#2e4459]/70 text-sm leading-relaxed">Yes — they carry a small +$10/tire surcharge (it's in the pricing table) because they take longer to mount safely.</p>
           </details>
-          <details class="faq bg-white border border-[#0d2a4a]/10 rounded-2xl group">
-            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#0d2a4a] list-none">Are you safe for EVs — Tesla, Polestar, Ioniq?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
-            <p class="px-6 pb-5 text-[#0d2a4a]/60 text-sm leading-relaxed">Yes — it's in our name. Lift-point pucks protect the battery skirt, we torque to EV-specific specs, reset TPMS, and can source OE acoustic tires built for EV weight and quiet cabins. <a href="/electric-vehicles/" class="text-[#f04e23] underline underline-offset-4">More on EV tire service</a>.</p>
+          <details class="faq bg-white border border-[#2e4459]/10 rounded-2xl group">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#2e4459] list-none">Are you safe for EVs — Tesla, Polestar, Ioniq?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
+            <p class="px-6 pb-5 text-[#2e4459]/70 text-sm leading-relaxed">Yes — it's in our name. Lift-point pucks protect the battery skirt, we torque to EV-specific specs, reset TPMS, and can source OE acoustic tires built for EV weight and quiet cabins. <a href="/electric-vehicles/" class="text-[#f04e23] underline underline-offset-4">More on EV tire service</a>.</p>
           </details>
-          <details class="faq bg-white border border-[#0d2a4a]/10 rounded-2xl group">
-            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#0d2a4a] list-none">What if something feels off after the appointment?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
-            <p class="px-6 pb-5 text-[#0d2a4a]/60 text-sm leading-relaxed">That's the 45-Day Ride Promise: any vibration, slow leak on a repaired tire, or TPMS light tied to our work within 45 days — we come back and make it right, free.</p>
+          <details class="faq bg-white border border-[#2e4459]/10 rounded-2xl group">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#2e4459] list-none">What if something feels off after the appointment?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
+            <p class="px-6 pb-5 text-[#2e4459]/70 text-sm leading-relaxed">That's the 45-Day Ride Promise: any vibration, slow leak on a repaired tire, or TPMS light tied to our work within 45 days — we come back and make it right, free.</p>
           </details>
-          <details class="faq bg-white border border-[#0d2a4a]/10 rounded-2xl group">
-            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#0d2a4a] list-none">Do you sell new tires and rims too?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
-            <p class="px-6 pb-5 text-[#0d2a4a]/60 text-sm leading-relaxed">Yes — all major brands plus winter wheel &amp; rim packages, delivered and installed at your door. Found a lower written quote from an insured mobile installer? We'll match it. <a href="/tires/" class="text-[#f04e23] underline underline-offset-4">Start a tire quote</a>.</p>
+          <details class="faq bg-white border border-[#2e4459]/10 rounded-2xl group">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 font-semibold text-[#2e4459] list-none">Do you sell new tires and rims too?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0 faq-chevron text-[#f04e23]"><path d="m6 9 6 6 6-6"></path></svg></summary>
+            <p class="px-6 pb-5 text-[#2e4459]/70 text-sm leading-relaxed">Yes — all major brands plus winter wheel &amp; rim packages, delivered and installed at your door. Found a lower written quote from an insured mobile installer? We'll match it. <a href="/tires/" class="text-[#f04e23] underline underline-offset-4">Start a tire quote</a>.</p>
           </details>
         </div>
       </div>
@@ -696,25 +696,25 @@
       <div class="max-w-3xl mx-auto px-6 relative">
         <div class="text-center mb-12">
           <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Book Now</span>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-[#0d2a4a]">Book Your Tire Service.</h2>
-          <p class="text-[#0d2a4a]/50 text-lg max-w-md mx-auto">Two minutes now, zero waiting rooms later. We text back <strong class="text-[#0d2a4a]">within 30 minutes</strong> during business hours to confirm your 2-hour window.</p>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-[#2e4459]">Book Your Tire Service.</h2>
+          <p class="text-[#2e4459]/60 text-lg max-w-md mx-auto">Two minutes now, zero waiting rooms later. We text back <strong class="text-[#2e4459]">within 30 minutes</strong> during business hours to confirm your 2-hour window.</p>
         </div>
-        <div class="bg-white border border-[#0d2a4a]/10 rounded-3xl p-8 md:p-10 shadow-lg">
+        <div class="bg-white border border-[#2e4459]/10 rounded-3xl p-8 md:p-10 shadow-lg">
           <form class="space-y-6" name="booking" method="POST" action="/thanks.html" onsubmit="return rcSubmit(this)">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="space-y-2">
-                <label for="bk-name" class="text-[#0d2a4a]/60 text-xs font-medium uppercase tracking-wider">Full Name *</label>
-                <input id="bk-name" name="name" class="w-full bg-[#0d2a4a]/5 border border-[#0d2a4a]/10 text-[#0d2a4a] placeholder:text-[#0d2a4a]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" required placeholder="Jane Doe" autocomplete="name">
+                <label for="bk-name" class="text-[#2e4459]/70 text-xs font-medium uppercase tracking-wider">Full Name *</label>
+                <input id="bk-name" name="name" class="w-full bg-[#2e4459]/5 border border-[#2e4459]/10 text-[#2e4459] placeholder:text-[#2e4459]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" required placeholder="Jane Doe" autocomplete="name">
               </div>
               <div class="space-y-2">
-                <label for="bk-phone" class="text-[#0d2a4a]/60 text-xs font-medium uppercase tracking-wider">Phone *</label>
-                <input id="bk-phone" name="phone" type="tel" class="w-full bg-[#0d2a4a]/5 border border-[#0d2a4a]/10 text-[#0d2a4a] placeholder:text-[#0d2a4a]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" required placeholder="(905) 000-0000" autocomplete="tel">
+                <label for="bk-phone" class="text-[#2e4459]/70 text-xs font-medium uppercase tracking-wider">Phone *</label>
+                <input id="bk-phone" name="phone" type="tel" class="w-full bg-[#2e4459]/5 border border-[#2e4459]/10 text-[#2e4459] placeholder:text-[#2e4459]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" required placeholder="(905) 000-0000" autocomplete="tel">
               </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="space-y-2">
-                <label for="bk-service" class="text-[#0d2a4a]/60 text-xs font-medium uppercase tracking-wider">Service *</label>
-                <select id="bk-service" name="service" class="w-full bg-[#0d2a4a]/5 border border-[#0d2a4a]/10 text-[#0d2a4a] h-12 rounded-xl px-3 text-sm focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 appearance-none" required>
+                <label for="bk-service" class="text-[#2e4459]/70 text-xs font-medium uppercase tracking-wider">Service *</label>
+                <select id="bk-service" name="service" class="w-full bg-[#2e4459]/5 border border-[#2e4459]/10 text-[#2e4459] h-12 rounded-xl px-3 text-sm focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 appearance-none" required>
                   <option value="" disabled selected>Select a service</option>
                   <option>Seasonal Tire Swap (on rims) — $139</option>
                   <option>Tire Changeover (off rims) — $229</option>
@@ -727,8 +727,8 @@
                 </select>
               </div>
               <div class="space-y-2">
-                <label for="bk-city" class="text-[#0d2a4a]/60 text-xs font-medium uppercase tracking-wider">City *</label>
-                <select id="bk-city" name="city" class="w-full bg-[#0d2a4a]/5 border border-[#0d2a4a]/10 text-[#0d2a4a] h-12 rounded-xl px-3 text-sm focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 appearance-none" required>
+                <label for="bk-city" class="text-[#2e4459]/70 text-xs font-medium uppercase tracking-wider">City *</label>
+                <select id="bk-city" name="city" class="w-full bg-[#2e4459]/5 border border-[#2e4459]/10 text-[#2e4459] h-12 rounded-xl px-3 text-sm focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 appearance-none" required>
                   <option value="" disabled selected>Select your city</option>
                   <option>Oakville</option>
                   <option>Burlington</option>
@@ -739,26 +739,26 @@
             </div>
             <div class="grid grid-cols-3 gap-4">
               <div class="space-y-2">
-                <label for="bk-year" class="text-[#0d2a4a]/60 text-xs font-medium uppercase tracking-wider">Year</label>
-                <input id="bk-year" name="year" class="w-full bg-[#0d2a4a]/5 border border-[#0d2a4a]/10 text-[#0d2a4a] placeholder:text-[#0d2a4a]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" placeholder="2024" inputmode="numeric">
+                <label for="bk-year" class="text-[#2e4459]/70 text-xs font-medium uppercase tracking-wider">Year</label>
+                <input id="bk-year" name="year" class="w-full bg-[#2e4459]/5 border border-[#2e4459]/10 text-[#2e4459] placeholder:text-[#2e4459]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" placeholder="2024" inputmode="numeric">
               </div>
               <div class="space-y-2">
-                <label for="bk-make" class="text-[#0d2a4a]/60 text-xs font-medium uppercase tracking-wider">Make</label>
-                <input id="bk-make" name="make" class="w-full bg-[#0d2a4a]/5 border border-[#0d2a4a]/10 text-[#0d2a4a] placeholder:text-[#0d2a4a]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" placeholder="Tesla">
+                <label for="bk-make" class="text-[#2e4459]/70 text-xs font-medium uppercase tracking-wider">Make</label>
+                <input id="bk-make" name="make" class="w-full bg-[#2e4459]/5 border border-[#2e4459]/10 text-[#2e4459] placeholder:text-[#2e4459]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" placeholder="Tesla">
               </div>
               <div class="space-y-2">
-                <label for="bk-model" class="text-[#0d2a4a]/60 text-xs font-medium uppercase tracking-wider">Model</label>
-                <input id="bk-model" name="model" class="w-full bg-[#0d2a4a]/5 border border-[#0d2a4a]/10 text-[#0d2a4a] placeholder:text-[#0d2a4a]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" placeholder="Model Y">
+                <label for="bk-model" class="text-[#2e4459]/70 text-xs font-medium uppercase tracking-wider">Model</label>
+                <input id="bk-model" name="model" class="w-full bg-[#2e4459]/5 border border-[#2e4459]/10 text-[#2e4459] placeholder:text-[#2e4459]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" placeholder="Model Y">
               </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="space-y-2">
-                <label for="bk-date" class="text-[#0d2a4a]/60 text-xs font-medium uppercase tracking-wider">Preferred Date</label>
-                <input id="bk-date" name="date" type="date" class="w-full bg-[#0d2a4a]/5 border border-[#0d2a4a]/10 text-[#0d2a4a] h-12 rounded-xl px-3 text-sm focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2">
+                <label for="bk-date" class="text-[#2e4459]/70 text-xs font-medium uppercase tracking-wider">Preferred Date</label>
+                <input id="bk-date" name="date" type="date" class="w-full bg-[#2e4459]/5 border border-[#2e4459]/10 text-[#2e4459] h-12 rounded-xl px-3 text-sm focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2">
               </div>
               <div class="space-y-2">
-                <label for="bk-time" class="text-[#0d2a4a]/60 text-xs font-medium uppercase tracking-wider">Preferred Window</label>
-                <select id="bk-time" name="window" class="w-full bg-[#0d2a4a]/5 border border-[#0d2a4a]/10 text-[#0d2a4a] h-12 rounded-xl px-3 text-sm focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 appearance-none">
+                <label for="bk-time" class="text-[#2e4459]/70 text-xs font-medium uppercase tracking-wider">Preferred Window</label>
+                <select id="bk-time" name="window" class="w-full bg-[#2e4459]/5 border border-[#2e4459]/10 text-[#2e4459] h-12 rounded-xl px-3 text-sm focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 appearance-none">
                   <option value="" disabled selected>Select window</option>
                   <option>Morning (8am–12pm)</option>
                   <option>Afternoon (12pm–4pm)</option>
@@ -767,19 +767,19 @@
               </div>
             </div>
             <div class="space-y-2">
-              <label for="bk-address" class="text-[#0d2a4a]/60 text-xs font-medium uppercase tracking-wider">Service Address *</label>
-              <input id="bk-address" name="address" class="w-full bg-[#0d2a4a]/5 border border-[#0d2a4a]/10 text-[#0d2a4a] placeholder:text-[#0d2a4a]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" required placeholder="123 Lakeshore Rd E, Oakville" autocomplete="street-address">
+              <label for="bk-address" class="text-[#2e4459]/70 text-xs font-medium uppercase tracking-wider">Service Address *</label>
+              <input id="bk-address" name="address" class="w-full bg-[#2e4459]/5 border border-[#2e4459]/10 text-[#2e4459] placeholder:text-[#2e4459]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 h-12 rounded-xl px-3 text-sm" required placeholder="123 Lakeshore Rd E, Oakville" autocomplete="street-address">
             </div>
             <div class="flex items-start gap-3">
-              <input id="bk-second" name="second_vehicle" type="checkbox" class="mt-1 w-4 h-4 rounded border-[#0d2a4a]/20 text-[#f04e23] focus:ring-[#f04e23]/30">
-              <label for="bk-second" class="text-sm text-[#0d2a4a]/60">Add a second vehicle at the same address <span class="font-semibold text-[#f04e23]">(on-rim swap just $79)</span></label>
+              <input id="bk-second" name="second_vehicle" type="checkbox" class="mt-1 w-4 h-4 rounded border-[#2e4459]/20 text-[#f04e23] focus:ring-[#f04e23]/30">
+              <label for="bk-second" class="text-sm text-[#2e4459]/70">Add a second vehicle at the same address <span class="font-semibold text-[#f04e23]">(on-rim swap just $79)</span></label>
             </div>
             <div class="space-y-2">
-              <label for="bk-notes" class="text-[#0d2a4a]/60 text-xs font-medium uppercase tracking-wider">Notes <span class="normal-case">(tire size, storage location, garage clearance…)</span></label>
-              <textarea id="bk-notes" name="notes" class="w-full bg-[#0d2a4a]/5 border border-[#0d2a4a]/10 text-[#0d2a4a] placeholder:text-[#0d2a4a]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 rounded-xl px-3 py-3 text-sm min-h-[80px]" placeholder="e.g. 235/45R18, tires in garage, P2 underground level"></textarea>
+              <label for="bk-notes" class="text-[#2e4459]/70 text-xs font-medium uppercase tracking-wider">Notes <span class="normal-case">(tire size, storage location, garage clearance…)</span></label>
+              <textarea id="bk-notes" name="notes" class="w-full bg-[#2e4459]/5 border border-[#2e4459]/10 text-[#2e4459] placeholder:text-[#2e4459]/25 focus:border-[#f04e23]/50 focus:ring-[#f04e23]/20 focus:outline-none focus:ring-2 rounded-xl px-3 py-3 text-sm min-h-[80px]" placeholder="e.g. 235/45R18, tires in garage, P2 underground level"></textarea>
             </div>
             <button class="w-full bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold h-14 rounded-xl text-base transition-all duration-300 hover:shadow-lg hover:shadow-[#f04e23]/20 inline-flex items-center justify-center gap-2" type="submit">Request My Booking<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
-            <p class="text-center text-xs text-[#0d2a4a]/40">Prefer to talk? <a href="tel:+15551234567" class="text-[#f04e23] font-semibold">Call</a> or <a href="sms:+15551234567" class="text-[#f04e23] font-semibold">text us</a> — we reply fast during business hours.</p>
+            <p class="text-center text-xs text-[#2e4459]/55">Prefer to talk? <a href="tel:+15551234567" class="text-[#f04e23] font-semibold">Call</a> or <a href="sms:+15551234567" class="text-[#f04e23] font-semibold">text us</a> — we reply fast during business hours.</p>
           </form>
         </div>
       </div>
@@ -787,7 +787,7 @@
   </main>
 
   <!-- ========== FOOTER ========== -->
-  <footer class="border-t border-[#0d2a4a]/10 bg-[#f8fafc]">
+  <footer class="border-t border-[#2e4459]/10 bg-[#edf3f8]">
     <div class="max-w-7xl mx-auto px-6 py-16">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div class="md:col-span-1">
@@ -795,55 +795,55 @@
             <img src="/assets/rnc-crest.png" alt="Roll &amp; Charge logo" class="h-10 w-auto" loading="lazy">
             <span class="font-bold tracking-tight">Roll &amp; Charge</span>
           </a>
-          <p class="text-sm text-[#0d2a4a]/50 leading-relaxed mb-4">Mobile tire service &amp; tire and rim sales for Halton Region. We come to you.</p>
-          <p class="text-sm text-[#0d2a4a]/50">Halton Region, Ontario<br><a href="tel:+15551234567" class="hover:text-[#f04e23]">(555) 123-4567</a><br><a href="mailto:hello@rollandcharge.com" class="hover:text-[#f04e23]">hello@rollandcharge.com</a></p>
+          <p class="text-sm text-[#2e4459]/60 leading-relaxed mb-4">Mobile tire service &amp; tire and rim sales for Halton Region. We come to you.</p>
+          <p class="text-sm text-[#2e4459]/60">Halton Region, Ontario<br><a href="tel:+15551234567" class="hover:text-[#f04e23]">(555) 123-4567</a><br><a href="mailto:hello@rollandcharge.com" class="hover:text-[#f04e23]">hello@rollandcharge.com</a></p>
         </div>
         <div>
-          <h3 class="font-bold text-sm uppercase tracking-wider text-[#0d2a4a]/40 mb-4">Services</h3>
+          <h3 class="font-bold text-sm uppercase tracking-wider text-[#2e4459]/55 mb-4">Services</h3>
           <ul class="space-y-2.5 text-sm">
-            <li><a href="#services" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Seasonal Tire Swap</a></li>
-            <li><a href="#services" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Tire Changeover</a></li>
-            <li><a href="#services" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Flat Tire Repair</a></li>
-            <li><a href="/tires/" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">New Tires &amp; Rims</a></li>
-            <li><a href="#services" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Tire Storage</a></li>
-            <li><a href="#services" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Fleet Tire Service</a></li>
-            <li><a href="/electric-vehicles/" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">EV Tire Service</a></li>
+            <li><a href="#services" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Seasonal Tire Swap</a></li>
+            <li><a href="#services" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Tire Changeover</a></li>
+            <li><a href="#services" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Flat Tire Repair</a></li>
+            <li><a href="/tires/" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">New Tires &amp; Rims</a></li>
+            <li><a href="#services" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Tire Storage</a></li>
+            <li><a href="#services" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Fleet Tire Service</a></li>
+            <li><a href="/electric-vehicles/" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">EV Tire Service</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="font-bold text-sm uppercase tracking-wider text-[#0d2a4a]/40 mb-4">Service Areas</h3>
+          <h3 class="font-bold text-sm uppercase tracking-wider text-[#2e4459]/55 mb-4">Service Areas</h3>
           <ul class="space-y-2.5 text-sm">
-            <li><a href="/oakville/" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Mobile Tire Change Oakville</a></li>
-            <li><a href="/burlington/" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Mobile Tire Change Burlington</a></li>
-            <li><a href="/milton/" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Mobile Tire Change Milton</a></li>
-            <li><a href="/halton-hills/" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Mobile Tire Change Halton Hills</a></li>
-            <li><a href="/roadside/" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Roadside Flat Rescue</a></li>
+            <li><a href="/oakville/" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Mobile Tire Change Oakville</a></li>
+            <li><a href="/burlington/" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Mobile Tire Change Burlington</a></li>
+            <li><a href="/milton/" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Mobile Tire Change Milton</a></li>
+            <li><a href="/halton-hills/" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Mobile Tire Change Halton Hills</a></li>
+            <li><a href="/roadside/" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Roadside Flat Rescue</a></li>
           </ul>
-          <h3 class="font-bold text-sm uppercase tracking-wider text-[#0d2a4a]/40 mt-6 mb-4">Hours</h3>
-          <p class="text-sm text-[#0d2a4a]/60">Mon–Fri 8am–6pm<br>Sat–Sun 9am–5pm</p>
+          <h3 class="font-bold text-sm uppercase tracking-wider text-[#2e4459]/55 mt-6 mb-4">Hours</h3>
+          <p class="text-sm text-[#2e4459]/70">Mon–Fri 8am–6pm<br>Sat–Sun 9am–5pm</p>
         </div>
         <div>
-          <h3 class="font-bold text-sm uppercase tracking-wider text-[#0d2a4a]/40 mb-4">Company</h3>
+          <h3 class="font-bold text-sm uppercase tracking-wider text-[#2e4459]/55 mb-4">Company</h3>
           <ul class="space-y-2.5 text-sm">
-            <li><a href="/about/" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">About Us</a></li>
-            <li><a href="/careers/" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Careers</a></li>
-            <li><a href="/winter-tires-ontario/" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Winter Tire Guide</a></li>
-            <li><a href="#pricing" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Pricing</a></li>
-            <li><a href="#faq" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">FAQ</a></li>
-            <li><a href="#booking" class="text-[#0d2a4a]/60 hover:text-[#f04e23] transition-colors">Book Now</a></li>
+            <li><a href="/about/" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">About Us</a></li>
+            <li><a href="/careers/" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Careers</a></li>
+            <li><a href="/winter-tires-ontario/" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Winter Tire Guide</a></li>
+            <li><a href="#pricing" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Pricing</a></li>
+            <li><a href="#faq" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">FAQ</a></li>
+            <li><a href="#booking" class="text-[#2e4459]/70 hover:text-[#f04e23] transition-colors">Book Now</a></li>
           </ul>
         </div>
       </div>
-      <div class="mt-12 pt-8 border-t border-[#0d2a4a]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-xs text-[#0d2a4a]/40">© 2026 Roll &amp; Charge. All rights reserved.</p>
-        <p class="text-xs text-[#0d2a4a]/40">Proudly serving Oakville · Burlington · Milton</p>
+      <div class="mt-12 pt-8 border-t border-[#2e4459]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-[#2e4459]/55">© 2026 Roll &amp; Charge. All rights reserved.</p>
+        <p class="text-xs text-[#2e4459]/55">Proudly serving Oakville · Burlington · Milton</p>
       </div>
     </div>
   </footer>
 
   <!-- Sticky mobile CTA bar -->
-  <div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 backdrop-blur border-t border-[#0d2a4a]/10 px-4 py-3 flex gap-3" style="padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));">
-    <a href="tel:+15551234567" class="flex-1 inline-flex items-center justify-center gap-2 border border-[#0d2a4a]/15 text-[#0d2a4a] font-semibold text-sm h-12 rounded-full">
+  <div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 backdrop-blur border-t border-[#2e4459]/10 px-4 py-3 flex gap-3" style="padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));">
+    <a href="tel:+15551234567" class="flex-1 inline-flex items-center justify-center gap-2 border border-[#2e4459]/15 text-[#2e4459] font-semibold text-sm h-12 rounded-full">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call</a>
     <a href="#booking" class="flex-[2] inline-flex items-center justify-center bg-[#f04e23] text-white font-semibold text-sm h-12 rounded-full shadow-lg shadow-[#f04e23]/25">Book My Tire Change</a>
   </div>
