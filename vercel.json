@@ -1,0 +1,22 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/our-services/mobile-tire-repair", "destination": "/", "permanent": true },
+    { "source": "/our-services/ev-repair", "destination": "/electric-vehicles/", "permanent": true },
+    { "source": "/our-services/fleet-maintenance", "destination": "/services/fleet/", "permanent": true },
+    { "source": "/our-services/mobile-oil-change", "destination": "/", "permanent": true },
+    { "source": "/our-services/brake-repair", "destination": "/", "permanent": true },
+    { "source": "/our-services", "destination": "/", "permanent": true },
+    { "source": "/our-services-1", "destination": "/", "permanent": true },
+    { "source": "/aboutus", "destination": "/about/", "permanent": true },
+    { "source": "/contact", "destination": "/#booking", "permanent": true },
+    { "source": "/warranty", "destination": "/#faq", "permanent": true },
+    { "source": "/blog", "destination": "/winter-tires-ontario/", "permanent": true },
+    { "source": "/post/:slug", "destination": "/winter-tires-ontario/", "permanent": true },
+    { "source": "/privacy-policy", "destination": "/", "permanent": false },
+    { "source": "/terms-and-conditions", "destination": "/", "permanent": false },
+    { "source": "/accessibility-statement", "destination": "/", "permanent": false },
+    { "source": "/trademark-usage-policy", "destination": "/", "permanent": false }
+  ]
+}
