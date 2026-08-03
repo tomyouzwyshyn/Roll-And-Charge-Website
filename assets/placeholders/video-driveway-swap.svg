@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Placeholder for a 60-second video of a mobile tire swap in a customer driveway">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2e4459"/><stop offset="1" stop-color="#22344a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="16" y="16" width="1248" height="688" fill="none" stroke="#f04e23" stroke-width="4" stroke-dasharray="18 14" rx="20"/>
+  <!-- play button -->
+  <circle cx="640" cy="300" r="86" fill="#f04e23"/>
+  <circle cx="640" cy="300" r="86" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="10"/>
+  <polygon points="615,258 615,342 692,300" fill="#ffffff"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="640" y="440" font-size="34" font-weight="800" fill="#ffffff">VIDEO PLACEHOLDER — THE 60-SECOND DRIVEWAY SWAP</text>
+    <text x="640" y="474" font-size="18" fill="#ffffff" opacity="0.7">One continuous shot or 4 quick cuts · real customer driveway · finish on the photo-report text arriving</text>
+  </g>
+  <!-- storyboard strip -->
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <g>
+      <rect x="120" y="520" width="240" height="120" rx="12" fill="#ffffff" opacity="0.10"/>
+      <rect x="120" y="520" width="240" height="120" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+      <text x="240" y="570" font-size="30" fill="#f04e23" font-weight="800">1</text>
+      <text x="240" y="600" font-size="16" fill="#ffffff" opacity="0.85">Van arrives, wave hello</text>
+    </g>
+    <g>
+      <rect x="400" y="520" width="240" height="120" rx="12" fill="#ffffff" opacity="0.10"/>
+      <rect x="400" y="520" width="240" height="120" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+      <text x="520" y="570" font-size="30" fill="#f04e23" font-weight="800">2</text>
+      <text x="520" y="600" font-size="16" fill="#ffffff" opacity="0.85">Lift pucks + wheels off</text>
+    </g>
+    <g>
+      <rect x="680" y="520" width="240" height="120" rx="12" fill="#ffffff" opacity="0.10"/>
+      <rect x="680" y="520" width="240" height="120" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+      <text x="800" y="570" font-size="30" fill="#f04e23" font-weight="800">3</text>
+      <text x="800" y="600" font-size="16" fill="#ffffff" opacity="0.85">Torque wrench close-up</text>
+    </g>
+    <g>
+      <rect x="960" y="520" width="240" height="120" rx="12" fill="#ffffff" opacity="0.10"/>
+      <rect x="960" y="520" width="240" height="120" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+      <text x="1080" y="570" font-size="30" fill="#f04e23" font-weight="800">4</text>
+      <text x="1080" y="600" font-size="16" fill="#ffffff" opacity="0.85">Photo report hits their phone</text>
+    </g>
+  </g>
+  <text x="640" y="686" font-family="system-ui, sans-serif" font-size="14" fill="#ffffff" opacity="0.5" text-anchor="middle">Swap this file with your video embed: /assets/placeholders/video-driveway-swap.svg</text>
+</svg>
