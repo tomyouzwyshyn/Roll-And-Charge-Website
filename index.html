@@ -124,7 +124,7 @@
 <body class="bg-white text-[#2e4459]">
 <div class="min-h-screen bg-white text-[#2e4459]">
 
-  <!-- ========== HEADER: UTILITY ROW (LWH-style: logo · phone · dual-intent CTAs) ========== -->
+  <!-- ========== HEADER: UTILITY ROW ========== -->
   <div class="bg-white border-b border-[#2e4459]/10">
     <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-6">
       <a href="/" class="flex items-center gap-3 shrink-0" aria-label="Roll &amp; Charge home">
@@ -143,7 +143,7 @@
         </div>
       </div>
       <div class="hidden lg:flex items-stretch gap-3 shrink-0">
-        <a href="#booking" class="flex flex-col justify-center bg-[#d7e2ec] hover:bg-[#c3d6e5] text-[#2e4459] rounded-2xl px-5 py-2.5 text-left transition-colors duration-300">
+        <a href="/#booking" class="flex flex-col justify-center bg-[#d7e2ec] hover:bg-[#c3d6e5] text-[#2e4459] rounded-2xl px-5 py-2.5 text-left transition-colors duration-300">
           <span class="text-[10px] uppercase tracking-widest opacity-70 font-semibold">Need tire service?</span>
           <span class="text-sm font-bold">Book Your Appointment →</span>
         </a>
@@ -157,24 +157,24 @@
       </button>
     </div>
     <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-[#2e4459]/10 px-4 py-4 space-y-1">
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/">Home</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="#services">Services</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="#pricing">Pricing</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#f04e23] hover:bg-[#2e4459]/5" href="/">Home</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/#services">Services</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/#pricing">Pricing</a>
       <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/tires/">Tires &amp; Rims</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459]/70 hover:bg-[#2e4459]/5" href="/oakville/">— Oakville</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459]/70 hover:bg-[#2e4459]/5" href="/burlington/">— Burlington</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459]/70 hover:bg-[#2e4459]/5" href="/milton/">— Milton</a>
-      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459]/70 hover:bg-[#2e4459]/5" href="/halton-hills/">— Halton Hills</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/oakville/">Oakville</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/burlington/">Burlington</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/milton/">Milton</a>
+      <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/halton-hills/">Halton Hills</a>
       <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/electric-vehicles/">EV Tires</a>
       <a class="block py-2.5 px-4 rounded-xl text-sm font-medium text-[#2e4459] hover:bg-[#2e4459]/5" href="/about/">About</a>
       <div class="pt-3 px-2 flex gap-3">
         <a href="tel:+15551234567" class="flex-1 inline-flex items-center justify-center gap-2 border border-[#2e4459]/15 text-[#2e4459] font-semibold text-sm h-12 rounded-full">Call Us</a>
-        <a href="#booking" class="flex-1 inline-flex items-center justify-center bg-[#f04e23] text-white font-semibold text-sm h-12 rounded-full" onclick="document.getElementById('mobile-menu').classList.remove('open')">Book Now</a>
+        <a href="/#booking" class="flex-1 inline-flex items-center justify-center bg-[#f04e23] text-white font-semibold text-sm h-12 rounded-full">Book Now</a>
       </div>
     </div>
   </div>
 
-  <!-- ========== HEADER: NAVY NAV BAR (LWH-style) ========== -->
+  <!-- ========== HEADER: STICKY POWDER NAV ========== -->
   <nav class="hidden lg:block bg-[#d7e2ec] sticky top-0 z-50" aria-label="Main">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
       <div class="flex items-center">
@@ -182,8 +182,8 @@
           <img src="/assets/rnc-crest.png" alt="Roll &amp; Charge" class="h-7 w-auto">
         </a>
         <a class="px-4 py-3.5 text-sm font-semibold text-[#f04e23]" href="/">Home</a>
-        <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="#services">Services</a>
-        <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="#pricing">Pricing</a>
+        <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="/#services">Services</a>
+        <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="/#pricing">Pricing</a>
         <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="/tires/">Tires &amp; Rims</a>
         <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="/oakville/">Oakville</a>
         <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="/burlington/">Burlington</a>
@@ -192,7 +192,7 @@
         <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="/electric-vehicles/">EV Tires</a>
         <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="/about/">About</a>
       </div>
-      <a href="#booking" class="bg-[#f04e23] hover:bg-[#d94318] text-white text-sm font-bold px-5 py-2 rounded-full transition-colors duration-300">Book Now</a>
+      <a href="/#booking" class="bg-[#f04e23] hover:bg-[#d94318] text-white text-sm font-bold px-5 py-2 rounded-full transition-colors duration-300">Book Now</a>
     </div>
   </nav>
 
