@@ -178,6 +178,9 @@
   <nav class="hidden lg:block bg-[#d7e2ec] sticky top-0 z-50" aria-label="Main">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
       <div class="flex items-center">
+        <a href="/" id="nav-logo" class="flex items-center mr-3 opacity-0 -translate-x-2 pointer-events-none transition-all duration-300" aria-hidden="true" tabindex="-1">
+          <img src="/assets/rnc-crest.png" alt="Roll &amp; Charge" class="h-7 w-auto">
+        </a>
         <a class="px-4 py-3.5 text-sm font-semibold text-[#f04e23]" href="/">Home</a>
         <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="#services">Services</a>
         <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="#pricing">Pricing</a>
@@ -849,6 +852,23 @@
   </div>
 
   <script>
+    // Sticky-nav logo: fades in once the top utility row (with the main logo) scrolls away
+    (function () {
+      var logo = document.getElementById('nav-logo');
+      if (!logo) return;
+      var shown = false;
+      window.addEventListener('scroll', function () {
+        var on = window.scrollY > 80;
+        if (on === shown) return;
+        shown = on;
+        logo.classList.toggle('opacity-0', !on);
+        logo.classList.toggle('-translate-x-2', !on);
+        logo.classList.toggle('pointer-events-none', !on);
+        logo.setAttribute('aria-hidden', String(!on));
+        if (on) logo.removeAttribute('tabindex'); else logo.setAttribute('tabindex', '-1');
+      }, { passive: true });
+    })();
+
     // Booking form stopgap: opens the visitor's email client pre-filled until a real
     // scheduler/backend is connected. Also mirrors to SMS-friendly summary.
     function rcSubmit(f) {
