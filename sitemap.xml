@@ -2,74 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rollandcharge.com/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://rollandcharge.com/oakville/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rollandcharge.com/burlington/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rollandcharge.com/milton/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rollandcharge.com/halton-hills/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://rollandcharge.com/services/seasonal-tire-change/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rollandcharge.com/services/tire-swap-on-rims/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rollandcharge.com/services/tire-changeover/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rollandcharge.com/services/flat-tire-repair/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rollandcharge.com/services/wheel-balancing/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rollandcharge.com/services/tire-storage/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rollandcharge.com/services/multi-vehicle/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://rollandcharge.com/winter-tires-ontario/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://rollandcharge.com/tires/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://rollandcharge.com/electric-vehicles/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://rollandcharge.com/roadside/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://rollandcharge.com/services/fleet/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://rollandcharge.com/about/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://rollandcharge.com/careers/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://rollandcharge.com/policies/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

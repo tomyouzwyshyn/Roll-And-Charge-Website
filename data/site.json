@@ -1,0 +1,64 @@
+{
+  "business": {
+    "name": "Roll & Charge Mobile Tire",
+    "legalName": "Roll & Charge Inc. (TODO: confirm legal entity name)",
+    "productionUrl": "https://rollandcharge.com",
+    "stagingUrl": "https://roll-and-charge-website.vercel.app",
+    "phoneDisplay": "(555) 123-4567",
+    "phoneE164": "+15551234567",
+    "phoneIsPlaceholder": true,
+    "email": "hello@rollandcharge.com",
+    "emailIsPlaceholder": true,
+    "logo": "/assets/rnc-logo.png",
+    "crest": "/assets/rnc-crest.png",
+    "geo": { "lat": 43.4675, "lng": -79.6877, "radiusMeters": 25000 },
+    "socialProfiles": [],
+    "currency": "CAD"
+  },
+  "hours": {
+    "display": "Mon–Fri 8am–6pm · Sat–Sun 9am–5pm",
+    "weekday": { "opens": "08:00", "closes": "18:00" },
+    "weekend": { "opens": "09:00", "closes": "17:00" },
+    "responseSLA": "We text back within 30 minutes during business hours."
+  },
+  "serviceAreas": ["Oakville", "Burlington", "Milton", "Halton Hills"],
+  "serviceAreaLabel": "Oakville, Burlington, Milton & Halton Hills",
+  "prices": {
+    "swapOnRims": 139,
+    "swapSecondVehicle": 79,
+    "changeoverOffRims": 229,
+    "changeoverSecondVehicle": 159,
+    "flatRepair": 119,
+    "balancing4": 99,
+    "storagePerSeason": 119,
+    "swapStoreBundle": 239,
+    "spareInstall": 99,
+    "oversizeSurchargePerTire": 10,
+    "taxNote": "+HST",
+    "pricesArePlaceholder": true,
+    "note": "Launch pricing approved by owner 2026-07; confirm before public launch."
+  },
+  "guarantees": {
+    "ridePromiseDays": 45,
+    "ridePromise": "45-Day Ride Promise: anything tied to our work within 45 days — vibration, slow leak on a repair, TPMS light — we come back and make it right, free.",
+    "retorque": "Free re-torque check after 50 km.",
+    "priceMatch": "Written-quote price match against any insured mobile installer.",
+    "insured": "Fully insured mobile operation. (TODO: insurer name + policy confirmation before publishing specifics)"
+  },
+  "policies": {
+    "cancellation": "Rebook or cancel free up to 24 hours before your window. Inside 24 hours we may apply a $49 rebooking fee. (TODO: confirm)",
+    "weather": "We work in most weather. In severe conditions (ice storms, lightning) we text to rebook at no charge.",
+    "payment": "Pay on completion — card, tap, or e-transfer. No deposits for standard residential service. (TODO: confirm)"
+  },
+  "booking": {
+    "mode": "request",
+    "formEndpoint": "",
+    "formEndpointNote": "Empty = form falls back to email/SMS compose. Set a Formspree/Basin endpoint or scheduler URL before launch.",
+    "ctaPrimary": "Request an Appointment"
+  },
+  "analytics": {
+    "gtmContainerId": "",
+    "ga4MeasurementId": "",
+    "note": "IDs empty = tracking scaffold is inert. Add IDs, redeploy, verify in GTM preview."
+  }
+}

@@ -1,5 +1,5 @@
-# robots.txt — Roll & Charge
-# https://rollandcharge.com
+# robots.txt — Roll & Charge Mobile Tire (production: rollandcharge.com)
+# Staging (*.vercel.app) is blocked via X-Robots-Tag noindex headers, not here.
 
 User-agent: *
 Allow: /
@@ -8,14 +8,19 @@ Disallow: /.tmp/
 Disallow: /temporary screenshots/
 Disallow: /*.mjs$
 
-# AI crawlers — allow (modify if you want to block training)
-User-agent: GPTBot
+# AI answer engines — allowed for search visibility (ChatGPT Search etc.)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: PerplexityBot
+# GPTBot (model training, not search) — business decision; currently allowed.
+# To opt out of training while keeping ChatGPT Search visibility, change to Disallow: /
+User-agent: GPTBot
 Allow: /
 
 Sitemap: https://rollandcharge.com/sitemap.xml
