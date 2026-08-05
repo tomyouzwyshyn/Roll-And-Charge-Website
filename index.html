@@ -27,7 +27,6 @@
   <link rel="icon" href="/assets/rnc-logo.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/rnc-logo.png">
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-  <link rel="preload" as="image" href="/assets/tires-hero.jpg">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script type="application/ld+json">
@@ -118,7 +117,17 @@
     details.faq summary::-webkit-details-marker { display: none; }
     details.faq[open] .faq-chevron { transform: rotate(180deg); }
     .faq-chevron { transition: transform 0.2s ease; }
-      .skip-to-content { position: absolute; left: -9999px; top: 0; z-index: 100; background: #f04e23; color: #fff; padding: 10px 18px; border-radius: 0 0 12px 0; font-weight: 600; }
+      @media (prefers-reduced-motion: no-preference) {
+      .rc-van { animation: rc-drive 3.2s cubic-bezier(.22,.9,.35,1) both; }
+      @keyframes rc-drive { from { transform: translateX(-840px); } to { transform: translateX(0); } }
+      .rc-wheel { transform-box: fill-box; transform-origin: center; animation: rc-spin 3.2s cubic-bezier(.22,.9,.35,1) both; }
+      @keyframes rc-spin { from { transform: rotate(-780deg); } to { transform: rotate(0deg); } }
+      .rc-cloud-1 { animation: rc-drift 64s linear infinite alternate; }
+      .rc-cloud-2 { animation: rc-drift 82s linear infinite alternate-reverse; }
+      .rc-cloud-3 { animation: rc-drift 58s linear infinite alternate; }
+      @keyframes rc-drift { from { transform: translateX(0); } to { transform: translateX(64px); } }
+    }
+    .skip-to-content { position: absolute; left: -9999px; top: 0; z-index: 100; background: #f04e23; color: #fff; padding: 10px 18px; border-radius: 0 0 12px 0; font-weight: 600; }
     .skip-to-content:focus { left: 0; }
     a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid #f04e23; outline-offset: 2px; border-radius: 4px; }
   </style>
@@ -202,41 +211,70 @@
     </div>
   </nav>
 
-  <main id="main-content">    <!-- ========== HERO: FULL-BLEED PHOTO, CENTERED (LWH-style) ========== -->
-    <section class="relative overflow-hidden">
-      <div class="absolute inset-0">
-        <img src="/assets/tires-hero.jpg" alt="Winter tires stacked and ready for mobile installation" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#d7e2ec]/95 via-[#d7e2ec]/80 to-[#f0f5f9]/95"></div>
-      </div>
-      <div class="relative max-w-4xl mx-auto px-6 py-24 lg:py-36 text-center">
-        <div class="inline-flex items-center gap-2 bg-white/70 border border-[#2e4459]/20 text-[#2e4459] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-7 backdrop-blur">
+  <main id="main-content">    <!-- ========== HERO: "YOUR STREET" — animated brand scene ========== -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-[#d7e2ec] via-[#e9f1f7] to-white">
+      <div class="relative max-w-4xl mx-auto px-6 pt-10 lg:pt-14 pb-0 text-center">
+        <div class="inline-flex items-center gap-2 bg-white/70 border border-[#2e4459]/15 text-[#2e4459] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
           <span class="w-1.5 h-1.5 rounded-full bg-[#f04e23] animate-pulse"></span>Now Serving All of Halton Region
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-5 text-[#2e4459]">Halton's Mobile Tire Shop.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f04e23] to-[#ff7a4d]">We Come to You.</span></h1>
-        <p class="text-lg sm:text-xl text-[#2e4459]/80 max-w-2xl mx-auto leading-relaxed mb-9">Seasonal tire changes, flat repairs, and new tires &amp; rims — installed at your home, office, or job site. Book a 2-hour window online and keep your Saturday. Every price published below.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-          <a class="inline-flex items-center justify-center gap-2 bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-[#f04e23]/30 group" href="#booking">Request an Appointment<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
-          <a class="inline-flex items-center justify-center gap-2 bg-white/70 hover:bg-white border border-[#2e4459]/20 text-[#2e4459] font-semibold text-base px-8 py-4 rounded-full transition-colors duration-300 backdrop-blur" href="#pricing">See Transparent Pricing</a>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-5 text-[#2e4459]">Halton's Mobile Tire Shop.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f04e23] to-[#d94318]">We Come Up Your Street.</span></h1>
+        <p class="text-lg sm:text-xl text-[#2e4459]/75 max-w-2xl mx-auto leading-relaxed mb-7">Seasonal tire changes, flat repairs, and new tires &amp; rims — done in your driveway in Oakville, Burlington, Milton &amp; Halton Hills. Every price published. Your Saturday, returned.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <a class="inline-flex items-center justify-center gap-2 bg-[#f04e23] hover:bg-[#d94318] text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-[#f04e23]/30 group" href="#booking">Request an Appointment<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a class="inline-flex items-center justify-center gap-2 bg-white/70 hover:bg-white border border-[#2e4459]/20 text-[#2e4459] font-semibold text-base px-8 py-4 rounded-full transition-colors duration-300" href="#pricing">See Transparent Pricing</a>
         </div>
-        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-[#2e4459]/75">
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23]"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
-            <span>45-Day Ride Promise</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23]"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            <span>Same-Day Slots</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23]"><path d="M10 2h4"></path><path d="M12 14v-4"></path><path d="M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6"></path><path d="M9 17H4v5"></path></svg>
-            <span>Torqued to Spec, Re-torque Free</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23]"><path d="M7 19h10"></path><path d="M7 19a2 2 0 0 1-2-2v-3.34a2 2 0 0 1 .58-1.41L7 10.83V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3.83l1.42 1.42a2 2 0 0 1 .58 1.41V17a2 2 0 0 1-2 2"></path><circle cx="8.5" cy="16" r="1"></circle><circle cx="15.5" cy="16" r="1"></circle></svg>
-            <span>Fully Insured · EV-Safe</span>
-          </div>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-[#2e4459]/70">
+          <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23]" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg><span>45-Day Ride Promise</span></div>
+          <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23]" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Same-Day Slots</span></div>
+          <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23]" aria-hidden="true"><path d="M10 2h4"></path><path d="M12 14v-4"></path><path d="M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6"></path><path d="M9 17H4v5"></path></svg><span>Torqued to Spec, Re-torque Free</span></div>
+          <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#f04e23]" aria-hidden="true"><path d="M7 19h10"></path><path d="M7 19a2 2 0 0 1-2-2v-3.34a2 2 0 0 1 .58-1.41L7 10.83V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3.83l1.42 1.42a2 2 0 0 1 .58 1.41V17a2 2 0 0 1-2 2"></path><circle cx="8.5" cy="16" r="1"></circle><circle cx="15.5" cy="16" r="1"></circle></svg><span>Fully Insured · EV-Safe</span></div>
         </div>
       </div>
+
+      <!-- The street scene -->
+      <svg viewBox="0 0 1600 480" class="w-full h-auto block mt-2" role="img" aria-label="Illustration: the Roll &amp; Charge service van arriving up a Halton residential street and parking at a driveway, greeted by two technicians beside a stack of tires" xmlns="http://www.w3.org/2000/svg">
+        <g class="rc-cloud rc-cloud-1" fill="#ffffff" opacity="0.85"><ellipse cx="220" cy="70" rx="78" ry="24"/><ellipse cx="286" cy="58" rx="52" ry="18"/></g>
+        <g class="rc-cloud rc-cloud-2" fill="#ffffff" opacity="0.7"><ellipse cx="980" cy="46" rx="66" ry="20"/><ellipse cx="1036" cy="38" rx="42" ry="15"/></g>
+        <g class="rc-cloud rc-cloud-3" fill="#ffffff" opacity="0.6"><ellipse cx="1430" cy="92" rx="58" ry="18"/></g>
+        <path d="M0 300 Q 260 210 560 268 T 1080 258 T 1600 282 L 1600 480 L 0 480 Z" fill="#cfdde9"/>
+        <path d="M0 330 Q 320 262 720 306 T 1600 318 L 1600 480 L 0 480 Z" fill="#c3d6e5"/>
+        <g stroke-linejoin="round">
+          <g><rect x="60" y="272" width="150" height="120" rx="4" fill="#ffffff" stroke="#2e4459" stroke-opacity="0.15"/><polygon points="48,276 135,208 222,276" fill="#35506a"/><rect x="118" y="330" width="34" height="62" rx="3" fill="#f04e23"/><rect x="84" y="296" width="30" height="26" rx="3" fill="#d7e2ec"/><rect x="156" y="296" width="30" height="26" rx="3" fill="#d7e2ec"/></g>
+          <g><rect x="290" y="288" width="130" height="104" rx="4" fill="#e8eff5" stroke="#2e4459" stroke-opacity="0.12"/><polygon points="280,292 355,232 430,292" fill="#4a6885"/><rect x="338" y="338" width="30" height="54" rx="3" fill="#2e4459"/><rect x="306" y="306" width="26" height="22" rx="3" fill="#ffffff"/><rect x="376" y="306" width="26" height="22" rx="3" fill="#ffffff"/></g>
+          <g><rect x="500" y="270" width="160" height="122" rx="4" fill="#35506a"/><polygon points="488,274 580,204 672,274" fill="#2e4459"/><rect x="562" y="330" width="34" height="62" rx="3" fill="#d7e2ec"/><rect x="522" y="292" width="30" height="26" rx="3" fill="#c3d6e5"/><rect x="606" y="292" width="30" height="26" rx="3" fill="#c3d6e5"/></g>
+          <g><rect x="970" y="282" width="146" height="110" rx="4" fill="#ffffff" stroke="#2e4459" stroke-opacity="0.15"/><polygon points="958,286 1043,214 1128,286" fill="#4a6885"/><rect x="1026" y="334" width="32" height="58" rx="3" fill="#f04e23"/><rect x="992" y="302" width="28" height="24" rx="3" fill="#d7e2ec"/><rect x="1062" y="302" width="28" height="24" rx="3" fill="#d7e2ec"/></g>
+          <g><rect x="1200" y="292" width="126" height="100" rx="4" fill="#e8eff5" stroke="#2e4459" stroke-opacity="0.12"/><polygon points="1190,296 1263,238 1336,296" fill="#35506a"/><rect x="1246" y="340" width="28" height="52" rx="3" fill="#2e4459"/><rect x="1214" y="308" width="24" height="20" rx="3" fill="#ffffff"/><rect x="1282" y="308" width="24" height="20" rx="3" fill="#ffffff"/></g>
+          <g><rect x="1410" y="278" width="150" height="114" rx="4" fill="#ffffff" stroke="#2e4459" stroke-opacity="0.15"/><polygon points="1398,282 1485,212 1572,282" fill="#2e4459"/><rect x="1468" y="332" width="32" height="60" rx="3" fill="#35506a"/><rect x="1432" y="300" width="28" height="24" rx="3" fill="#d7e2ec"/><rect x="1502" y="300" width="28" height="24" rx="3" fill="#d7e2ec"/></g>
+        </g>
+        <g><rect x="246" y="342" width="10" height="50" fill="#6b7f8f"/><circle cx="251" cy="322" r="34" fill="#a9c4ae"/></g>
+        <g><rect x="452" y="350" width="9" height="42" fill="#6b7f8f"/><circle cx="456" cy="332" r="28" fill="#9dbba6"/></g>
+        <g><rect x="1152" y="348" width="9" height="44" fill="#6b7f8f"/><circle cx="1156" cy="330" r="29" fill="#a9c4ae"/></g>
+        <g><rect x="1360" y="352" width="8" height="40" fill="#6b7f8f"/><circle cx="1364" cy="336" r="25" fill="#9dbba6"/></g>
+        <rect x="0" y="392" width="1600" height="16" fill="#e4edf4"/>
+        <rect x="0" y="408" width="1600" height="72" fill="#a9bacb"/>
+        <g stroke="#ffffff" stroke-width="4" stroke-dasharray="34 26" opacity="0.5"><line x1="0" y1="446" x2="1600" y2="446"/></g>
+        <polygon points="700,392 940,392 960,480 680,480" fill="#c8d4e0"/>
+        <g><ellipse cx="974" cy="386" rx="30" ry="9" fill="#2e4459"/><rect x="944" y="356" width="60" height="30" rx="9" fill="#35506a"/><ellipse cx="974" cy="356" rx="30" ry="9" fill="#4a6885"/><ellipse cx="974" cy="356" rx="13" ry="4.5" fill="#f04e23"/></g>
+        <g fill="#2e4459">
+          <g><circle cx="1025" cy="330" r="11"/><rect x="1013" y="344" width="24" height="40" rx="9"/><rect x="1007" y="318" width="10" height="26" rx="5" transform="rotate(-35 1012 331)"/></g>
+          <g><circle cx="1061" cy="334" r="10"/><rect x="1050" y="347" width="22" height="37" rx="9"/></g>
+        </g>
+        <g fill="#f04e23"><rect x="1013" y="344" width="24" height="9" rx="4"/><rect x="1050" y="347" width="22" height="8" rx="4"/></g>
+        <g transform="translate(320 14)"><g class="rc-van">
+          <g>
+            <rect x="360" y="296" width="272" height="112" rx="14" fill="#ffffff" stroke="#2e4459" stroke-width="5"/>
+            <path d="M632 408 L632 336 Q632 310 606 305 L554 296 L554 408 Z" fill="#ffffff" stroke="#2e4459" stroke-width="5"/>
+            <rect x="566" y="312" width="44" height="36" rx="5" fill="#c3d6e5"/>
+            <rect x="360" y="372" width="272" height="20" fill="#f04e23"/>
+            <text x="382" y="342" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#2e4459" letter-spacing="1">ROLL &amp; CHARGE</text>
+            <text x="383" y="362" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#f04e23" letter-spacing="2.5">MOBILE TIRE SERVICE</text>
+            <rect x="418" y="270" width="128" height="18" rx="8" fill="#35506a"/>
+            <ellipse cx="452" cy="279" rx="22" ry="8" fill="#2e4459"/><ellipse cx="502" cy="279" rx="22" ry="8" fill="#2e4459"/>
+          </g>
+          <g class="rc-wheel"><circle cx="432" cy="408" r="30" fill="#2e4459"/><circle cx="432" cy="408" r="12" fill="#e4edf4"/><g stroke="#e4edf4" stroke-width="4"><line x1="432" y1="384" x2="432" y2="396"/><line x1="432" y1="420" x2="432" y2="432"/><line x1="408" y1="408" x2="420" y2="408"/><line x1="444" y1="408" x2="456" y2="408"/></g></g>
+          <g class="rc-wheel"><circle cx="586" cy="408" r="30" fill="#2e4459"/><circle cx="586" cy="408" r="12" fill="#e4edf4"/><g stroke="#e4edf4" stroke-width="4"><line x1="586" y1="384" x2="586" y2="396"/><line x1="586" y1="420" x2="586" y2="432"/><line x1="562" y1="408" x2="574" y2="408"/><line x1="598" y1="408" x2="610" y2="408"/></g></g>
+        </g></g>
+      </svg>
     </section>
 
     <!-- ========== SERVICES GRID (LWH services grid slot) ========== -->
@@ -406,30 +444,47 @@
       </div>
     </section>
 
-    <!-- ========== HOW IT WORKS: 3 STEPS (LWH Select→Schedule→Installation slot) ========== -->
-    <section id="how-it-works" class="py-20 bg-[#edf3f8] border-b border-[#2e4459]/10 scroll-mt-14">
+    <!-- ========== 45 MINUTES AT YOUR CURB (how it works, illustrated) ========== -->
+    <section id="how-it-works" class="py-20 bg-[#edf3f8] border-y border-[#2e4459]/10 scroll-mt-14">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="text-center max-w-2xl mx-auto mb-12">
           <span class="text-[#f04e23] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">How It Works</span>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#2e4459] mb-4">Three Steps. Zero Waiting Rooms.</h2>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#2e4459] mb-4">Forty-Five Minutes at Your Curb.</h2>
+          <p class="text-[#2e4459]/60 text-lg">A typical on-rim swap, minute by minute. You request, we confirm by text within 30 minutes in business hours — then this happens.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="relative bg-white border border-[#2e4459]/10 rounded-3xl p-8">
-            <span class="absolute -top-5 left-8 w-10 h-10 rounded-full bg-[#f04e23] text-white font-bold flex items-center justify-center shadow-lg shadow-[#f04e23]/30">1</span>
-            <h3 class="text-lg font-bold mt-3 mb-2">Request in 2 Minutes</h3>
-            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Pick your service, tell us your vehicle and where you are, choose a window. Your request isn't confirmed until we text you back — within 30 minutes in business hours.</p>
+        <div class="flex lg:grid lg:grid-cols-5 gap-4 overflow-x-auto lg:overflow-visible snap-x snap-mandatory pb-4 lg:pb-0 -mx-6 px-6 lg:mx-0 lg:px-0">
+          <div class="snap-start shrink-0 w-[240px] lg:w-auto bg-white border border-[#2e4459]/10 rounded-3xl p-6 relative">
+            <span class="absolute -top-3 left-6 bg-[#2e4459] text-white text-xs font-bold px-3 py-1 rounded-full tabular-nums">0:00</span>
+            <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-4 mt-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7" aria-hidden="true"><path d="M7 19h10"></path><path d="M7 19a2 2 0 0 1-2-2v-3.34a2 2 0 0 1 .58-1.41L7 10.83V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3.83l1.42 1.42a2 2 0 0 1 .58 1.41V17a2 2 0 0 1-2 2"></path><circle cx="8.5" cy="16" r="1"></circle><circle cx="15.5" cy="16" r="1"></circle></svg></div>
+            <h3 class="font-bold mb-1.5">The van rolls up</h3>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">A text says we’re here. You don’t even need to come outside.</p>
           </div>
-          <div class="relative bg-white border border-[#2e4459]/10 rounded-3xl p-8">
-            <span class="absolute -top-5 left-8 w-10 h-10 rounded-full bg-[#f04e23] text-white font-bold flex items-center justify-center shadow-lg shadow-[#f04e23]/30">2</span>
-            <h3 class="text-lg font-bold mt-3 mb-2">We Come to You</h3>
-            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Our fully-equipped van arrives at your driveway, office lot, or curbside. Every wheel torqued to manufacturer spec, pressures set, TPMS reset.</p>
+          <div class="snap-start shrink-0 w-[240px] lg:w-auto bg-white border border-[#2e4459]/10 rounded-3xl p-6 relative">
+            <span class="absolute -top-3 left-6 bg-[#2e4459] text-white text-xs font-bold px-3 py-1 rounded-full tabular-nums">0:05</span>
+            <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-4 mt-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v4"></path><path d="M12 18v4"></path><path d="M2 12h4"></path><path d="M18 12h4"></path></svg></div>
+            <h3 class="font-bold mb-1.5">Wheels off, safely</h3>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Lift points respected — pucks on EVs. Your seasonal set comes out of the garage.</p>
           </div>
-          <div class="relative bg-white border border-[#2e4459]/10 rounded-3xl p-8">
-            <span class="absolute -top-5 left-8 w-10 h-10 rounded-full bg-[#f04e23] text-white font-bold flex items-center justify-center shadow-lg shadow-[#f04e23]/30">3</span>
-            <h3 class="text-lg font-bold mt-3 mb-2">Roll On, Covered</h3>
-            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Pay on completion, get photos of the work — and our 45-Day Ride Promise: anything feels off, we come back free.</p>
+          <div class="snap-start shrink-0 w-[240px] lg:w-auto bg-white border border-[#2e4459]/10 rounded-3xl p-6 relative">
+            <span class="absolute -top-3 left-6 bg-[#2e4459] text-white text-xs font-bold px-3 py-1 rounded-full tabular-nums">0:30</span>
+            <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-4 mt-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7" aria-hidden="true"><path d="M10 2h4"></path><path d="M12 14v-4"></path><path d="M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6"></path><path d="M9 17H4v5"></path></svg></div>
+            <h3 class="font-bold mb-1.5">Torqued to spec</h3>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Every lug with a calibrated wrench to your manufacturer’s number — never an impact-gun guess.</p>
+          </div>
+          <div class="snap-start shrink-0 w-[240px] lg:w-auto bg-white border border-[#2e4459]/10 rounded-3xl p-6 relative">
+            <span class="absolute -top-3 left-6 bg-[#2e4459] text-white text-xs font-bold px-3 py-1 rounded-full tabular-nums">0:40</span>
+            <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-4 mt-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2"></rect><path d="M12 18h.01"></path></svg></div>
+            <h3 class="font-bold mb-1.5">Photos hit your phone</h3>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Pressures set, TPMS reset, photo report texted. Pay on completion.</p>
+          </div>
+          <div class="snap-start shrink-0 w-[240px] lg:w-auto bg-white border border-[#2e4459]/10 rounded-3xl p-6 relative">
+            <span class="absolute -top-3 left-6 bg-[#2e4459] text-white text-xs font-bold px-3 py-1 rounded-full tabular-nums">0:45</span>
+            <div class="w-12 h-12 rounded-2xl bg-[#f04e23]/10 flex items-center justify-center mb-4 mt-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f04e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div>
+            <h3 class="font-bold mb-1.5">The van rolls away</h3>
+            <p class="text-[#2e4459]/60 text-sm leading-relaxed">Driveway clean, Saturday intact. Free re-torque after 50 km — and the 45-Day Promise.</p>
           </div>
         </div>
+        <p class="text-center text-xs text-[#2e4459]/55 mt-6 lg:hidden" aria-hidden="true">Swipe →</p>
       </div>
     </section>
 
