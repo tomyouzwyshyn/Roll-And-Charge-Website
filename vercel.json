@@ -124,12 +124,12 @@
       "permanent": false
     },
     {
-      "source": "/milton",
+      "source": "/milton/",
       "destination": "/",
       "permanent": false
     },
     {
-      "source": "/halton-hills",
+      "source": "/halton-hills/",
       "destination": "/",
       "permanent": false
     }
