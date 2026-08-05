@@ -180,7 +180,7 @@
         <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="/electric-vehicles/">EV Tires</a>
         <a class="px-4 py-3.5 text-sm font-medium text-[#2e4459]/75 hover:text-[#2e4459] transition-colors" href="/about/">About</a>
       </div>
-      <a href="/#booking" class="bg-[#f04e23] hover:bg-[#d94318] text-white text-sm font-bold px-5 py-2 rounded-full transition-colors duration-300">Request Appointment</a>
+      <a href="/#booking" id="nav-cta" class="bg-[#f04e23] hover:bg-[#d94318] text-white text-sm font-bold px-5 py-2 rounded-full transition-all duration-300 opacity-0 translate-x-2 pointer-events-none" aria-hidden="true" tabindex="-1">Request Appointment</a>
     </div>
   </nav>
 
@@ -493,20 +493,26 @@
   </div>
 
   <script>
-    // Sticky-nav logo: fades in once the top utility row (with the main logo) scrolls away
+    // Sticky-nav logo + CTA: fade in once the top utility row scrolls away
     (function () {
       var logo = document.getElementById('nav-logo');
-      if (!logo) return;
+      var cta = document.getElementById('nav-cta');
+      if (!logo && !cta) return;
       var shown = false;
+      function setEl(el, on, slideClass) {
+        if (!el) return;
+        el.classList.toggle('opacity-0', !on);
+        el.classList.toggle(slideClass, !on);
+        el.classList.toggle('pointer-events-none', !on);
+        el.setAttribute('aria-hidden', String(!on));
+        if (on) el.removeAttribute('tabindex'); else el.setAttribute('tabindex', '-1');
+      }
       window.addEventListener('scroll', function () {
         var on = window.scrollY > 80;
         if (on === shown) return;
         shown = on;
-        logo.classList.toggle('opacity-0', !on);
-        logo.classList.toggle('-translate-x-2', !on);
-        logo.classList.toggle('pointer-events-none', !on);
-        logo.setAttribute('aria-hidden', String(!on));
-        if (on) logo.removeAttribute('tabindex'); else logo.setAttribute('tabindex', '-1');
+        setEl(logo, on, '-translate-x-2');
+        setEl(cta, on, 'translate-x-2');
       }, { passive: true });
     })();
   </script>
