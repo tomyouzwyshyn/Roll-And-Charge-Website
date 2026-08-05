@@ -11,18 +11,31 @@
     "emailIsPlaceholder": true,
     "logo": "/assets/rnc-logo.png",
     "crest": "/assets/rnc-crest.png",
-    "geo": { "lat": 43.4675, "lng": -79.6877, "radiusMeters": 25000 },
+    "geo": {
+      "lat": 43.3965,
+      "lng": -79.7434,
+      "radiusMeters": 18000
+    },
     "socialProfiles": [],
     "currency": "CAD"
   },
   "hours": {
     "display": "Mon–Fri 8am–6pm · Sat–Sun 9am–5pm",
-    "weekday": { "opens": "08:00", "closes": "18:00" },
-    "weekend": { "opens": "09:00", "closes": "17:00" },
+    "weekday": {
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "weekend": {
+      "opens": "09:00",
+      "closes": "17:00"
+    },
     "responseSLA": "We text back within 30 minutes during business hours."
   },
-  "serviceAreas": ["Oakville", "Burlington", "Milton", "Halton Hills"],
-  "serviceAreaLabel": "Oakville, Burlington, Milton & Halton Hills",
+  "serviceAreas": [
+    "Oakville",
+    "Burlington"
+  ],
+  "serviceAreaLabel": "Oakville & Burlington",
   "prices": {
     "swapOnRims": 139,
     "swapSecondVehicle": 79,
